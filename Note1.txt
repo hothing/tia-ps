@@ -1,0 +1,4 @@
+New-Object : Exception calling ".ctor" with "1" argument(s): "Security error.
+Can't access this process to acquire needed information.
+Security error.
+Owner 'tiaws2\master' of this process is not member of the windows group 'Siemens TIA Openness'. Please contact your administrator."
