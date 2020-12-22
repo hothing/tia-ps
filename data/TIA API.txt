@@ -1,0 +1,845 @@
+=============================================================================================================
+IsPublic IsSerial Name                                     BaseType                                                                                                                            
+-------- -------- ----                                     --------                                                                                                                            
+True     False    IEngineeringInstance                                                                                                                                                         
+True     False    IEngineeringCompositionOrObject                                                                                                                                              
+True     False    IEngineeringObject                                                                                                                                                           
+True     False    IEngineeringRoot                                                                                                                                                             
+True     False    TiaPortal                                System.Object                                                                                                                       
+True     True     TiaPortalMode                            System.Enum                                                                                                                         
+True     False    TiaPortalProcess                         System.Object                                                                                                                       
+True     False    TiaPortalSession                         System.Object                                                                                                                       
+True     False    TiaPortalProduct                         System.Object                                                                                                                       
+True     False    AttachingEventArgs                       System.EventArgs                                                                                                                    
+True     True     ConfirmationChoices                      System.Enum                                                                                                                         
+True     True     ConfirmationIcon                         System.Enum                                                                                                                         
+True     True     ConfirmationResult                       System.Enum                                                                                                                         
+True     False    ExclusiveAccess                          System.Object                                                                                                                       
+True     True     ExportOptions                            System.Enum                                                                                                                         
+True     False    HistoryEntry                             System.Object                                                                                                                       
+True     False    IEngineeringComposition                                                                                                                                                      
+True     False    HistoryEntryComposition                  System.Object                                                                                                                       
+True     False    IEngineeringAssociation                                                                                                                                                      
+True     False    IEngineeringObjectAssociation            System.Object                                                                                                                       
+True     False    IEngineeringService                                                                                                                                                          
+True     False    IShowable                                                                                                                                                                    
+True     False    ISystemObject                                                                                                                                                                
+True     False    ITransactionSupport                                                                                                                                                          
+True     True     ImportOptions                            System.Enum                                                                                                                         
+True     False    Language                                 System.Object                                                                                                                       
+True     False    LanguageAssociation                      System.Object                                                                                                                       
+True     False    LanguageComposition                      System.Object                                                                                                                       
+True     False    LanguageSettings                         System.Object                                                                                                                       
+True     False    MultilingualText                         System.Object                                                                                                                       
+True     False    MultilingualTextItem                     System.Object                                                                                                                       
+True     False    MultilingualTextItemComposition          System.Object                                                                                                                       
+True     True     NotificationIcon                         System.Enum                                                                                                                         
+True     True     OpenMode                                 System.Enum                                                                                                                         
+True     False    IMasterCopyTarget                                                                                                                                                            
+True     False    IEngineeringServiceProvider                                                                                                                                                  
+True     False    Project                                  System.Object                                                                                                                       
+True     True     ProjectArchivationMode                   System.Enum                                                                                                                         
+True     False    ProjectComposition                       System.Object                                                                                                                       
+True     True     ProjectOpenMode                          System.Enum                                                                                                                         
+True     False    ProjectTextResult                        System.Object                                                                                                                       
+True     True     ProjectTextResultState                   System.Enum                                                                                                                         
+True     True     TiaPortalAccessLevel                     System.Enum                                                                                                                         
+True     True     TiaPortalTrustAuthority                  System.Enum                                                                                                                         
+True     False    Transaction                              System.Object                                                                                                                       
+True     False    UmacCredentials                          System.Object                                                                                                                       
+True     True     UmacDelegate                             System.MulticastDelegate                                                                                                            
+True     True     UmacUserType                             System.Enum                                                                                                                         
+True     False    UsedProduct                              System.Object                                                                                                                       
+True     False    UsedProductComposition                   System.Object                                                                                                                       
+True     False    ProtectionProviderBase                   System.Object                                                                                                                       
+True     True     CaxImportOptions                         System.Enum                                                                                                                         
+True     False    CaxProvider                              System.Object                                                                                                                       
+True     False    CompareResult                            System.Object                                                                                                                       
+True     False    CompareResultElement                     System.Object                                                                                                                       
+True     False    CompareResultElementComposition          System.Object                                                                                                                       
+True     True     CompareResultState                       System.Enum                                                                                                                         
+True     False    ICompilable                                                                                                                                                                  
+True     False    CompilerResult                           System.Object                                                                                                                       
+True     False    CompilerResultMessage                    System.Object                                                                                                                       
+True     False    CompilerResultMessageComposition         System.Object                                                                                                                       
+True     True     CompilerResultState                      System.Enum                                                                                                                         
+True     False    IConfiguration                                                                                                                                                               
+True     False    ConfigurationAddress                     System.Object                                                                                                                       
+True     False    ConfigurationAddressComposition          System.Object                                                                                                                       
+True     False    ConfigurationGateway                     System.Object                                                                                                                       
+True     False    ConfigurationGatewayComposition          System.Object                                                                                                                       
+True     False    ConfigurationMode                        System.Object                                                                                                                       
+True     False    ConfigurationModeComposition             System.Object                                                                                                                       
+True     False    ConfigurationPcInterface                 System.Object                                                                                                                       
+True     False    ConfigurationPcInterfaceComposition      System.Object                                                                                                                       
+True     False    ConfigurationSubnet                      System.Object                                                                                                                       
+True     False    ConfigurationSubnetComposition           System.Object                                                                                                                       
+True     False    ConfigurationTargetInterface             System.Object                                                                                                                       
+True     False    ConfigurationTargetInterfaceComposition  System.Object                                                                                                                       
+True     False    ConnectionConfiguration                  System.Object                                                                                                                       
+True     True     DownloadConfigurationDelegate            System.MulticastDelegate                                                                                                            
+True     True     DownloadOptions                          System.Enum                                                                                                                         
+True     False    DownloadProvider                         System.Object                                                                                                                       
+True     False    DownloadResult                           System.Object                                                                                                                       
+True     False    DownloadResultMessage                    System.Object                                                                                                                       
+True     False    DownloadResultMessageComposition         System.Object                                                                                                                       
+True     True     DownloadResultState                      System.Enum                                                                                                                         
+True     False    RHDownloadProvider                       System.Object                                                                                                                       
+True     False    DownloadConfiguration                    System.Object                                                                                                                       
+True     False    DownloadSelectionConfiguration           Siemens.Engineering.Download.Configurations.DownloadConfiguration                                                                   
+True     False    ActiveTestCanBeAborted                   Siemens.Engineering.Download.Configurations.DownloadSelectionConfiguration                                                          
+True     True     ActiveTestCanBeAbortedSelections         System.Enum                                                                                                                         
+True     False    AlarmTextLibrariesDownload               Siemens.Engineering.Download.Configurations.DownloadSelectionConfiguration                                                          
+True     True     AlarmTextLibrariesDownloadSelections     System.Enum                                                                                                                         
+True     False    AllBlocksDownload                        Siemens.Engineering.Download.Configurations.DownloadSelectionConfiguration                                                          
+True     True     AllBlocksDownloadSelections              System.Enum                                                                                                                         
+True     False    DownloadPasswordConfiguration            Siemens.Engineering.Download.Configurations.DownloadConfiguration                                                                   
+True     False    BlockBindingPassword                     Siemens.Engineering.Download.Configurations.DownloadPasswordConfiguration                                                           
+True     False    DownloadCheckConfiguration               Siemens.Engineering.Download.Configurations.DownloadConfiguration                                                                   
+True     False    CheckBeforeDownload                      Siemens.Engineering.Download.Configurations.DownloadCheckConfiguration                                                              
+True     False    ConsistentBlocksDownload                 Siemens.Engineering.Download.Configurations.DownloadSelectionConfiguration                                                          
+True     True     ConsistentBlocksDownloadSelections       System.Enum                                                                                                                         
+True     False    DifferentTargetConfiguration             Siemens.Engineering.Download.Configurations.DownloadSelectionConfiguration                                                          
+True     True     DifferentTargetConfigurationSelections   System.Enum                                                                                                                         
+True     False    DowngradeTargetDevice                    Siemens.Engineering.Download.Configurations.DownloadCheckConfiguration                                                              
+True     False    ExpandDownload                           Siemens.Engineering.Download.Configurations.DownloadSelectionConfiguration                                                          
+True     True     ExpandDownloadSelections                 System.Enum                                                                                                                         
+True     False    FitHmiComponents                         Siemens.Engineering.Download.Configurations.DownloadCheckConfiguration                                                              
+True     False    InitializeMemory                         Siemens.Engineering.Download.Configurations.DownloadSelectionConfiguration                                                          
+True     True     InitializeMemorySelections               System.Enum                                                                                                                         
+True     False    LoadIdentificationData                   Siemens.Engineering.Download.Configurations.DownloadSelectionConfiguration                                                          
+True     True     LoadIdentificationDataSelections         System.Enum                                                                                                                         
+True     False    ModuleReadAccessPassword                 Siemens.Engineering.Download.Configurations.DownloadPasswordConfiguration                                                           
+True     False    ModuleWriteAccessPassword                Siemens.Engineering.Download.Configurations.DownloadPasswordConfiguration                                                           
+True     False    OverwriteHmiData                         Siemens.Engineering.Download.Configurations.DownloadCheckConfiguration                                                              
+True     False    OverwriteSystemData                      Siemens.Engineering.Download.Configurations.DownloadSelectionConfiguration                                                          
+True     True     OverwriteSystemDataSelections            System.Enum                                                                                                                         
+True     False    OverwriteTargetLanguages                 Siemens.Engineering.Download.Configurations.DownloadCheckConfiguration                                                              
+True     False    ProtectionLevelChanged                   Siemens.Engineering.Download.Configurations.DownloadSelectionConfiguration                                                          
+True     True     ProtectionLevelChangedSelections         System.Enum                                                                                                                         
+True     False    ResetModule                              Siemens.Engineering.Download.Configurations.DownloadSelectionConfiguration                                                          
+True     True     ResetModuleSelections                    System.Enum                                                                                                                         
+True     False    StartBackupModules                       Siemens.Engineering.Download.Configurations.DownloadSelectionConfiguration                                                          
+True     True     StartBackupModulesSelections             System.Enum                                                                                                                         
+True     False    StartModules                             Siemens.Engineering.Download.Configurations.DownloadSelectionConfiguration                                                          
+True     True     StartModulesSelections                   System.Enum                                                                                                                         
+True     False    StopHSystem                              Siemens.Engineering.Download.Configurations.DownloadSelectionConfiguration                                                          
+True     False    StopHSystemOrModule                      Siemens.Engineering.Download.Configurations.DownloadSelectionConfiguration                                                          
+True     True     StopHSystemOrModuleSelections            System.Enum                                                                                                                         
+True     True     StopHSystemSelections                    System.Enum                                                                                                                         
+True     False    StopModules                              Siemens.Engineering.Download.Configurations.DownloadSelectionConfiguration                                                          
+True     True     StopModulesSelections                    System.Enum                                                                                                                         
+True     False    SwitchBackupToPrimary                    Siemens.Engineering.Download.Configurations.DownloadSelectionConfiguration                                                          
+True     True     SwitchBackupToPrimarySelections          System.Enum                                                                                                                         
+True     False    TurnOffSequence                          Siemens.Engineering.Download.Configurations.DownloadCheckConfiguration                                                              
+True     False    UpgradeTargetDevice                      Siemens.Engineering.Download.Configurations.DownloadCheckConfiguration                                                              
+True     False    WaitOnReboot                             Siemens.Engineering.Download.Configurations.DownloadSelectionConfiguration                                                          
+True     True     WaitOnRebootSelections                   System.Enum                                                                                                                         
+True     False    Address                                  System.Object                                                                                                                       
+True     False    AddressAssociation                       System.Object                                                                                                                       
+True     False    AddressComposition                       System.Object                                                                                                                       
+True     True     AddressContext                           System.Enum                                                                                                                         
+True     True     AddressIoType                            System.Enum                                                                                                                         
+True     True     ApplicationControlFunction               System.Enum                                                                                                                         
+True     True     BasicType                                System.Enum                                                                                                                         
+True     True     BaudRate                                 System.Enum                                                                                                                         
+True     True     BusProfile                               System.Enum                                                                                                                         
+True     True     CableLength                              System.Enum                                                                                                                         
+True     True     CableName                                System.Enum                                                                                                                         
+True     False    Channel                                  System.Object                                                                                                                       
+True     False    ChannelComposition                       System.Object                                                                                                                       
+True     True     ChannelIoType                            System.Enum                                                                                                                         
+True     True     ChannelType                              System.Enum                                                                                                                         
+True     True     Classification                           System.Enum                                                                                                                         
+True     True     CommunicationLoad                        System.Enum                                                                                                                         
+True     True     ConfigurationDQOrDIGroup2                System.Enum                                                                                                                         
+True     True     ControlFunctionCurrentMeasuringModule... System.Enum                                                                                                                         
+True     True     ControlFunctionFeedbackCLOSEDFC          System.Enum                                                                                                                         
+True     True     ControlFunctionFeedbackON                System.Enum                                                                                                                         
+True     True     ControlFunctionFeedbackOPENFO            System.Enum                                                                                                                         
+True     True     ControlFunctionForward                   System.Enum                                                                                                                         
+True     True     ControlFunctionForwardFast               System.Enum                                                                                                                         
+True     True     ControlFunctionOFF                       System.Enum                                                                                                                         
+True     True     ControlFunctionReverse                   System.Enum                                                                                                                         
+True     True     ControlFunctionReverseFast               System.Enum                                                                                                                         
+True     True     ControlFunctionTorqueCLOSEDTC            System.Enum                                                                                                                         
+True     True     ControlFunctionTorqueOPENTO              System.Enum                                                                                                                         
+True     True     ControlStationModeSelectorS1             System.Enum                                                                                                                         
+True     True     ControlStationModeSelectorS2             System.Enum                                                                                                                         
+True     True     CounterMode                              System.Enum                                                                                                                         
+True     False    IHardwareCompareTarget                                                                                                                                                       
+True     False    HardwareObject                           System.Object                                                                                                                       
+True     False    IMasterCopySource                                                                                                                                                            
+True     False    Device                                   Siemens.Engineering.HW.HardwareObject                                                                                               
+True     False    DeviceComposition                        System.Object                                                                                                                       
+True     False    DeviceGroup                              System.Object                                                                                                                       
+True     False    DeviceItem                               Siemens.Engineering.HW.HardwareObject                                                                                               
+True     False    DeviceItemAssociation                    System.Object                                                                                                                       
+True     True     DeviceItemClassifications                System.Enum                                                                                                                         
+True     False    DeviceItemComposition                    System.Object                                                                                                                       
+True     False    DeviceSystemGroup                        Siemens.Engineering.HW.DeviceGroup                                                                                                  
+True     False    DeviceUserGroup                          Siemens.Engineering.HW.DeviceGroup                                                                                                  
+True     False    DeviceUserGroupComposition               System.Object                                                                                                                       
+True     True     Failsafe_BehaviorAfterChannelFault       System.Enum                                                                                                                         
+True     True     Failsafe_ChannelFailureAcknowledge       System.Enum                                                                                                                         
+True     True     Failsafe_ControlOfOutput                 System.Enum                                                                                                                         
+True     True     Failsafe_DiscrepancyBehavior             System.Enum                                                                                                                         
+True     True     Failsafe_DiscrepancyMonitoring           System.Enum                                                                                                                         
+True     True     Failsafe_FCRCSeed                        System.Enum                                                                                                                         
+True     True     Failsafe_FCheckSeqNr                     System.Enum                                                                                                                         
+True     True     Failsafe_FCheckiPar                      System.Enum                                                                                                                         
+True     True     Failsafe_FParVersion                     System.Enum                                                                                                                         
+True     True     Failsafe_FPassivation                    System.Enum                                                                                                                         
+True     True     Failsafe_FSIL                            System.Enum                                                                                                                         
+True     True     Failsafe_F_CRC_Length                    System.Enum                                                                                                                         
+True     True     Failsafe_InputDelay                      System.Enum                                                                                                                         
+True     True     Failsafe_ManualAssignmentFIODBNumber     System.Enum                                                                                                                         
+True     True     Failsafe_MaxReadbackTimeLightTestAndD... System.Enum                                                                                                                         
+True     True     Failsafe_MaximumTestPeriod               System.Enum                                                                                                                         
+True     True     Failsafe_OutputType                      System.Enum                                                                                                                         
+True     True     Failsafe_ReintegrationAfterChannelFault  System.Enum                                                                                                                         
+True     True     Failsafe_ReintegrationAfterDiscrepanc... System.Enum                                                                                                                         
+True     True     Failsafe_SensorEvaluation                System.Enum                                                                                                                         
+True     True     Failsafe_SensorSupply                    System.Enum                                                                                                                         
+True     True     Failsafe_SequenceMonitoring              System.Enum                                                                                                                         
+True     True     HardwareResource                         System.Enum                                                                                                                         
+True     False    HwIdentifier                             System.Object                                                                                                                       
+True     False    HwIdentifierAssociation                  System.Object                                                                                                                       
+True     False    HwIdentifierComposition                  System.Object                                                                                                                       
+True     True     InterfaceOperatingModes                  System.Enum                                                                                                                         
+True     True     InterfaceType                            System.Enum                                                                                                                         
+True     False    IoConnector                              System.Object                                                                                                                       
+True     False    IoConnectorAssociation                   System.Object                                                                                                                       
+True     False    IoConnectorComposition                   System.Object                                                                                                                       
+True     False    IoController                             System.Object                                                                                                                       
+True     False    IoControllerComposition                  System.Object                                                                                                                       
+True     False    IoSystem                                 System.Object                                                                                                                       
+True     False    IoSystemAssociation                      System.Object                                                                                                                       
+True     True     IpProtocolSelection                      System.Enum                                                                                                                         
+True     True     IsochronousTiToCalculationMode           System.Enum                                                                                                                         
+True     True     LengthOfIORange                          System.Enum                                                                                                                         
+True     True     MeasuringTemperatureCoefficient          System.Enum                                                                                                                         
+True     True     MediaRedundancyRole                      System.Enum                                                                                                                         
+True     True     MediumAttachmentType                     System.Enum                                                                                                                         
+True     True     MotorProtectionClass                     System.Enum                                                                                                                         
+True     True     MotorProtectionReset                     System.Enum                                                                                                                         
+True     True     MotorProtectionResponseToPrewarning      System.Enum                                                                                                                         
+True     True     MotorProtectionResponseToTripLevel       System.Enum                                                                                                                         
+True     True     MotorProtectionStalledRotorResponse      System.Enum                                                                                                                         
+True     True     MotorProtectionTypeOfLoad                System.Enum                                                                                                                         
+True     True     MotorProtectionUnbalanceResponse         System.Enum                                                                                                                         
+True     True     NetType                                  System.Enum                                                                                                                         
+True     False    Node                                     System.Object                                                                                                                       
+True     False    NodeAssociation                          System.Object                                                                                                                       
+True     False    NodeComposition                          System.Object                                                                                                                       
+True     True     OpcUaSecurityPolicies                    System.Enum                                                                                                                         
+True     True     OperatingHoursMonitoringResponse         System.Enum                                                                                                                         
+True     True     OperatingMode                            System.Enum                                                                                                                         
+True     True     OperatingRange                           System.Enum                                                                                                                         
+True     True     OperatingType                            System.Enum                                                                                                                         
+True     True     OperatingTypeAndRange                    System.Enum                                                                                                                         
+True     True     PcInterfaceAssignmentMode                System.Enum                                                                                                                         
+True     True     PcStationType                            System.Enum                                                                                                                         
+True     True     PlcProtectionAccessLevel                 System.Enum                                                                                                                         
+True     True     ResponseToOvershoot                      System.Enum                                                                                                                         
+True     True     ResponseToPrewarning                     System.Enum                                                                                                                         
+True     True     RetentiveDataMemoryUsage                 System.Enum                                                                                                                         
+True     True     RtClass                                  System.Enum                                                                                                                         
+True     True     SignalDelaySelection                     System.Enum                                                                                                                         
+True     False    Software                                 System.Object                                                                                                                       
+True     True     StopTimeOperatingHoursMonitoringResponse System.Enum                                                                                                                         
+True     False    Subnet                                   System.Object                                                                                                                       
+True     False    SubnetComposition                        System.Object                                                                                                                       
+True     True     SyncRole                                 System.Enum                                                                                                                         
+True     True     TemperatureUnit                          System.Enum                                                                                                                         
+True     True     ThermistorResponseToSensorFault          System.Enum                                                                                                                         
+True     True     ThermistorResponseToTripLevel            System.Enum                                                                                                                         
+True     False    TransferArea                             System.Object                                                                                                                       
+True     False    TransferAreaComposition                  System.Object                                                                                                                       
+True     True     TransferAreaDirection                    System.Enum                                                                                                                         
+True     False    TransferAreaMappingRule                  System.Object                                                                                                                       
+True     False    TransferAreaMappingRuleComposition       System.Object                                                                                                                       
+True     True     TransferAreaType                         System.Enum                                                                                                                         
+True     True     TransmissionRateAndDuplex                System.Enum                                                                                                                         
+True     True     TypeOfConsumerLoad                       System.Enum                                                                                                                         
+True     True     View                                     System.Enum                                                                                                                         
+True     False    PlugLocation                             System.Object                                                                                                                       
+True     False    HardwareFeature                          System.Object                                                                                                                       
+True     False    DeviceItemFeature                        Siemens.Engineering.HW.Features.HardwareFeature                                                                                     
+True     False    AddressController                        Siemens.Engineering.HW.Features.DeviceItemFeature                                                                                   
+True     False    AddressControllerAssociation             System.Object                                                                                                                       
+True     False    DeviceFeature                            Siemens.Engineering.HW.Features.HardwareFeature                                                                                     
+True     False    FrontPanelDisplay                        Siemens.Engineering.HW.Features.DeviceItemFeature                                                                                   
+True     False    IGsdObject                                                                                                                                                                   
+True     False    GsdDevice                                Siemens.Engineering.HW.Features.DeviceFeature                                                                                       
+True     False    GsdDeviceItem                            Siemens.Engineering.HW.Features.DeviceItemFeature                                                                                   
+True     False    HwIdentifierController                   Siemens.Engineering.HW.Features.DeviceItemFeature                                                                                   
+True     False    HwIdentifierControllerAssociation        System.Object                                                                                                                       
+True     False    NetworkInterface                         Siemens.Engineering.HW.Features.DeviceItemFeature                                                                                   
+True     False    NetworkPort                              Siemens.Engineering.HW.Features.DeviceItemFeature                                                                                   
+True     False    NetworkPortAssociation                   System.Object                                                                                                                       
+True     False    PcInterfaceAssignment                    Siemens.Engineering.HW.Features.DeviceItemFeature                                                                                   
+True     False    PlcAccessLevelProvider                   Siemens.Engineering.HW.Features.DeviceItemFeature                                                                                   
+True     False    SoftwareContainer                        Siemens.Engineering.HW.Features.DeviceItemFeature                                                                                   
+True     False    SubnetOwner                              Siemens.Engineering.HW.Features.DeviceItemFeature                                                                                   
+True     False    HardwareUtility                          System.Object                                                                                                                       
+True     False    CardReaderPscProvider                    Siemens.Engineering.HW.Utilities.HardwareUtility                                                                                    
+True     False    HardwareUtilityComposition               System.Object                                                                                                                       
+True     False    ModuleInformationProvider                Siemens.Engineering.HW.Utilities.HardwareUtility                                                                                    
+True     False    OpcUaExportProvider                      Siemens.Engineering.HW.Utilities.HardwareUtility                                                                                    
+True     False    IInstanceSearchScope                                                                                                                                                         
+True     False    IUpdateProjectScope                                                                                                                                                          
+True     False    HmiTarget                                Siemens.Engineering.HW.Software                                                                                                     
+True     False    Connection                               System.Object                                                                                                                       
+True     False    ConnectionComposition                    System.Object                                                                                                                       
+True     False    Cycle                                    System.Object                                                                                                                       
+True     False    CycleComposition                         System.Object                                                                                                                       
+True     False    ILibraryTypeOrFolderSelection                                                                                                                                                
+True     False    LibraryType                              System.Object                                                                                                                       
+True     False    FaceplateLibraryType                     Siemens.Engineering.Library.Types.LibraryType                                                                                       
+True     False    LibraryTypeVersion                       System.Object                                                                                                                       
+True     False    FaceplateLibraryTypeVersion              Siemens.Engineering.Library.Types.LibraryTypeVersion                                                                                
+True     False    MultiLingualGraphic                      System.Object                                                                                                                       
+True     False    MultiLingualGraphicComposition           System.Object                                                                                                                       
+True     False    CScriptLibraryType                       Siemens.Engineering.Library.Types.LibraryType                                                                                       
+True     False    CScriptLibraryTypeVersion                Siemens.Engineering.Library.Types.LibraryTypeVersion                                                                                
+True     False    VBScript                                 System.Object                                                                                                                       
+True     False    VBScriptComposition                      System.Object                                                                                                                       
+True     False    VBScriptFolder                           System.Object                                                                                                                       
+True     False    VBScriptLibraryType                      Siemens.Engineering.Library.Types.LibraryType                                                                                       
+True     False    VBScriptLibraryTypeVersion               Siemens.Engineering.Library.Types.LibraryTypeVersion                                                                                
+True     False    ILibraryTypeInstantiationTarget                                                                                                                                              
+True     False    VBScriptSystemFolder                     Siemens.Engineering.Hmi.RuntimeScripting.VBScriptFolder                                                                             
+True     False    VBScriptUserFolder                       Siemens.Engineering.Hmi.RuntimeScripting.VBScriptFolder                                                                             
+True     False    VBScriptUserFolderComposition            System.Object                                                                                                                       
+True     False    Screen                                   System.Object                                                                                                                       
+True     False    ScreenComposition                        System.Object                                                                                                                       
+True     False    ScreenFolder                             System.Object                                                                                                                       
+True     False    ScreenGlobalElements                     System.Object                                                                                                                       
+True     False    ScreenLibraryType                        Siemens.Engineering.Library.Types.LibraryType                                                                                       
+True     False    ScreenLibraryTypeVersion                 Siemens.Engineering.Library.Types.LibraryTypeVersion                                                                                
+True     False    ScreenOverview                           System.Object                                                                                                                       
+True     False    ScreenPopup                              System.Object                                                                                                                       
+True     False    ScreenPopupComposition                   System.Object                                                                                                                       
+True     False    ScreenPopupFolder                        System.Object                                                                                                                       
+True     False    ScreenPopupSystemFolder                  Siemens.Engineering.Hmi.Screen.ScreenPopupFolder                                                                                    
+True     False    ScreenPopupUserFolder                    Siemens.Engineering.Hmi.Screen.ScreenPopupFolder                                                                                    
+True     False    ScreenPopupUserFolderComposition         System.Object                                                                                                                       
+True     False    ScreenSlidein                            System.Object                                                                                                                       
+True     False    ScreenSlideinComposition                 System.Object                                                                                                                       
+True     False    ScreenSlideinSystemFolder                System.Object                                                                                                                       
+True     False    ScreenSystemFolder                       Siemens.Engineering.Hmi.Screen.ScreenFolder                                                                                         
+True     False    ScreenTemplate                           System.Object                                                                                                                       
+True     False    ScreenTemplateComposition                System.Object                                                                                                                       
+True     False    ScreenTemplateFolder                     System.Object                                                                                                                       
+True     False    ScreenTemplateSystemFolder               Siemens.Engineering.Hmi.Screen.ScreenTemplateFolder                                                                                 
+True     False    ScreenTemplateUserFolder                 Siemens.Engineering.Hmi.Screen.ScreenTemplateFolder                                                                                 
+True     False    ScreenTemplateUserFolderComposition      System.Object                                                                                                                       
+True     False    ScreenUserFolder                         Siemens.Engineering.Hmi.Screen.ScreenFolder                                                                                         
+True     False    ScreenUserFolderComposition              System.Object                                                                                                                       
+True     True     SlideinType                              System.Enum                                                                                                                         
+True     False    StyleLibraryType                         Siemens.Engineering.Library.Types.LibraryType                                                                                       
+True     False    StyleLibraryTypeVersion                  Siemens.Engineering.Library.Types.LibraryTypeVersion                                                                                
+True     False    StyleSheetLibraryType                    Siemens.Engineering.Library.Types.LibraryType                                                                                       
+True     False    StyleSheetLibraryTypeVersion             Siemens.Engineering.Library.Types.LibraryTypeVersion                                                                                
+True     True     VisibilityModes                          System.Enum                                                                                                                         
+True     False    HmiUdtLibraryType                        Siemens.Engineering.Library.Types.LibraryType                                                                                       
+True     False    HmiUdtLibraryTypeVersion                 Siemens.Engineering.Library.Types.LibraryTypeVersion                                                                                
+True     False    Tag                                      System.Object                                                                                                                       
+True     False    TagComposition                           System.Object                                                                                                                       
+True     False    TagFolder                                System.Object                                                                                                                       
+True     False    TagSystemFolder                          Siemens.Engineering.Hmi.Tag.TagFolder                                                                                               
+True     False    TagTable                                 System.Object                                                                                                                       
+True     False    TagTableComposition                      System.Object                                                                                                                       
+True     False    TagUserFolder                            Siemens.Engineering.Hmi.Tag.TagFolder                                                                                               
+True     False    TagUserFolderComposition                 System.Object                                                                                                                       
+True     False    GraphicList                              System.Object                                                                                                                       
+True     False    GraphicListComposition                   System.Object                                                                                                                       
+True     False    TextList                                 System.Object                                                                                                                       
+True     False    TextListComposition                      System.Object                                                                                                                       
+True     False    HmiSoftware                              Siemens.Engineering.HW.Software                                                                                                     
+True     False    IValidator                                                                                                                                                                   
+True     False    HmiBase                                  System.Object                                                                                                                       
+True     False    HmiValidationResult                      System.Object                                                                                                                       
+True     False    HmiAlarmClass                            Siemens.Engineering.HmiUnified.Common.HmiBase                                                                                       
+True     False    HmiAlarmClassComposition                 System.Object                                                                                                                       
+True     False    AlarmBase                                Siemens.Engineering.HmiUnified.Common.HmiBase                                                                                       
+True     False    HmiAnalogAlarm                           Siemens.Engineering.HmiUnified.HmiAlarm.HmiAlarmCommon.AlarmBase                                                                    
+True     False    HmiAnalogAlarmComposition                System.Object                                                                                                                       
+True     False    HmiDiscreteAlarm                         Siemens.Engineering.HmiUnified.HmiAlarm.HmiAlarmCommon.AlarmBase                                                                    
+True     False    HmiDiscreteAlarmComposition              System.Object                                                                                                                       
+True     False    AlarmStatusVisuals                       System.Object                                                                                                                       
+True     False    HmiAcknowledgedClearedState              Siemens.Engineering.HmiUnified.HmiAlarm.HmiAlarmCommon.AlarmStatusVisuals                                                           
+True     False    HmiAcknowledgedState                     Siemens.Engineering.HmiUnified.HmiAlarm.HmiAlarmCommon.AlarmStatusVisuals                                                           
+True     True     HmiAlarmCondition                        System.Enum                                                                                                                         
+True     True     HmiAlarmStateMachine                     System.Enum                                                                                                                         
+True     False    HmiClearedState                          Siemens.Engineering.HmiUnified.HmiAlarm.HmiAlarmCommon.AlarmStatusVisuals                                                           
+True     True     HmiDiscreteAlarmTriggerMode              System.Enum                                                                                                                         
+True     False    HmiRaisedState                           Siemens.Engineering.HmiUnified.HmiAlarm.HmiAlarmCommon.AlarmStatusVisuals                                                           
+True     False    HmiConnection                            System.Object                                                                                                                       
+True     False    HmiConnectionComposition                 System.Object                                                                                                                       
+True     False    LoggingBase                              Siemens.Engineering.HmiUnified.Common.HmiBase                                                                                       
+True     False    HmiAlarmLog                              Siemens.Engineering.HmiUnified.HmiLogging.HmiLoggingCommon.LoggingBase                                                              
+True     False    HmiAlarmLogComposition                   System.Object                                                                                                                       
+True     False    HmiDataLog                               Siemens.Engineering.HmiUnified.HmiLogging.HmiLoggingCommon.LoggingBase                                                              
+True     False    HmiDataLogComposition                    System.Object                                                                                                                       
+True     True     HmiBackupMode                            System.Enum                                                                                                                         
+True     False    LogBackup                                System.Object                                                                                                                       
+True     False    LogDuration                              System.Object                                                                                                                       
+True     False    LogSegment                               System.Object                                                                                                                       
+True     False    LogSettings                              System.Object                                                                                                                       
+True     False    SegmentDuration                          System.Object                                                                                                                       
+True     True     HmiAccessMode                            System.Enum                                                                                                                         
+True     True     HmiAcquisitionMode                       System.Enum                                                                                                                         
+True     True     HmiLimitValueType                        System.Enum                                                                                                                         
+True     False    HmiSubstituteValue                       System.Object                                                                                                                       
+True     True     HmiSubstituteValueUsage                  System.Enum                                                                                                                         
+True     False    HmiSystemTag                             System.Object                                                                                                                       
+True     False    HmiSystemTagComposition                  System.Object                                                                                                                       
+True     False    HmiTag                                   System.Object                                                                                                                       
+True     False    HmiTagComposition                        System.Object                                                                                                                       
+True     False    HmiTagTable                              System.Object                                                                                                                       
+True     False    HmiTagTableComposition                   System.Object                                                                                                                       
+True     True     HmiTagType                               System.Enum                                                                                                                         
+True     True     HmiUpdateScope                           System.Enum                                                                                                                         
+True     False    Range                                    System.Object                                                                                                                       
+True     False    LowerRange                               Siemens.Engineering.HmiUnified.HmiTags.Range                                                                                        
+True     False    UpperRange                               Siemens.Engineering.HmiUnified.HmiTags.Range                                                                                        
+True     True     HmiLimitScope                            System.Enum                                                                                                                         
+True     True     HmiLoggingMode                           System.Enum                                                                                                                         
+True     False    HmiLoggingTag                            System.Object                                                                                                                       
+True     False    HmiLoggingTagComposition                 System.Object                                                                                                                       
+True     True     HmiSmoothingMode                         System.Enum                                                                                                                         
+True     False    HmiLanguageAndFont                       System.Object                                                                                                                       
+True     False    HmiLanguageAndFontAssociation            System.Object                                                                                                                       
+True     False    HmiRuntimeSetting                        System.Object                                                                                                                       
+True     False    ILibrary                                                                                                                                                                     
+True     False    ISoftwareCompareTarget                                                                                                                                                       
+True     False    GlobalLibrary                            System.Object                                                                                                                       
+True     False    CorporateGlobalLibrary                   Siemens.Engineering.Library.GlobalLibrary                                                                                           
+True     False    GlobalLibraryComposition                 System.Object                                                                                                                       
+True     False    GlobalLibraryInfo                        System.Object                                                                                                                       
+True     True     GlobalLibraryType                        System.Enum                                                                                                                         
+True     True     LibraryArchivationMode                   System.Enum                                                                                                                         
+True     False    ProjectLibrary                           System.Object                                                                                                                       
+True     False    SystemGlobalLibrary                      Siemens.Engineering.Library.GlobalLibrary                                                                                           
+True     False    UserGlobalLibrary                        Siemens.Engineering.Library.GlobalLibrary                                                                                           
+True     False    MasterCopy                               System.Object                                                                                                                       
+True     False    MasterCopyAssociation                    System.Object                                                                                                                       
+True     False    MasterCopyComposition                    System.Object                                                                                                                       
+True     False    MasterCopyContentDescription             System.Object                                                                                                                       
+True     False    MasterCopyContentDescriptionComposition  System.Object                                                                                                                       
+True     False    MasterCopyFolder                         System.Object                                                                                                                       
+True     True     MasterCopyMode                           System.Enum                                                                                                                         
+True     False    MasterCopySystemFolder                   Siemens.Engineering.Library.MasterCopies.MasterCopyFolder                                                                           
+True     False    MasterCopyUserFolder                     Siemens.Engineering.Library.MasterCopies.MasterCopyFolder                                                                           
+True     False    MasterCopyUserFolderComposition          System.Object                                                                                                                       
+True     False    LibraryTypeComposition                   System.Object                                                                                                                       
+True     False    LibraryTypeFolder                        System.Object                                                                                                                       
+True     False    LibraryTypeInstanceInfo                  System.Object                                                                                                                       
+True     False    LibraryTypeSystemFolder                  Siemens.Engineering.Library.Types.LibraryTypeFolder                                                                                 
+True     False    LibraryTypeUserFolder                    Siemens.Engineering.Library.Types.LibraryTypeFolder                                                                                 
+True     False    LibraryTypeUserFolderComposition         System.Object                                                                                                                       
+True     False    LibraryTypeVersionAssociation            System.Object                                                                                                                       
+True     False    LibraryTypeVersionComposition            System.Object                                                                                                                       
+True     True     LibraryTypeVersionState                  System.Enum                                                                                                                         
+True     True     UpdateCheckMode                          System.Enum                                                                                                                         
+True     False    UpdateCheckResult                        System.Object                                                                                                                       
+True     False    UpdateCheckResultMessage                 System.Object                                                                                                                       
+True     False    UpdateCheckResultMessageComposition      System.Object                                                                                                                       
+True     False    OnlineProvider                           System.Object                                                                                                                       
+True     True     OnlineState                              System.Enum                                                                                                                         
+True     False    RHOnlineProvider                         System.Object                                                                                                                       
+True     False    Fingerprint                              System.Object                                                                                                                       
+True     True     FingerprintId                            System.Enum                                                                                                                         
+True     False    FingerprintProvider                      System.Object                                                                                                                       
+True     False    PlcChecksumProvider                      System.Object                                                                                                                       
+True     False    PlcSoftware                              Siemens.Engineering.HW.Software                                                                                                     
+True     True     SWImportOptions                          System.Enum                                                                                                                         
+True     False    IGenerateSource                                                                                                                                                              
+True     False    PlcBlock                                 System.Object                                                                                                                       
+True     False    DataBlock                                Siemens.Engineering.SW.Blocks.PlcBlock                                                                                              
+True     False    ArrayDB                                  Siemens.Engineering.SW.Blocks.DataBlock                                                                                             
+True     True     BlockType                                System.Enum                                                                                                                         
+True     False    CodeBlock                                Siemens.Engineering.SW.Blocks.PlcBlock                                                                                              
+True     False    CodeBlockLibraryType                     Siemens.Engineering.Library.Types.LibraryType                                                                                       
+True     False    CodeBlockLibraryTypeVersion              Siemens.Engineering.Library.Types.LibraryTypeVersion                                                                                
+True     False    FB                                       Siemens.Engineering.SW.Blocks.CodeBlock                                                                                             
+True     False    FC                                       Siemens.Engineering.SW.Blocks.CodeBlock                                                                                             
+True     False    GlobalDB                                 Siemens.Engineering.SW.Blocks.DataBlock                                                                                             
+True     False    InstanceDB                               Siemens.Engineering.SW.Blocks.DataBlock                                                                                             
+True     False    InterfaceSnapshot                        System.Object                                                                                                                       
+True     True     MemoryLayout                             System.Enum                                                                                                                         
+True     False    OB                                       Siemens.Engineering.SW.Blocks.CodeBlock                                                                                             
+True     True     OBDataExchangeMode                       System.Enum                                                                                                                         
+True     True     OBExecution                              System.Enum                                                                                                                         
+True     True     OBTimeMode                               System.Enum                                                                                                                         
+True     False    PlcBlockComposition                      System.Object                                                                                                                       
+True     False    PlcBlockGroup                            System.Object                                                                                                                       
+True     False    PlcBlockProtectionProvider               Siemens.Engineering.AdvancedProtection.ProtectionProviderBase                                                                       
+True     False    PlcBlockSystemGroup                      Siemens.Engineering.SW.Blocks.PlcBlockGroup                                                                                         
+True     False    PlcBlockUserGroup                        Siemens.Engineering.SW.Blocks.PlcBlockGroup                                                                                         
+True     False    PlcBlockUserGroupComposition             System.Object                                                                                                                       
+True     False    PlcSystemBlockGroup                      System.Object                                                                                                                       
+True     False    PlcSystemBlockGroupComposition           System.Object                                                                                                                       
+True     True     ProgrammingLanguage                      System.Enum                                                                                                                         
+True     False    Supervision                              System.Object                                                                                                                       
+True     False    SupervisionComposition                   System.Object                                                                                                                       
+True     True     GenerateBlockOption                      System.Enum                                                                                                                         
+True     True     GenerateOptions                          System.Enum                                                                                                                         
+True     False    PlcExternalSource                        System.Object                                                                                                                       
+True     False    PlcExternalSourceComposition             System.Object                                                                                                                       
+True     False    PlcExternalSourceGroup                   System.Object                                                                                                                       
+True     False    PlcExternalSourceSystemGroup             Siemens.Engineering.SW.ExternalSources.PlcExternalSourceGroup                                                                       
+True     False    PlcExternalSourceUserGroup               Siemens.Engineering.SW.ExternalSources.PlcExternalSourceGroup                                                                       
+True     False    PlcExternalSourceUserGroupComposition    System.Object                                                                                                                       
+True     False    OpcUaCommunicationGroup                  System.Object                                                                                                                       
+True     False    OpcUaProvider                            System.Object                                                                                                                       
+True     False    ServerInterface                          System.Object                                                                                                                       
+True     False    ServerInterfaceComposition               System.Object                                                                                                                       
+True     False    ServerInterfaceGroup                     System.Object                                                                                                                       
+True     False    PlcConstant                              System.Object                                                                                                                       
+True     False    PlcSystemConstant                        Siemens.Engineering.SW.Tags.PlcConstant                                                                                             
+True     False    PlcSystemConstantComposition             System.Object                                                                                                                       
+True     False    PlcTag                                   System.Object                                                                                                                       
+True     False    PlcTagComposition                        System.Object                                                                                                                       
+True     False    PlcTagTable                              System.Object                                                                                                                       
+True     False    PlcTagTableComposition                   System.Object                                                                                                                       
+True     False    PlcTagTableGroup                         System.Object                                                                                                                       
+True     False    PlcTagTableSystemGroup                   Siemens.Engineering.SW.Tags.PlcTagTableGroup                                                                                        
+True     False    PlcTagTableUserGroup                     Siemens.Engineering.SW.Tags.PlcTagTableGroup                                                                                        
+True     False    PlcTagTableUserGroupComposition          System.Object                                                                                                                       
+True     False    PlcUserConstant                          Siemens.Engineering.SW.Tags.PlcConstant                                                                                             
+True     False    PlcUserConstantComposition               System.Object                                                                                                                       
+True     False    TechnologicalInstanceDB                  Siemens.Engineering.SW.Blocks.InstanceDB                                                                                            
+True     False    TechnologicalInstanceDBAssociation       System.Object                                                                                                                       
+True     False    TechnologicalInstanceDBComposition       System.Object                                                                                                                       
+True     False    TechnologicalInstanceDBGroup             System.Object                                                                                                                       
+True     False    TechnologicalInstanceDBSystemGroup       Siemens.Engineering.SW.TechnologicalObjects.TechnologicalInstanceDBGroup                                                            
+True     False    TechnologicalParameter                   System.Object                                                                                                                       
+True     False    TechnologicalParameterComposition        System.Object                                                                                                                       
+True     False    AxisEncoderHardwareConnectionInterface   System.Object                                                                                                                       
+True     False    AxisEncoderHardwareConnectionInterfac... System.Object                                                                                                                       
+True     False    AxisHardwareConnectionProvider           System.Object                                                                                                                       
+True     True     CamDataFormat                            System.Enum                                                                                                                         
+True     True     CamDataFormatSeparator                   System.Enum                                                                                                                         
+True     False    CamDataSupport                           System.Object                                                                                                                       
+True     True     ConnectOption                            System.Enum                                                                                                                         
+True     False    EncoderHardwareConnectionProvider        System.Object                                                                                                                       
+True     False    MeasuringInputHardwareConnectionProvider System.Object                                                                                                                       
+True     False    OutputCamHardwareConnectionProvider      System.Object                                                                                                                       
+True     False    OutputCamMeasuringInputContainer         System.Object                                                                                                                       
+True     False    SynchronousAxisMasterValues              System.Object                                                                                                                       
+True     False    TorqueHardwareConnectionInterface        System.Object                                                                                                                       
+True     False    PlcType                                  System.Object                                                                                                                       
+True     False    PlcStruct                                Siemens.Engineering.SW.Types.PlcType                                                                                                
+True     False    PlcSystemTypeGroup                       System.Object                                                                                                                       
+True     False    PlcSystemTypeGroupComposition            System.Object                                                                                                                       
+True     False    PlcTypeComposition                       System.Object                                                                                                                       
+True     False    PlcTypeGroup                             System.Object                                                                                                                       
+True     False    PlcTypeLibraryType                       Siemens.Engineering.Library.Types.LibraryType                                                                                       
+True     False    PlcTypeLibraryTypeVersion                Siemens.Engineering.Library.Types.LibraryTypeVersion                                                                                
+True     False    PlcTypeSystemGroup                       Siemens.Engineering.SW.Types.PlcTypeGroup                                                                                           
+True     False    PlcTypeUserGroup                         Siemens.Engineering.SW.Types.PlcTypeGroup                                                                                           
+True     False    PlcTypeUserGroupComposition              System.Object                                                                                                                       
+True     False    PlcForceTable                            System.Object                                                                                                                       
+True     False    PlcForceTableComposition                 System.Object                                                                                                                       
+True     False    PlcTableCommentEntry                     System.Object                                                                                                                       
+True     False    PlcForceTableEntry                       Siemens.Engineering.SW.WatchAndForceTables.PlcTableCommentEntry                                                                     
+True     False    PlcTableCommentEntryComposition          System.Object                                                                                                                       
+True     True     PlcWatchAndForceTableDisplayFormat       System.Enum                                                                                                                         
+True     False    PlcWatchAndForceTableGroup               System.Object                                                                                                                       
+True     True     PlcWatchAndForceTablePreDefinedTrigger   System.Enum                                                                                                                         
+True     False    PlcWatchAndForceTableSystemGroup         Siemens.Engineering.SW.WatchAndForceTables.PlcWatchAndForceTableGroup                                                               
+True     False    PlcWatchAndForceTableUserGroup           Siemens.Engineering.SW.WatchAndForceTables.PlcWatchAndForceTableGroup                                                               
+True     False    PlcWatchAndForceTableUserGroupComposi... System.Object                                                                                                                       
+True     False    PlcWatchTable                            System.Object                                                                                                                       
+True     False    PlcWatchTableComposition                 System.Object                                                                                                                       
+True     False    PlcWatchTableEntry                       Siemens.Engineering.SW.WatchAndForceTables.PlcTableCommentEntry                                                                     
+True     False    TiaPortalSetting                         System.Object                                                                                                                       
+True     False    TiaPortalSettingComposition              System.Object                                                                                                                       
+True     False    TiaPortalSettingsFolder                  System.Object                                                                                                                       
+True     False    TiaPortalSettingsFolderComposition       System.Object                                                                                                                       
+True     False    StationUploadProvider                    System.Object                                                                                                                       
+True     True     UploadConfigurationDelegate              System.MulticastDelegate                                                                                                            
+True     False    UploadResult                             System.Object                                                                                                                       
+True     False    UploadResultMessage                      System.Object                                                                                                                       
+True     False    UploadResultMessageComposition           System.Object                                                                                                                       
+True     True     UploadResultState                        System.Enum                                                                                                                         
+True     False    UploadConfiguration                      System.Object                                                                                                                       
+True     False    UploadPasswordConfiguration              Siemens.Engineering.Upload.Configurations.UploadConfiguration                                                                       
+True     False    ModuleReadAccessPassword                 Siemens.Engineering.Upload.Configurations.UploadPasswordConfiguration                                                               
+True     False    ModuleWriteAccessPassword                Siemens.Engineering.Upload.Configurations.UploadPasswordConfiguration                                                               
+True     False    PasswordReadAccess                       Siemens.Engineering.Upload.Configurations.UploadPasswordConfiguration                                                               
+True     False    UploadSelectionConfiguration             Siemens.Engineering.Upload.Configurations.UploadConfiguration                                                                       
+True     False    UploadMissingProducts                    Siemens.Engineering.Upload.Configurations.UploadSelectionConfiguration                                                              
+True     True     UploadMissingProductsSelections          System.Enum                                                                                                                         
+True     False    EngineeringCompositionInfo               System.Object                                                                                                                       
+True     True     EngineeringAttributeAccessMode           System.Enum                                                                                                                         
+True     True     EngineeringCreateRelevance               System.Enum                                                                                                                         
+True     False    EngineeringAttributeInfo                 System.Object                                                                                                                       
+True     False    EngineeringServiceInfo                   System.Object                                                                                                                       
+True     False    EngineeringInvocationInfo                System.Object                                                                                                                       
+True     False    EngineeringInvocationParameterInfo       System.Object                                                                                                                       
+True     False    EngineeringCreationInfo                  System.Object                                                                                                                       
+True     False    EngineeringCreationParameterInfo         System.Object                                                                                                                       
+True     True     EngineeringException                     System.Exception                                                                                                                    
+True     True     EngineeringTargetInvocationException     Siemens.Engineering.EngineeringException                                                                                            
+True     True     EngineeringUserAbortException            Siemens.Engineering.EngineeringTargetInvocationException                                                                            
+True     True     EngineeringObjectDisposedException       Siemens.Engineering.EngineeringException                                                                                            
+True     True     EngineeringNotSupportedException         Siemens.Engineering.EngineeringException                                                                                            
+True     True     EngineeringSecurityException             Siemens.Engineering.EngineeringException                                                                                            
+True     True     EngineeringOutOfMemoryException          Siemens.Engineering.EngineeringException                                                                                            
+True     True     EngineeringRuntimeException              Siemens.Engineering.EngineeringException                                                                                            
+True     True     EngineeringDelegateInvocationException   Siemens.Engineering.EngineeringTargetInvocationException                                                                            
+True     True     ExceptionMessageData                     System.ValueType                                                                                                                    
+True     True     NonRecoverableException                  System.Exception                                                                                                                    
+True     False    ConfirmationEventArgs                    System.EventArgs                                                                                                                    
+True     False    NotificationEventArgs                    System.EventArgs     
+
+======================================================================================================================================
+TypeName: Siemens.Engineering.TiaPortal
+
+Name                MemberType Definition                                                                                                                                                      
+----                ---------- ----------                                                                                                                                                      
+Confirmation        Event      System.EventHandler`1[Siemens.Engineering.ConfirmationEventArgs] Confirmation(System.Object, Siemens.Engineering.ConfirmationEventArgs)                         
+Disposed            Event      System.EventHandler`1[System.EventArgs] Disposed(System.Object, System.EventArgs)                                                                               
+Notification        Event      System.EventHandler`1[Siemens.Engineering.NotificationEventArgs] Notification(System.Object, Siemens.Engineering.NotificationEventArgs)                         
+Create              Method     Siemens.Engineering.IEngineeringObject IEngineeringObject.Create(string compositionName, type type, System.Collections.Generic.IEnumerable[System.Collections...
+Dispose             Method     void Dispose(), void IDisposable.Dispose()                                                                                                                      
+Equals              Method     bool Equals(System.Object obj), bool IEquatable[Object].Equals(System.Object other)                                                                             
+ExclusiveAccess     Method     Siemens.Engineering.ExclusiveAccess ExclusiveAccess(), Siemens.Engineering.ExclusiveAccess ExclusiveAccess(string text)                                         
+GetAttribute        Method     System.Object IEngineeringObject.GetAttribute(string name)                                                                                                      
+GetAttributeInfos   Method     System.Collections.Generic.IList[Siemens.Engineering.EngineeringAttributeInfo] IEngineeringObject.GetAttributeInfos()                                           
+GetAttributes       Method     System.Collections.Generic.IList[System.Object] IEngineeringObject.GetAttributes(System.Collections.Generic.IEnumerable[string] names)                          
+GetComposition      Method     Siemens.Engineering.IEngineeringCompositionOrObject IEngineeringObject.GetComposition(string name)                                                              
+GetCompositionInfos Method     System.Collections.Generic.IList[Siemens.Engineering.EngineeringCompositionInfo] IEngineeringObject.GetCompositionInfos()                                       
+GetCreationInfos    Method     System.Collections.Generic.IList[Siemens.Engineering.EngineeringCreationInfo] IEngineeringObject.GetCreationInfos(string compositionName)                       
+GetCurrentProcess   Method     Siemens.Engineering.TiaPortalProcess GetCurrentProcess()                                                                                                        
+GetHashCode         Method     int GetHashCode()                                                                                                                                               
+GetInvocationInfos  Method     System.Collections.Generic.IList[Siemens.Engineering.EngineeringInvocationInfo] IEngineeringObject.GetInvocationInfos()                                         
+GetType             Method     type GetType()                                                                                                                                                  
+Invoke              Method     System.Object IEngineeringObject.Invoke(string name, System.Collections.Generic.IEnumerable[System.Collections.Generic.KeyValuePair[type,System.Object]] para...
+SetAttribute        Method     void IEngineeringObject.SetAttribute(string name, System.Object value)                                                                                          
+SetAttributes       Method     void IEngineeringObject.SetAttributes(System.Collections.Generic.IEnumerable[System.Collections.Generic.KeyValuePair[string,System.Object]] attributes)         
+ToString            Method     string ToString()                                                                                                                                               
+GlobalLibraries     Property   Siemens.Engineering.Library.GlobalLibraryComposition GlobalLibraries {get;}                                                                                     
+Parent              Property   Siemens.Engineering.IEngineeringObject Parent {get;}                                                                                                            
+Projects            Property   Siemens.Engineering.ProjectComposition Projects {get;}                                                                                                          
+SettingsFolders     Property   Siemens.Engineering.Settings.TiaPortalSettingsFolderComposition SettingsFolders {get;}  
+
+
+   TypeName: Siemens.Engineering.ProjectComposition
+
+Name                MemberType            Definition                                                                                                                                           
+----                ----------            ----------                                                                                                                                           
+Contains            Method                bool Contains(Siemens.Engineering.Project item), bool IEngineeringComposition.Contains(Siemens.Engineering.IEngineeringObject item)                  
+Create              Method                Siemens.Engineering.Project Create(System.IO.DirectoryInfo targetDirectory, string name), Siemens.Engineering.IEngineeringObject IEngineeringCompo...
+Equals              Method                bool Equals(System.Object obj), bool IEquatable[Object].Equals(System.Object other)                                                                  
+GetCreationInfos    Method                System.Collections.Generic.IList[Siemens.Engineering.EngineeringCreationInfo] IEngineeringComposition.GetCreationInfos()                             
+GetEnumerator       Method                System.Collections.Generic.IEnumerator[Siemens.Engineering.Project] GetEnumerator(), System.Collections.IEnumerator IEnumerable.GetEnumerator(), S...
+GetHashCode         Method                int GetHashCode()                                                                                                                                    
+GetInvocationInfos  Method                System.Collections.Generic.IList[Siemens.Engineering.EngineeringInvocationInfo] IEngineeringComposition.GetInvocationInfos()                         
+GetType             Method                type GetType()                                                                                                                                       
+IndexOf             Method                int IndexOf(Siemens.Engineering.Project item), int IEngineeringComposition.IndexOf(Siemens.Engineering.IEngineeringObject item)                      
+Invoke              Method                System.Object IEngineeringComposition.Invoke(string name, System.Collections.Generic.IEnumerable[System.Collections.Generic.KeyValuePair[type,Syst...
+Open                Method                Siemens.Engineering.Project Open(System.IO.FileInfo path), Siemens.Engineering.Project Open(System.IO.FileInfo path, Siemens.Engineering.UmacDeleg...
+OpenWithUpgrade     Method                Siemens.Engineering.Project OpenWithUpgrade(System.IO.FileInfo path), Siemens.Engineering.Project OpenWithUpgrade(System.IO.FileInfo path, Siemens...
+Retrieve            Method                Siemens.Engineering.Project Retrieve(System.IO.FileInfo sourcePath, System.IO.DirectoryInfo targetDirectory), Siemens.Engineering.Project Retrieve...
+RetrieveWithUpgrade Method                Siemens.Engineering.Project RetrieveWithUpgrade(System.IO.FileInfo sourcePath, System.IO.DirectoryInfo targetDirectory), Siemens.Engineering.Proje...
+ToString            Method                string ToString()                                                                                                                                    
+Item                ParameterizedProperty Siemens.Engineering.Project Item(int index) {get;}                                                                                                   
+Count               Property              int Count {get;}                                                                                                                                     
+IsReadOnly          Property              bool IsReadOnly {get;}                                                                                                                               
+Parent              Property              Siemens.Engineering.IEngineeringObject Parent {get;}                                                                                                 
+
+TypeName: Siemens.Engineering.Project
+
+Name                  MemberType Definition                                                                                                                                                    
+----                  ---------- ----------                                                                                                                                                    
+Archive               Method     void Archive(System.IO.DirectoryInfo targetDirectory, string targetName, Siemens.Engineering.ProjectArchivationMode archivationMode)                          
+Close                 Method     void Close()                                                                                                                                                  
+Create                Method     Siemens.Engineering.IEngineeringObject IEngineeringObject.Create(string compositionName, type type, System.Collections.Generic.IEnumerable[System.Collectio...
+Equals                Method     bool Equals(System.Object obj), bool IEquatable[Object].Equals(System.Object other)                                                                           
+ExportProjectTexts    Method     void ExportProjectTexts(System.IO.FileInfo path, cultureinfo sourceLanguage, cultureinfo targetLanguage)                                                      
+GetAttribute          Method     System.Object IEngineeringObject.GetAttribute(string name)                                                                                                    
+GetAttributeInfos     Method     System.Collections.Generic.IList[Siemens.Engineering.EngineeringAttributeInfo] IEngineeringObject.GetAttributeInfos()                                         
+GetAttributes         Method     System.Collections.Generic.IList[System.Object] GetAttributes(System.Collections.Generic.IEnumerable[string] names), System.Collections.Generic.IList[Syste...
+GetComposition        Method     Siemens.Engineering.IEngineeringCompositionOrObject IEngineeringObject.GetComposition(string name)                                                            
+GetCompositionInfos   Method     System.Collections.Generic.IList[Siemens.Engineering.EngineeringCompositionInfo] IEngineeringObject.GetCompositionInfos()                                     
+GetCreationInfos      Method     System.Collections.Generic.IList[Siemens.Engineering.EngineeringCreationInfo] IEngineeringObject.GetCreationInfos(string compositionName)                     
+GetHashCode           Method     int GetHashCode()                                                                                                                                             
+GetInvocationInfos    Method     System.Collections.Generic.IList[Siemens.Engineering.EngineeringInvocationInfo] IEngineeringObject.GetInvocationInfos()                                       
+GetService            Method     T GetService[T](), T IEngineeringServiceProvider.GetService[T](), System.Object IServiceProvider.GetService(type serviceType)                                 
+GetServiceInfos       Method     System.Collections.Generic.IList[Siemens.Engineering.EngineeringServiceInfo] IEngineeringServiceProvider.GetServiceInfos()                                    
+GetType               Method     type GetType()                                                                                                                                                
+ImportProjectTexts    Method     Siemens.Engineering.ProjectTextResult ImportProjectTexts(System.IO.FileInfo path, bool updateSourceLanguage)                                                  
+Invoke                Method     System.Object IEngineeringObject.Invoke(string name, System.Collections.Generic.IEnumerable[System.Collections.Generic.KeyValuePair[type,System.Object]] pa...
+Save                  Method     void Save()                                                                                                                                                   
+SaveAs                Method     void SaveAs(System.IO.DirectoryInfo targetFolderPath)                                                                                                         
+SetAttribute          Method     void IEngineeringObject.SetAttribute(string name, System.Object value)                                                                                        
+SetAttributes         Method     void SetAttributes(System.Collections.Generic.IEnumerable[System.Collections.Generic.KeyValuePair[string,System.Object]] attributes), void IEngineeringObje...
+ShowHwEditor          Method     void ShowHwEditor(Siemens.Engineering.HW.View view)                                                                                                           
+ToString              Method     string ToString()                                                                                                                                             
+Author                Property   string Author {get;}                                                                                                                                          
+Comment               Property   Siemens.Engineering.MultilingualText Comment {get;}                                                                                                           
+Copyright             Property   string Copyright {get;}                                                                                                                                       
+CreationTime          Property   datetime CreationTime {get;}                                                                                                                                  
+DeviceGroups          Property   Siemens.Engineering.HW.DeviceUserGroupComposition DeviceGroups {get;}                                                                                         
+Devices               Property   Siemens.Engineering.HW.DeviceComposition Devices {get;}                                                                                                       
+Family                Property   string Family {get;}                                                                                                                                          
+Graphics              Property   Siemens.Engineering.Hmi.Globalization.MultiLingualGraphicComposition Graphics {get;}                                                                          
+HistoryEntries        Property   Siemens.Engineering.HistoryEntryComposition HistoryEntries {get;}                                                                                             
+HwUtilities           Property   Siemens.Engineering.HW.Utilities.HardwareUtilityComposition HwUtilities {get;}                                                                                
+IsModified            Property   bool IsModified {get;}                                                                                                                                        
+IsPrimary             Property   bool IsPrimary {get;}                                                                                                                                         
+LanguageSettings      Property   Siemens.Engineering.LanguageSettings LanguageSettings {get;}                                                                                                  
+LastModified          Property   datetime LastModified {get;}                                                                                                                                  
+LastModifiedBy        Property   string LastModifiedBy {get;}                                                                                                                                  
+Name                  Property   string Name {get;}                                                                                                                                            
+Parent                Property   Siemens.Engineering.IEngineeringObject Parent {get;}                                                                                                          
+Path                  Property   System.IO.FileInfo Path {get;}                                                                                                                                
+ProjectLibrary        Property   Siemens.Engineering.Library.ProjectLibrary ProjectLibrary {get;}                                                                                              
+Size                  Property   long Size {get;}                                                                                                                                              
+Subnets               Property   Siemens.Engineering.HW.SubnetComposition Subnets {get;}                                                                                                       
+UngroupedDevicesGroup Property   Siemens.Engineering.HW.DeviceSystemGroup UngroupedDevicesGroup {get;}                                                                                         
+UsedProducts          Property   Siemens.Engineering.UsedProductComposition UsedProducts {get;}                                                                                                
+Version               Property   string Version {get;}                                                                                                                                         
+
+
+TypeName: Siemens.Engineering.HW.DeviceSystemGroup
+
+Name                MemberType Definition                                                                                                                                                      
+----                ---------- ----------                                                                                                                                                      
+Create              Method     Siemens.Engineering.IEngineeringObject IEngineeringObject.Create(string compositionName, type type, System.Collections.Generic.IEnumerable[System.Collections...
+Equals              Method     bool Equals(System.Object obj), bool IEquatable[Object].Equals(System.Object other)                                                                             
+GetAttribute        Method     System.Object IEngineeringObject.GetAttribute(string name)                                                                                                      
+GetAttributeInfos   Method     System.Collections.Generic.IList[Siemens.Engineering.EngineeringAttributeInfo] IEngineeringObject.GetAttributeInfos()                                           
+GetAttributes       Method     System.Collections.Generic.IList[System.Object] GetAttributes(System.Collections.Generic.IEnumerable[string] names), System.Collections.Generic.IList[System....
+GetComposition      Method     Siemens.Engineering.IEngineeringCompositionOrObject IEngineeringObject.GetComposition(string name)                                                              
+GetCompositionInfos Method     System.Collections.Generic.IList[Siemens.Engineering.EngineeringCompositionInfo] IEngineeringObject.GetCompositionInfos()                                       
+GetCreationInfos    Method     System.Collections.Generic.IList[Siemens.Engineering.EngineeringCreationInfo] IEngineeringObject.GetCreationInfos(string compositionName)                       
+GetHashCode         Method     int GetHashCode()                                                                                                                                               
+GetInvocationInfos  Method     System.Collections.Generic.IList[Siemens.Engineering.EngineeringInvocationInfo] IEngineeringObject.GetInvocationInfos()                                         
+GetService          Method     T GetService[T](), T IEngineeringServiceProvider.GetService[T](), System.Object IServiceProvider.GetService(type serviceType)                                   
+GetServiceInfos     Method     System.Collections.Generic.IList[Siemens.Engineering.EngineeringServiceInfo] IEngineeringServiceProvider.GetServiceInfos()                                      
+GetType             Method     type GetType()                                                                                                                                                  
+Invoke              Method     System.Object IEngineeringObject.Invoke(string name, System.Collections.Generic.IEnumerable[System.Collections.Generic.KeyValuePair[type,System.Object]] para...
+SetAttribute        Method     void IEngineeringObject.SetAttribute(string name, System.Object value)                                                                                          
+SetAttributes       Method     void SetAttributes(System.Collections.Generic.IEnumerable[System.Collections.Generic.KeyValuePair[string,System.Object]] attributes), void IEngineeringObject...
+ToString            Method     string ToString()                                                                                                                                               
+Devices             Property   Siemens.Engineering.HW.DeviceComposition Devices {get;}                                                                                                         
+Name                Property   string Name {get;}                                                                                                                                              
+Parent              Property   Siemens.Engineering.IEngineeringObject Parent {get;}    
+
+   TypeName: Siemens.Engineering.HW.DeviceUserGroupComposition
+
+Name               MemberType            Definition                                                                                                                                            
+----               ----------            ----------                                                                                                                                            
+Contains           Method                bool Contains(Siemens.Engineering.HW.DeviceUserGroup item), bool IEngineeringComposition.Contains(Siemens.Engineering.IEngineeringObject item)        
+Create             Method                Siemens.Engineering.HW.DeviceUserGroup Create(string name), Siemens.Engineering.IEngineeringObject IEngineeringComposition.Create(type type, System...
+CreateFrom         Method                Siemens.Engineering.HW.DeviceUserGroup CreateFrom(Siemens.Engineering.Library.MasterCopies.MasterCopy masterCopy)                                     
+Equals             Method                bool Equals(System.Object obj), bool IEquatable[Object].Equals(System.Object other)                                                                   
+Find               Method                Siemens.Engineering.HW.DeviceUserGroup Find(string name)                                                                                              
+GetCreationInfos   Method                System.Collections.Generic.IList[Siemens.Engineering.EngineeringCreationInfo] IEngineeringComposition.GetCreationInfos()                              
+GetEnumerator      Method                System.Collections.Generic.IEnumerator[Siemens.Engineering.HW.DeviceUserGroup] GetEnumerator(), System.Collections.IEnumerator IEnumerable.GetEnume...
+GetHashCode        Method                int GetHashCode()                                                                                                                                     
+GetInvocationInfos Method                System.Collections.Generic.IList[Siemens.Engineering.EngineeringInvocationInfo] IEngineeringComposition.GetInvocationInfos()                          
+GetType            Method                type GetType()                                                                                                                                        
+IndexOf            Method                int IndexOf(Siemens.Engineering.HW.DeviceUserGroup item), int IEngineeringComposition.IndexOf(Siemens.Engineering.IEngineeringObject item)            
+Invoke             Method                System.Object IEngineeringComposition.Invoke(string name, System.Collections.Generic.IEnumerable[System.Collections.Generic.KeyValuePair[type,Syste...
+ToString           Method                string ToString()                                                                                                                                     
+Item               ParameterizedProperty Siemens.Engineering.HW.DeviceUserGroup Item(int index) {get;}                                                                                         
+Count              Property              int Count {get;}                                                                                                                                      
+IsReadOnly         Property              bool IsReadOnly {get;}                                                                                                                                
+Parent             Property              Siemens.Engineering.IEngineeringObject Parent {get;}  
+
+TypeName: Siemens.Engineering.HW.DeviceUserGroup
+
+Name                MemberType Definition                                                                                                                                                      
+----                ---------- ----------                                                                                                                                                      
+Create              Method     Siemens.Engineering.IEngineeringObject IEngineeringObject.Create(string compositionName, type type, System.Collections.Generic.IEnumerable[System.Collections...
+Delete              Method     void Delete()                                                                                                                                                   
+Equals              Method     bool Equals(System.Object obj), bool IEquatable[Object].Equals(System.Object other)                                                                             
+GetAttribute        Method     System.Object IEngineeringObject.GetAttribute(string name)                                                                                                      
+GetAttributeInfos   Method     System.Collections.Generic.IList[Siemens.Engineering.EngineeringAttributeInfo] IEngineeringObject.GetAttributeInfos()                                           
+GetAttributes       Method     System.Collections.Generic.IList[System.Object] GetAttributes(System.Collections.Generic.IEnumerable[string] names), System.Collections.Generic.IList[System....
+GetComposition      Method     Siemens.Engineering.IEngineeringCompositionOrObject IEngineeringObject.GetComposition(string name)                                                              
+GetCompositionInfos Method     System.Collections.Generic.IList[Siemens.Engineering.EngineeringCompositionInfo] IEngineeringObject.GetCompositionInfos()                                       
+GetCreationInfos    Method     System.Collections.Generic.IList[Siemens.Engineering.EngineeringCreationInfo] IEngineeringObject.GetCreationInfos(string compositionName)                       
+GetHashCode         Method     int GetHashCode()                                                                                                                                               
+GetInvocationInfos  Method     System.Collections.Generic.IList[Siemens.Engineering.EngineeringInvocationInfo] IEngineeringObject.GetInvocationInfos()                                         
+GetService          Method     T GetService[T](), T IEngineeringServiceProvider.GetService[T](), System.Object IServiceProvider.GetService(type serviceType)                                   
+GetServiceInfos     Method     System.Collections.Generic.IList[Siemens.Engineering.EngineeringServiceInfo] IEngineeringServiceProvider.GetServiceInfos()                                      
+GetType             Method     type GetType()                                                                                                                                                  
+Invoke              Method     System.Object IEngineeringObject.Invoke(string name, System.Collections.Generic.IEnumerable[System.Collections.Generic.KeyValuePair[type,System.Object]] para...
+SetAttribute        Method     void IEngineeringObject.SetAttribute(string name, System.Object value)                                                                                          
+SetAttributes       Method     void SetAttributes(System.Collections.Generic.IEnumerable[System.Collections.Generic.KeyValuePair[string,System.Object]] attributes), void IEngineeringObject...
+ToString            Method     string ToString()                                                                                                                                               
+Devices             Property   Siemens.Engineering.HW.DeviceComposition Devices {get;}                                                                                                         
+Groups              Property   Siemens.Engineering.HW.DeviceUserGroupComposition Groups {get;}                                                                                                 
+Name                Property   string Name {get;set;}                                                                                                                                          
+Parent              Property   Siemens.Engineering.IEngineeringObject Parent {get;}         
+
+TypeName: Siemens.Engineering.HW.DeviceImpl
+
+Name                MemberType Definition                                                                                                                                                      
+----                ---------- ----------                                                                                                                                                      
+CanPlugCopy         Method     bool CanPlugCopy(Siemens.Engineering.HW.DeviceItem deviceItem, int positionNumber)                                                                              
+CanPlugMove         Method     bool CanPlugMove(Siemens.Engineering.HW.DeviceItem deviceItem, int positionNumber)                                                                              
+CanPlugNew          Method     bool CanPlugNew(string typeIdentifier, string name, int positionNumber)                                                                                         
+CompareTo           Method     Siemens.Engineering.Compare.CompareResult CompareTo(Siemens.Engineering.HW.IHardwareCompareTarget compareTarget)                                                
+Create              Method     Siemens.Engineering.IEngineeringObject IEngineeringObject.Create(string compositionName, type type, System.Collections.Generic.IEnumerable[System.Collections...
+Delete              Method     void Delete()                                                                                                                                                   
+Equals              Method     bool Equals(System.Object obj), bool IEquatable[Object].Equals(System.Object other)                                                                             
+GetAttribute        Method     System.Object GetAttribute(string name), System.Object IEngineeringObject.GetAttribute(string name)                                                             
+GetAttributeInfos   Method     System.Collections.Generic.IList[Siemens.Engineering.EngineeringAttributeInfo] GetAttributeInfos(), System.Collections.Generic.IList[Siemens.Engineering.Engi...
+GetAttributes       Method     System.Collections.Generic.IList[System.Object] GetAttributes(System.Collections.Generic.IEnumerable[string] names), System.Collections.Generic.IList[System....
+GetComposition      Method     Siemens.Engineering.IEngineeringCompositionOrObject IEngineeringObject.GetComposition(string name)                                                              
+GetCompositionInfos Method     System.Collections.Generic.IList[Siemens.Engineering.EngineeringCompositionInfo] IEngineeringObject.GetCompositionInfos()                                       
+GetCreationInfos    Method     System.Collections.Generic.IList[Siemens.Engineering.EngineeringCreationInfo] IEngineeringObject.GetCreationInfos(string compositionName)                       
+GetHashCode         Method     int GetHashCode()                                                                                                                                               
+GetInvocationInfos  Method     System.Collections.Generic.IList[Siemens.Engineering.EngineeringInvocationInfo] IEngineeringObject.GetInvocationInfos()                                         
+GetPlugLocations    Method     System.Collections.Generic.IList[Siemens.Engineering.HW.Extensions.PlugLocation] GetPlugLocations()                                                             
+GetService          Method     T GetService[T](), T IEngineeringServiceProvider.GetService[T](), System.Object IServiceProvider.GetService(type serviceType)                                   
+GetServiceInfos     Method     System.Collections.Generic.IList[Siemens.Engineering.EngineeringServiceInfo] IEngineeringServiceProvider.GetServiceInfos()                                      
+GetType             Method     type GetType()                                                                                                                                                  
+Invoke              Method     System.Object IEngineeringObject.Invoke(string name, System.Collections.Generic.IEnumerable[System.Collections.Generic.KeyValuePair[type,System.Object]] para...
+PlugCopy            Method     Siemens.Engineering.HW.DeviceItem PlugCopy(Siemens.Engineering.HW.DeviceItem deviceItem, int positionNumber)                                                    
+PlugMove            Method     Siemens.Engineering.HW.DeviceItem PlugMove(Siemens.Engineering.HW.DeviceItem deviceItem, int positionNumber)                                                    
+PlugNew             Method     Siemens.Engineering.HW.DeviceItem PlugNew(string typeIdentifier, string name, int positionNumber)                                                               
+SetAttribute        Method     void SetAttribute(string name, System.Object value), void IEngineeringObject.SetAttribute(string name, System.Object value)                                     
+SetAttributes       Method     void SetAttributes(System.Collections.Generic.IEnumerable[System.Collections.Generic.KeyValuePair[string,System.Object]] attributes), void IEngineeringObject...
+ShowInEditor        Method     void ShowInEditor(Siemens.Engineering.HW.View view)                                                                                                             
+ToString            Method     string ToString()                                                                                                                                               
+DeviceItems         Property   Siemens.Engineering.HW.DeviceItemComposition DeviceItems {get;}                                                                                                 
+HwIdentifiers       Property   Siemens.Engineering.HW.HwIdentifierComposition HwIdentifiers {get;}                                                                                             
+IsGsd               Property   bool IsGsd {get;}                                                                                                                                               
+Items               Property   Siemens.Engineering.HW.DeviceItemAssociation Items {get;}                                                                                                       
+Name                Property   string Name {get;set;}                                                                                                                                          
+Parent              Property   Siemens.Engineering.IEngineeringObject Parent {get;}                                                                                                            
+TypeIdentifier      Property   string TypeIdentifier {get;}                                                                                                                                    
+UnpluggedItems      Property   Siemens.Engineering.HW.DeviceItemAssociation UnpluggedItems {get;}  
+
+TypeName: Siemens.Engineering.HW.DeviceComposition
+
+Name               MemberType            Definition                                                                                                                                            
+----               ----------            ----------                                                                                                                                            
+Contains           Method                bool Contains(Siemens.Engineering.HW.Device item), bool IEngineeringComposition.Contains(Siemens.Engineering.IEngineeringObject item)                 
+Create             Method                Siemens.Engineering.HW.Device Create(string typeIdentifier, string name), Siemens.Engineering.IEngineeringObject IEngineeringComposition.Create(typ...
+CreateFrom         Method                Siemens.Engineering.HW.Device CreateFrom(Siemens.Engineering.Library.MasterCopies.MasterCopy masterCopy)                                              
+CreateWithItem     Method                Siemens.Engineering.HW.Device CreateWithItem(string typeIdentifier, string name, string deviceName)                                                   
+Equals             Method                bool Equals(System.Object obj), bool IEquatable[Object].Equals(System.Object other)                                                                   
+Find               Method                Siemens.Engineering.HW.Device Find(string name)                                                                                                       
+GetCreationInfos   Method                System.Collections.Generic.IList[Siemens.Engineering.EngineeringCreationInfo] IEngineeringComposition.GetCreationInfos()                              
+GetEnumerator      Method                System.Collections.Generic.IEnumerator[Siemens.Engineering.HW.Device] GetEnumerator(), System.Collections.IEnumerator IEnumerable.GetEnumerator(), ...
+GetHashCode        Method                int GetHashCode()                                                                                                                                     
+GetInvocationInfos Method                System.Collections.Generic.IList[Siemens.Engineering.EngineeringInvocationInfo] IEngineeringComposition.GetInvocationInfos()                          
+GetType            Method                type GetType()                                                                                                                                        
+IndexOf            Method                int IndexOf(Siemens.Engineering.HW.Device item), int IEngineeringComposition.IndexOf(Siemens.Engineering.IEngineeringObject item)                     
+Invoke             Method                System.Object IEngineeringComposition.Invoke(string name, System.Collections.Generic.IEnumerable[System.Collections.Generic.KeyValuePair[type,Syste...
+ToString           Method                string ToString()                                                                                                                                     
+Item               ParameterizedProperty Siemens.Engineering.HW.Device Item(int index) {get;}                                                                                                  
+Count              Property              int Count {get;}                                                                                                                                      
+IsReadOnly         Property              bool IsReadOnly {get;}                                                                                                                                
+Parent             Property              Siemens.Engineering.IEngineeringObject Parent {get;}  

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<document>
+<bookstore name="Springler">
+
+<book>
+  <title lang="en">Harry Potter</title>
+  <price>29.99</price>
+</book>
+
+<book>
+  <title lang="en">Learning XML</title>
+  <price>39.95</price>
+</book>
+
+</bookstore>
+
+<bookstore name="Mir">
+
+<book>
+  <title lang="ru">Война и Мир</title>
+  <price>19.99</price>
+</book>
+
+<book>
+  <title lang="ru">Тихй дон</title>
+  <price>19.95</price>
+</book>
+
+</bookstore>
+ 
+</document>

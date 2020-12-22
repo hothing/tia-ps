@@ -1,0 +1,454 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V15.1" />
+  <DocumentInfo>
+    <Created>2020-06-12T07:35:44.7412109Z</Created>
+    <ExportSetting>None</ExportSetting>
+    <InstalledProducts>
+      <Product>
+        <DisplayName>Totally Integrated Automation Portal</DisplayName>
+        <DisplayVersion>V15.1</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>TIA Portal Openness</DisplayName>
+        <DisplayVersion>V15.1</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>STEP 7 Professional</DisplayName>
+        <DisplayVersion>V15.1</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>STEP 7 Safety</DisplayName>
+        <DisplayVersion>V15.1</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>WinCC Advanced</DisplayName>
+        <DisplayVersion>V15.1</DisplayVersion>
+      </Product>
+    </InstalledProducts>
+  </DocumentInfo>
+  <SW.Blocks.GlobalDB ID="0">
+    <AttributeList>
+      <Interface>
+        <Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v3">
+          <Section Name="Static">
+            <Member Name="emer" Datatype="&quot;VISU_MSG&quot;" Remanence="Retain">
+              <Comment>
+                <MultiLanguageText Lang="en-US">Emergency line is not ok</MultiLanguageText>
+              </Comment>
+              <Sections>
+                <Section Name="None">
+                  <Member Name="in" Datatype="Bool">
+                    <StartValue>FALSE</StartValue>
+                  </Member>
+                  <Member Name="ack" Datatype="Bool">
+                    <StartValue>FALSE</StartValue>
+                  </Member>
+                  <Member Name="out" Datatype="Bool">
+                    <StartValue>TRUE</StartValue>
+                  </Member>
+                  <Member Name="fl" Datatype="Bool">
+                    <StartValue>FALSE</StartValue>
+                  </Member>
+                </Section>
+              </Sections>
+            </Member>
+            <Member Name="volt" Datatype="&quot;VISU_MSG&quot;" Remanence="Retain">
+              <Comment>
+                <MultiLanguageText Lang="en-US">Control voltage trip</MultiLanguageText>
+              </Comment>
+              <Sections>
+                <Section Name="None">
+                  <Member Name="in" Datatype="Bool">
+                    <StartValue>FALSE</StartValue>
+                  </Member>
+                  <Member Name="ack" Datatype="Bool">
+                    <StartValue>FALSE</StartValue>
+                  </Member>
+                  <Member Name="out" Datatype="Bool">
+                    <StartValue>FALSE</StartValue>
+                  </Member>
+                  <Member Name="fl" Datatype="Bool">
+                    <StartValue>FALSE</StartValue>
+                  </Member>
+                </Section>
+              </Sections>
+            </Member>
+            <Member Name="lev_tnk" Datatype="&quot;VISU_MSG&quot;" Remanence="Retain">
+              <Comment>
+                <MultiLanguageText Lang="en-US">CW Tank level is low</MultiLanguageText>
+              </Comment>
+              <Sections>
+                <Section Name="None">
+                  <Member Name="in" Datatype="Bool">
+                    <StartValue>FALSE</StartValue>
+                  </Member>
+                  <Member Name="ack" Datatype="Bool">
+                    <StartValue>FALSE</StartValue>
+                  </Member>
+                  <Member Name="out" Datatype="Bool">
+                    <StartValue>TRUE</StartValue>
+                  </Member>
+                  <Member Name="fl" Datatype="Bool">
+                    <StartValue>FALSE</StartValue>
+                  </Member>
+                </Section>
+              </Sections>
+            </Member>
+            <Member Name="prs_mod" Datatype="&quot;VISU_MSG&quot;" Remanence="Retain">
+              <Comment>
+                <MultiLanguageText Lang="en-US">CW module pressure is low</MultiLanguageText>
+              </Comment>
+              <Sections>
+                <Section Name="None">
+                  <Member Name="in" Datatype="Bool">
+                    <StartValue>FALSE</StartValue>
+                  </Member>
+                  <Member Name="ack" Datatype="Bool">
+                    <StartValue>FALSE</StartValue>
+                  </Member>
+                  <Member Name="out" Datatype="Bool">
+                    <StartValue>TRUE</StartValue>
+                  </Member>
+                  <Member Name="fl" Datatype="Bool">
+                    <StartValue>FALSE</StartValue>
+                  </Member>
+                </Section>
+              </Sections>
+            </Member>
+            <Member Name="epump" Datatype="&quot;VISU_MSG&quot;" Remanence="Retain">
+              <Comment>
+                <MultiLanguageText Lang="en-US">CW emergency pump is ON</MultiLanguageText>
+              </Comment>
+              <Sections>
+                <Section Name="None">
+                  <Member Name="in" Datatype="Bool">
+                    <StartValue>FALSE</StartValue>
+                  </Member>
+                  <Member Name="ack" Datatype="Bool">
+                    <StartValue>FALSE</StartValue>
+                  </Member>
+                  <Member Name="out" Datatype="Bool">
+                    <StartValue>FALSE</StartValue>
+                  </Member>
+                  <Member Name="fl" Datatype="Bool">
+                    <StartValue>FALSE</StartValue>
+                  </Member>
+                </Section>
+              </Sections>
+            </Member>
+            <Member Name="pump_stop" Datatype="&quot;VISU_MSG&quot;" Remanence="Retain">
+              <Comment>
+                <MultiLanguageText Lang="en-US">CW Pumps problem</MultiLanguageText>
+              </Comment>
+              <Sections>
+                <Section Name="None">
+                  <Member Name="in" Datatype="Bool">
+                    <StartValue>FALSE</StartValue>
+                  </Member>
+                  <Member Name="ack" Datatype="Bool">
+                    <StartValue>FALSE</StartValue>
+                  </Member>
+                  <Member Name="out" Datatype="Bool">
+                    <StartValue>TRUE</StartValue>
+                  </Member>
+                  <Member Name="fl" Datatype="Bool">
+                    <StartValue>FALSE</StartValue>
+                  </Member>
+                </Section>
+              </Sections>
+            </Member>
+            <Member Name="tnk_leak" Datatype="&quot;VISU_MSG&quot;" Remanence="Retain">
+              <Comment>
+                <MultiLanguageText Lang="en-US">CW Tank leakage</MultiLanguageText>
+              </Comment>
+              <Sections>
+                <Section Name="None">
+                  <Member Name="in" Datatype="Bool">
+                    <StartValue>FALSE</StartValue>
+                  </Member>
+                  <Member Name="ack" Datatype="Bool">
+                    <StartValue>FALSE</StartValue>
+                  </Member>
+                  <Member Name="out" Datatype="Bool">
+                    <StartValue>TRUE</StartValue>
+                  </Member>
+                  <Member Name="fl" Datatype="Bool">
+                    <StartValue>FALSE</StartValue>
+                  </Member>
+                </Section>
+              </Sections>
+            </Member>
+            <Member Name="cw_emer" Datatype="&quot;VISU_MSG&quot;" Remanence="Retain">
+              <Comment>
+                <MultiLanguageText Lang="en-US">CW Emergency water is open</MultiLanguageText>
+              </Comment>
+              <Sections>
+                <Section Name="None">
+                  <Member Name="in" Datatype="Bool">
+                    <StartValue>FALSE</StartValue>
+                  </Member>
+                  <Member Name="ack" Datatype="Bool">
+                    <StartValue>FALSE</StartValue>
+                  </Member>
+                  <Member Name="out" Datatype="Bool">
+                    <StartValue>TRUE</StartValue>
+                  </Member>
+                  <Member Name="fl" Datatype="Bool">
+                    <StartValue>FALSE</StartValue>
+                  </Member>
+                </Section>
+              </Sections>
+            </Member>
+            <Member Name="cw_filter" Datatype="&quot;VISU_MSG&quot;" Remanence="Retain">
+              <Comment>
+                <MultiLanguageText Lang="en-US">CW filter is clogged</MultiLanguageText>
+              </Comment>
+              <Sections>
+                <Section Name="None">
+                  <Member Name="in" Datatype="Bool">
+                    <StartValue>FALSE</StartValue>
+                  </Member>
+                  <Member Name="ack" Datatype="Bool">
+                    <StartValue>FALSE</StartValue>
+                  </Member>
+                  <Member Name="out" Datatype="Bool">
+                    <StartValue>FALSE</StartValue>
+                  </Member>
+                  <Member Name="fl" Datatype="Bool">
+                    <StartValue>FALSE</StartValue>
+                  </Member>
+                </Section>
+              </Sections>
+            </Member>
+            <Member Name="acool1" Datatype="&quot;VISU_MSG&quot;" Remanence="Retain">
+              <Comment>
+                <MultiLanguageText Lang="en-US">Aftercooling time MS1 is over</MultiLanguageText>
+              </Comment>
+              <Sections>
+                <Section Name="None">
+                  <Member Name="in" Datatype="Bool">
+                    <StartValue>TRUE</StartValue>
+                  </Member>
+                  <Member Name="ack" Datatype="Bool">
+                    <StartValue>FALSE</StartValue>
+                  </Member>
+                  <Member Name="out" Datatype="Bool">
+                    <StartValue>TRUE</StartValue>
+                  </Member>
+                  <Member Name="fl" Datatype="Bool">
+                    <StartValue>TRUE</StartValue>
+                  </Member>
+                </Section>
+              </Sections>
+            </Member>
+            <Member Name="acool2" Datatype="&quot;VISU_MSG&quot;" Remanence="Retain">
+              <Comment>
+                <MultiLanguageText Lang="en-US">Aftercooling time MS2 is over</MultiLanguageText>
+              </Comment>
+              <Sections>
+                <Section Name="None">
+                  <Member Name="in" Datatype="Bool">
+                    <StartValue>FALSE</StartValue>
+                  </Member>
+                  <Member Name="ack" Datatype="Bool">
+                    <StartValue>FALSE</StartValue>
+                  </Member>
+                  <Member Name="out" Datatype="Bool">
+                    <StartValue>TRUE</StartValue>
+                  </Member>
+                  <Member Name="fl" Datatype="Bool">
+                    <StartValue>FALSE</StartValue>
+                  </Member>
+                </Section>
+              </Sections>
+            </Member>
+            <Member Name="ecar_near" Datatype="&quot;VISU_MSG&quot;" Remanence="Retain">
+              <Comment>
+                <MultiLanguageText Lang="en-US">Electrode carriage near bottom position</MultiLanguageText>
+              </Comment>
+              <Sections>
+                <Section Name="None">
+                  <Member Name="in" Datatype="Bool">
+                    <StartValue>FALSE</StartValue>
+                  </Member>
+                  <Member Name="ack" Datatype="Bool">
+                    <StartValue>FALSE</StartValue>
+                  </Member>
+                  <Member Name="out" Datatype="Bool">
+                    <StartValue>FALSE</StartValue>
+                  </Member>
+                  <Member Name="fl" Datatype="Bool">
+                    <StartValue>FALSE</StartValue>
+                  </Member>
+                </Section>
+              </Sections>
+            </Member>
+            <Member Name="ecar_bot" Datatype="&quot;VISU_MSG&quot;" Remanence="Retain">
+              <Comment>
+                <MultiLanguageText Lang="en-US">Electrode carriage in bottom position</MultiLanguageText>
+              </Comment>
+              <Sections>
+                <Section Name="None">
+                  <Member Name="in" Datatype="Bool">
+                    <StartValue>FALSE</StartValue>
+                  </Member>
+                  <Member Name="ack" Datatype="Bool">
+                    <StartValue>FALSE</StartValue>
+                  </Member>
+                  <Member Name="out" Datatype="Bool">
+                    <StartValue>FALSE</StartValue>
+                  </Member>
+                  <Member Name="fl" Datatype="Bool">
+                    <StartValue>FALSE</StartValue>
+                  </Member>
+                </Section>
+              </Sections>
+            </Member>
+            <Member Name="ht_near" Datatype="&quot;VISU_MSG&quot;" Remanence="Retain">
+              <Comment>
+                <MultiLanguageText Lang="en-US">Hottopping starts in 1 minute</MultiLanguageText>
+              </Comment>
+              <Sections>
+                <Section Name="None">
+                  <Member Name="in" Datatype="Bool">
+                    <StartValue>FALSE</StartValue>
+                  </Member>
+                  <Member Name="ack" Datatype="Bool">
+                    <StartValue>FALSE</StartValue>
+                  </Member>
+                  <Member Name="out" Datatype="Bool">
+                    <StartValue>TRUE</StartValue>
+                  </Member>
+                  <Member Name="fl" Datatype="Bool">
+                    <StartValue>FALSE</StartValue>
+                  </Member>
+                </Section>
+              </Sections>
+            </Member>
+            <Member Name="alloy1" Datatype="&quot;VISU_MSG&quot;" Remanence="Retain">
+              <Comment>
+                <MultiLanguageText Lang="en-US">Alloy bin 1 is empty</MultiLanguageText>
+              </Comment>
+              <Sections>
+                <Section Name="None">
+                  <Member Name="in" Datatype="Bool">
+                    <StartValue>FALSE</StartValue>
+                  </Member>
+                  <Member Name="ack" Datatype="Bool">
+                    <StartValue>FALSE</StartValue>
+                  </Member>
+                  <Member Name="out" Datatype="Bool">
+                    <StartValue>FALSE</StartValue>
+                  </Member>
+                  <Member Name="fl" Datatype="Bool">
+                    <StartValue>FALSE</StartValue>
+                  </Member>
+                </Section>
+              </Sections>
+            </Member>
+            <Member Name="alloy2" Datatype="&quot;VISU_MSG&quot;" Remanence="Retain">
+              <Comment>
+                <MultiLanguageText Lang="en-US">Alloy bin 2 is empty</MultiLanguageText>
+              </Comment>
+              <Sections>
+                <Section Name="None">
+                  <Member Name="in" Datatype="Bool">
+                    <StartValue>FALSE</StartValue>
+                  </Member>
+                  <Member Name="ack" Datatype="Bool">
+                    <StartValue>FALSE</StartValue>
+                  </Member>
+                  <Member Name="out" Datatype="Bool">
+                    <StartValue>FALSE</StartValue>
+                  </Member>
+                  <Member Name="fl" Datatype="Bool">
+                    <StartValue>FALSE</StartValue>
+                  </Member>
+                </Section>
+              </Sections>
+            </Member>
+            <Member Name="alloy3" Datatype="&quot;VISU_MSG&quot;" Remanence="Retain">
+              <Comment>
+                <MultiLanguageText Lang="en-US">Alloy bin 3 is empty</MultiLanguageText>
+              </Comment>
+              <Sections>
+                <Section Name="None">
+                  <Member Name="in" Datatype="Bool">
+                    <StartValue>FALSE</StartValue>
+                  </Member>
+                  <Member Name="ack" Datatype="Bool">
+                    <StartValue>FALSE</StartValue>
+                  </Member>
+                  <Member Name="out" Datatype="Bool">
+                    <StartValue>FALSE</StartValue>
+                  </Member>
+                  <Member Name="fl" Datatype="Bool">
+                    <StartValue>FALSE</StartValue>
+                  </Member>
+                </Section>
+              </Sections>
+            </Member>
+            <Member Name="lime_empty" Datatype="&quot;VISU_MSG&quot;" Remanence="Retain">
+              <Sections>
+                <Section Name="None">
+                  <Member Name="in" Datatype="Bool">
+                    <StartValue>FALSE</StartValue>
+                  </Member>
+                  <Member Name="ack" Datatype="Bool">
+                    <StartValue>FALSE</StartValue>
+                  </Member>
+                  <Member Name="out" Datatype="Bool">
+                    <StartValue>FALSE</StartValue>
+                  </Member>
+                  <Member Name="fl" Datatype="Bool">
+                    <StartValue>FALSE</StartValue>
+                  </Member>
+                </Section>
+              </Sections>
+            </Member>
+          </Section>
+        </Sections>
+      </Interface>
+      <MemoryLayout>Optimized</MemoryLayout>
+      <MemoryReserve>100</MemoryReserve>
+      <Name>VIS_MSG_DB</Name>
+      <Number>812</Number>
+      <ProgrammingLanguage>DB</ProgrammingLanguage>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <MultilingualText ID="4" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="5" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="6" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.GlobalDB>
+</Document>

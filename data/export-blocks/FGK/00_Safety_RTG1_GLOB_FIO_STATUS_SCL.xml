@@ -1,0 +1,855 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V15.1" />
+  <DocumentInfo>
+    <Created>2020-06-12T07:35:35.6787109Z</Created>
+    <ExportSetting>None</ExportSetting>
+    <InstalledProducts>
+      <Product>
+        <DisplayName>Totally Integrated Automation Portal</DisplayName>
+        <DisplayVersion>V15.1</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>TIA Portal Openness</DisplayName>
+        <DisplayVersion>V15.1</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>STEP 7 Professional</DisplayName>
+        <DisplayVersion>V15.1</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>STEP 7 Safety</DisplayName>
+        <DisplayVersion>V15.1</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>WinCC Advanced</DisplayName>
+        <DisplayVersion>V15.1</DisplayVersion>
+      </Product>
+    </InstalledProducts>
+  </DocumentInfo>
+  <SW.Blocks.FB ID="0">
+    <AttributeList>
+      <Interface>
+        <Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v3">
+          <Section Name="Input" />
+          <Section Name="Output">
+            <Member Name="QSTATUS" Datatype="Bool" />
+            <Member Name="RIOforFA_VALUE_STATUS" Datatype="Bool" />
+          </Section>
+          <Section Name="InOut" />
+          <Section Name="Static" />
+          <Section Name="Temp" />
+          <Section Name="Constant" />
+        </Sections>
+      </Interface>
+      <MemoryLayout>Optimized</MemoryLayout>
+      <MemoryReserve>100</MemoryReserve>
+      <Name>RTG1_GLOB_FIO_STATUS</Name>
+      <Number>2</Number>
+      <ProgrammingLanguage>SCL</ProgrammingLanguage>
+      <SetENOAutomatically>False</SetENOAutomatically>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <SW.Blocks.CompileUnit ID="4" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource>
+            <StructuredText xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StructuredText/v2">
+              <Access Scope="LocalVariable" UId="21">
+                <Symbol UId="22">
+                  <Component Name="QSTATUS" UId="23">
+                    <BooleanAttribute Name="HasQuotes" UId="24">true</BooleanAttribute>
+                  </Component>
+                </Symbol>
+              </Access>
+              <Blank UId="25" />
+              <Token Text=":=" UId="26" />
+              <Blank UId="27" />
+              <Access Scope="LiteralConstant" UId="28">
+                <Constant UId="29">
+                  <ConstantValue UId="31">false</ConstantValue>
+                </Constant>
+              </Access>
+              <Token Text=";" UId="32" />
+              <NewLine UId="33" />
+              <Access Scope="LocalVariable" UId="34">
+                <Symbol UId="35">
+                  <Component Name="RIOforFA_VALUE_STATUS" UId="36">
+                    <BooleanAttribute Name="HasQuotes" UId="37">true</BooleanAttribute>
+                  </Component>
+                </Symbol>
+              </Access>
+              <Blank UId="38" />
+              <Token Text=":=" UId="39" />
+              <Blank UId="40" />
+              <Access Scope="LiteralConstant" UId="41">
+                <Constant UId="42">
+                  <ConstantValue UId="44">true</ConstantValue>
+                </Constant>
+              </Access>
+              <Token Text=";" UId="45" />
+              <NewLine UId="46" />
+              <LineComment Inserted="true" UId="47">
+                <Text UId="48">        -K82 | F-DI 8x24VDC HF </Text>
+              </LineComment>
+              <NewLine UId="49" />
+              <Access Scope="LocalVariable" UId="50">
+                <Symbol UId="51">
+                  <Component Name="QSTATUS" UId="52">
+                    <BooleanAttribute Name="HasQuotes" UId="53">true</BooleanAttribute>
+                  </Component>
+                </Symbol>
+              </Access>
+              <Blank UId="54" />
+              <Token Text=":=" UId="55" />
+              <Blank UId="56" />
+              <Access Scope="LocalVariable" UId="57">
+                <Symbol UId="58">
+                  <Component Name="QSTATUS" UId="59">
+                    <BooleanAttribute Name="HasQuotes" UId="60">true</BooleanAttribute>
+                  </Component>
+                </Symbol>
+              </Access>
+              <Blank UId="61" />
+              <Token Text="OR" UId="62" />
+              <Blank UId="63" />
+              <Token Text="(" UId="64" />
+              <Token Text="(" UId="65" />
+              <Token Text="NOT" UId="66" />
+              <Blank UId="67" />
+              <Access Scope="GlobalVariable" UId="68">
+                <Symbol UId="69">
+                  <Component Name="F04405_-K82|F-DI8x24VDCHF" UId="70" />
+                  <Token Text="." UId="71" />
+                  <Component Name="DISABLED" UId="72">
+                    <BooleanAttribute Name="HasQuotes" UId="73">true</BooleanAttribute>
+                  </Component>
+                </Symbol>
+              </Access>
+              <Token Text=")" UId="74" />
+              <Blank UId="75" />
+              <Token Text="AND" UId="76" />
+              <Blank UId="77" />
+              <Token Text="(" UId="78" />
+              <Access Scope="GlobalVariable" UId="79">
+                <Symbol UId="80">
+                  <Component Name="F04405_-K82|F-DI8x24VDCHF" UId="81" />
+                  <Token Text="." UId="82" />
+                  <Component Name="QBAD" UId="83">
+                    <BooleanAttribute Name="HasQuotes" UId="84">true</BooleanAttribute>
+                  </Component>
+                </Symbol>
+              </Access>
+              <Token Text=")" UId="85" />
+              <Token Text=")" UId="86" />
+              <Token Text=";" UId="87" />
+              <NewLine UId="88" />
+              <LineComment Inserted="true" UId="89">
+                <Text UId="90">        -K86 | F-DI 8x24VDC HF </Text>
+              </LineComment>
+              <NewLine UId="91" />
+              <Access Scope="LocalVariable" UId="92">
+                <Symbol UId="93">
+                  <Component Name="QSTATUS" UId="94">
+                    <BooleanAttribute Name="HasQuotes" UId="95">true</BooleanAttribute>
+                  </Component>
+                </Symbol>
+              </Access>
+              <Blank UId="96" />
+              <Token Text=":=" UId="97" />
+              <Blank UId="98" />
+              <Access Scope="LocalVariable" UId="99">
+                <Symbol UId="100">
+                  <Component Name="QSTATUS" UId="101">
+                    <BooleanAttribute Name="HasQuotes" UId="102">true</BooleanAttribute>
+                  </Component>
+                </Symbol>
+              </Access>
+              <Blank UId="103" />
+              <Token Text="OR" UId="104" />
+              <Blank UId="105" />
+              <Token Text="(" UId="106" />
+              <Token Text="(" UId="107" />
+              <Token Text="NOT" UId="108" />
+              <Blank UId="109" />
+              <Access Scope="GlobalVariable" UId="110">
+                <Symbol UId="111">
+                  <Component Name="F04411_-K86|F-DI8x24VDCHF" UId="112" />
+                  <Token Text="." UId="113" />
+                  <Component Name="DISABLED" UId="114">
+                    <BooleanAttribute Name="HasQuotes" UId="115">true</BooleanAttribute>
+                  </Component>
+                </Symbol>
+              </Access>
+              <Token Text=")" UId="116" />
+              <Blank UId="117" />
+              <Token Text="AND" UId="118" />
+              <Blank UId="119" />
+              <Token Text="(" UId="120" />
+              <Access Scope="GlobalVariable" UId="121">
+                <Symbol UId="122">
+                  <Component Name="F04411_-K86|F-DI8x24VDCHF" UId="123" />
+                  <Token Text="." UId="124" />
+                  <Component Name="QBAD" UId="125">
+                    <BooleanAttribute Name="HasQuotes" UId="126">true</BooleanAttribute>
+                  </Component>
+                </Symbol>
+              </Access>
+              <Token Text=")" UId="127" />
+              <Token Text=")" UId="128" />
+              <Token Text=";" UId="129" />
+              <NewLine UId="130" />
+              <LineComment Inserted="true" UId="131">
+                <Text UId="132"> -K102 | F-DQ 4x24VDC/2A PM HF </Text>
+              </LineComment>
+              <NewLine UId="133" />
+              <Access Scope="LocalVariable" UId="134">
+                <Symbol UId="135">
+                  <Component Name="QSTATUS" UId="136">
+                    <BooleanAttribute Name="HasQuotes" UId="137">true</BooleanAttribute>
+                  </Component>
+                </Symbol>
+              </Access>
+              <Blank UId="138" />
+              <Token Text=":=" UId="139" />
+              <Blank UId="140" />
+              <Access Scope="LocalVariable" UId="141">
+                <Symbol UId="142">
+                  <Component Name="QSTATUS" UId="143">
+                    <BooleanAttribute Name="HasQuotes" UId="144">true</BooleanAttribute>
+                  </Component>
+                </Symbol>
+              </Access>
+              <Blank UId="145" />
+              <Token Text="OR" UId="146" />
+              <Blank UId="147" />
+              <Token Text="(" UId="148" />
+              <Token Text="(" UId="149" />
+              <Token Text="NOT" UId="150" />
+              <Blank UId="151" />
+              <Access Scope="GlobalVariable" UId="152">
+                <Symbol UId="153">
+                  <Component Name="F04418_-K102|F-DQ4x24VDC/2APMHF" UId="154" />
+                  <Token Text="." UId="155" />
+                  <Component Name="DISABLED" UId="156">
+                    <BooleanAttribute Name="HasQuotes" UId="157">true</BooleanAttribute>
+                  </Component>
+                </Symbol>
+              </Access>
+              <Token Text=")" UId="158" />
+              <Blank UId="159" />
+              <Token Text="AND" UId="160" />
+              <Blank UId="161" />
+              <Token Text="(" UId="162" />
+              <Access Scope="GlobalVariable" UId="163">
+                <Symbol UId="164">
+                  <Component Name="F04418_-K102|F-DQ4x24VDC/2APMHF" UId="165" />
+                  <Token Text="." UId="166" />
+                  <Component Name="QBAD" UId="167">
+                    <BooleanAttribute Name="HasQuotes" UId="168">true</BooleanAttribute>
+                  </Component>
+                </Symbol>
+              </Access>
+              <Token Text=")" UId="169" />
+              <Token Text=")" UId="170" />
+              <Token Text=";" UId="171" />
+              <NewLine UId="172" />
+              <LineComment Inserted="true" UId="173">
+                <Text UId="174">        -K62 | F-DI 8x24VDC HF </Text>
+              </LineComment>
+              <NewLine UId="175" />
+              <Access Scope="LocalVariable" UId="176">
+                <Symbol UId="177">
+                  <Component Name="QSTATUS" UId="178">
+                    <BooleanAttribute Name="HasQuotes" UId="179">true</BooleanAttribute>
+                  </Component>
+                </Symbol>
+              </Access>
+              <Blank UId="180" />
+              <Token Text=":=" UId="181" />
+              <Blank UId="182" />
+              <Access Scope="LocalVariable" UId="183">
+                <Symbol UId="184">
+                  <Component Name="QSTATUS" UId="185">
+                    <BooleanAttribute Name="HasQuotes" UId="186">true</BooleanAttribute>
+                  </Component>
+                </Symbol>
+              </Access>
+              <Blank UId="187" />
+              <Token Text="OR" UId="188" />
+              <Blank UId="189" />
+              <Token Text="(" UId="190" />
+              <Token Text="(" UId="191" />
+              <Token Text="NOT" UId="192" />
+              <Blank UId="193" />
+              <Access Scope="GlobalVariable" UId="194">
+                <Symbol UId="195">
+                  <Component Name="F04428_-K62|F-DI8x24VDCHF" UId="196" />
+                  <Token Text="." UId="197" />
+                  <Component Name="DISABLED" UId="198">
+                    <BooleanAttribute Name="HasQuotes" UId="199">true</BooleanAttribute>
+                  </Component>
+                </Symbol>
+              </Access>
+              <Token Text=")" UId="200" />
+              <Blank UId="201" />
+              <Token Text="AND" UId="202" />
+              <Blank UId="203" />
+              <Token Text="(" UId="204" />
+              <Access Scope="GlobalVariable" UId="205">
+                <Symbol UId="206">
+                  <Component Name="F04428_-K62|F-DI8x24VDCHF" UId="207" />
+                  <Token Text="." UId="208" />
+                  <Component Name="QBAD" UId="209">
+                    <BooleanAttribute Name="HasQuotes" UId="210">true</BooleanAttribute>
+                  </Component>
+                </Symbol>
+              </Access>
+              <Token Text=")" UId="211" />
+              <Token Text=")" UId="212" />
+              <Token Text=";" UId="213" />
+              <NewLine UId="214" />
+              <LineComment Inserted="true" UId="215">
+                <Text UId="216">        -K66 | F-DI 8x24VDC HF </Text>
+              </LineComment>
+              <NewLine UId="217" />
+              <Access Scope="LocalVariable" UId="218">
+                <Symbol UId="219">
+                  <Component Name="QSTATUS" UId="220">
+                    <BooleanAttribute Name="HasQuotes" UId="221">true</BooleanAttribute>
+                  </Component>
+                </Symbol>
+              </Access>
+              <Blank UId="222" />
+              <Token Text=":=" UId="223" />
+              <Blank UId="224" />
+              <Access Scope="LocalVariable" UId="225">
+                <Symbol UId="226">
+                  <Component Name="QSTATUS" UId="227">
+                    <BooleanAttribute Name="HasQuotes" UId="228">true</BooleanAttribute>
+                  </Component>
+                </Symbol>
+              </Access>
+              <Blank UId="229" />
+              <Token Text="OR" UId="230" />
+              <Blank UId="231" />
+              <Token Text="(" UId="232" />
+              <Token Text="(" UId="233" />
+              <Token Text="NOT" UId="234" />
+              <Blank UId="235" />
+              <Access Scope="GlobalVariable" UId="236">
+                <Symbol UId="237">
+                  <Component Name="F04434_-K66|F-DI8x24VDCHF" UId="238" />
+                  <Token Text="." UId="239" />
+                  <Component Name="DISABLED" UId="240">
+                    <BooleanAttribute Name="HasQuotes" UId="241">true</BooleanAttribute>
+                  </Component>
+                </Symbol>
+              </Access>
+              <Token Text=")" UId="242" />
+              <Blank UId="243" />
+              <Token Text="AND" UId="244" />
+              <Blank UId="245" />
+              <Token Text="(" UId="246" />
+              <Access Scope="GlobalVariable" UId="247">
+                <Symbol UId="248">
+                  <Component Name="F04434_-K66|F-DI8x24VDCHF" UId="249" />
+                  <Token Text="." UId="250" />
+                  <Component Name="QBAD" UId="251">
+                    <BooleanAttribute Name="HasQuotes" UId="252">true</BooleanAttribute>
+                  </Component>
+                </Symbol>
+              </Access>
+              <Token Text=")" UId="253" />
+              <Token Text=")" UId="254" />
+              <Token Text=";" UId="255" />
+              <NewLine UId="256" />
+              <LineComment Inserted="true" UId="257">
+                <Text UId="258">        -K72 | F-DI 8x24VDC HF </Text>
+              </LineComment>
+              <NewLine UId="259" />
+              <Access Scope="LocalVariable" UId="260">
+                <Symbol UId="261">
+                  <Component Name="QSTATUS" UId="262">
+                    <BooleanAttribute Name="HasQuotes" UId="263">true</BooleanAttribute>
+                  </Component>
+                </Symbol>
+              </Access>
+              <Blank UId="264" />
+              <Token Text=":=" UId="265" />
+              <Blank UId="266" />
+              <Access Scope="LocalVariable" UId="267">
+                <Symbol UId="268">
+                  <Component Name="QSTATUS" UId="269">
+                    <BooleanAttribute Name="HasQuotes" UId="270">true</BooleanAttribute>
+                  </Component>
+                </Symbol>
+              </Access>
+              <Blank UId="271" />
+              <Token Text="OR" UId="272" />
+              <Blank UId="273" />
+              <Token Text="(" UId="274" />
+              <Token Text="(" UId="275" />
+              <Token Text="NOT" UId="276" />
+              <Blank UId="277" />
+              <Access Scope="GlobalVariable" UId="278">
+                <Symbol UId="279">
+                  <Component Name="F04440_-K72|F-DI8x24VDCHF" UId="280" />
+                  <Token Text="." UId="281" />
+                  <Component Name="DISABLED" UId="282">
+                    <BooleanAttribute Name="HasQuotes" UId="283">true</BooleanAttribute>
+                  </Component>
+                </Symbol>
+              </Access>
+              <Token Text=")" UId="284" />
+              <Blank UId="285" />
+              <Token Text="AND" UId="286" />
+              <Blank UId="287" />
+              <Token Text="(" UId="288" />
+              <Access Scope="GlobalVariable" UId="289">
+                <Symbol UId="290">
+                  <Component Name="F04440_-K72|F-DI8x24VDCHF" UId="291" />
+                  <Token Text="." UId="292" />
+                  <Component Name="QBAD" UId="293">
+                    <BooleanAttribute Name="HasQuotes" UId="294">true</BooleanAttribute>
+                  </Component>
+                </Symbol>
+              </Access>
+              <Token Text=")" UId="295" />
+              <Token Text=")" UId="296" />
+              <Token Text=";" UId="297" />
+              <NewLine UId="298" />
+              <LineComment Inserted="true" UId="299">
+                <Text UId="300">        -K76 | F-DI 8x24VDC HF </Text>
+              </LineComment>
+              <NewLine UId="301" />
+              <Access Scope="LocalVariable" UId="302">
+                <Symbol UId="303">
+                  <Component Name="QSTATUS" UId="304">
+                    <BooleanAttribute Name="HasQuotes" UId="305">true</BooleanAttribute>
+                  </Component>
+                </Symbol>
+              </Access>
+              <Blank UId="306" />
+              <Token Text=":=" UId="307" />
+              <Blank UId="308" />
+              <Access Scope="LocalVariable" UId="309">
+                <Symbol UId="310">
+                  <Component Name="QSTATUS" UId="311">
+                    <BooleanAttribute Name="HasQuotes" UId="312">true</BooleanAttribute>
+                  </Component>
+                </Symbol>
+              </Access>
+              <Blank UId="313" />
+              <Token Text="OR" UId="314" />
+              <Blank UId="315" />
+              <Token Text="(" UId="316" />
+              <Token Text="(" UId="317" />
+              <Token Text="NOT" UId="318" />
+              <Blank UId="319" />
+              <Access Scope="GlobalVariable" UId="320">
+                <Symbol UId="321">
+                  <Component Name="F04446_-K76|F-DI8x24VDCHF" UId="322" />
+                  <Token Text="." UId="323" />
+                  <Component Name="DISABLED" UId="324">
+                    <BooleanAttribute Name="HasQuotes" UId="325">true</BooleanAttribute>
+                  </Component>
+                </Symbol>
+              </Access>
+              <Token Text=")" UId="326" />
+              <Blank UId="327" />
+              <Token Text="AND" UId="328" />
+              <Blank UId="329" />
+              <Token Text="(" UId="330" />
+              <Access Scope="GlobalVariable" UId="331">
+                <Symbol UId="332">
+                  <Component Name="F04446_-K76|F-DI8x24VDCHF" UId="333" />
+                  <Token Text="." UId="334" />
+                  <Component Name="QBAD" UId="335">
+                    <BooleanAttribute Name="HasQuotes" UId="336">true</BooleanAttribute>
+                  </Component>
+                </Symbol>
+              </Access>
+              <Token Text=")" UId="337" />
+              <Token Text=")" UId="338" />
+              <Token Text=";" UId="339" />
+              <NewLine UId="340" />
+              <LineComment Inserted="true" UId="341">
+                <Text UId="342">  -K82 | F-DQ 4x24VDC/2A PM HF </Text>
+              </LineComment>
+              <NewLine UId="343" />
+              <Access Scope="LocalVariable" UId="344">
+                <Symbol UId="345">
+                  <Component Name="QSTATUS" UId="346">
+                    <BooleanAttribute Name="HasQuotes" UId="347">true</BooleanAttribute>
+                  </Component>
+                </Symbol>
+              </Access>
+              <Blank UId="348" />
+              <Token Text=":=" UId="349" />
+              <Blank UId="350" />
+              <Access Scope="LocalVariable" UId="351">
+                <Symbol UId="352">
+                  <Component Name="QSTATUS" UId="353">
+                    <BooleanAttribute Name="HasQuotes" UId="354">true</BooleanAttribute>
+                  </Component>
+                </Symbol>
+              </Access>
+              <Blank UId="355" />
+              <Token Text="OR" UId="356" />
+              <Blank UId="357" />
+              <Token Text="(" UId="358" />
+              <Token Text="(" UId="359" />
+              <Token Text="NOT" UId="360" />
+              <Blank UId="361" />
+              <Access Scope="GlobalVariable" UId="362">
+                <Symbol UId="363">
+                  <Component Name="F04452_-K82|F-DQ4x24VDC/2APMHF" UId="364" />
+                  <Token Text="." UId="365" />
+                  <Component Name="DISABLED" UId="366">
+                    <BooleanAttribute Name="HasQuotes" UId="367">true</BooleanAttribute>
+                  </Component>
+                </Symbol>
+              </Access>
+              <Token Text=")" UId="368" />
+              <Blank UId="369" />
+              <Token Text="AND" UId="370" />
+              <Blank UId="371" />
+              <Token Text="(" UId="372" />
+              <Access Scope="GlobalVariable" UId="373">
+                <Symbol UId="374">
+                  <Component Name="F04452_-K82|F-DQ4x24VDC/2APMHF" UId="375" />
+                  <Token Text="." UId="376" />
+                  <Component Name="QBAD" UId="377">
+                    <BooleanAttribute Name="HasQuotes" UId="378">true</BooleanAttribute>
+                  </Component>
+                </Symbol>
+              </Access>
+              <Token Text=")" UId="379" />
+              <Token Text=")" UId="380" />
+              <Token Text=";" UId="381" />
+              <NewLine UId="382" />
+              <LineComment Inserted="true" UId="383">
+                <Text UId="384">  -K86 | F-DQ 4x24VDC/2A PM HF </Text>
+              </LineComment>
+              <NewLine UId="385" />
+              <Access Scope="LocalVariable" UId="386">
+                <Symbol UId="387">
+                  <Component Name="QSTATUS" UId="388">
+                    <BooleanAttribute Name="HasQuotes" UId="389">true</BooleanAttribute>
+                  </Component>
+                </Symbol>
+              </Access>
+              <Blank UId="390" />
+              <Token Text=":=" UId="391" />
+              <Blank UId="392" />
+              <Access Scope="LocalVariable" UId="393">
+                <Symbol UId="394">
+                  <Component Name="QSTATUS" UId="395">
+                    <BooleanAttribute Name="HasQuotes" UId="396">true</BooleanAttribute>
+                  </Component>
+                </Symbol>
+              </Access>
+              <Blank UId="397" />
+              <Token Text="OR" UId="398" />
+              <Blank UId="399" />
+              <Token Text="(" UId="400" />
+              <Token Text="(" UId="401" />
+              <Token Text="NOT" UId="402" />
+              <Blank UId="403" />
+              <Access Scope="GlobalVariable" UId="404">
+                <Symbol UId="405">
+                  <Component Name="F04457_-K86|F-DQ4x24VDC/2APMHF" UId="406" />
+                  <Token Text="." UId="407" />
+                  <Component Name="DISABLED" UId="408">
+                    <BooleanAttribute Name="HasQuotes" UId="409">true</BooleanAttribute>
+                  </Component>
+                </Symbol>
+              </Access>
+              <Token Text=")" UId="410" />
+              <Blank UId="411" />
+              <Token Text="AND" UId="412" />
+              <Blank UId="413" />
+              <Token Text="(" UId="414" />
+              <Access Scope="GlobalVariable" UId="415">
+                <Symbol UId="416">
+                  <Component Name="F04457_-K86|F-DQ4x24VDC/2APMHF" UId="417" />
+                  <Token Text="." UId="418" />
+                  <Component Name="QBAD" UId="419">
+                    <BooleanAttribute Name="HasQuotes" UId="420">true</BooleanAttribute>
+                  </Component>
+                </Symbol>
+              </Access>
+              <Token Text=")" UId="421" />
+              <Token Text=")" UId="422" />
+              <Token Text=";" UId="423" />
+              <NewLine UId="424" />
+              <LineComment Inserted="true" UId="425">
+                <Text UId="426">  -K92 | F-DQ 4x24VDC/2A PM HF </Text>
+              </LineComment>
+              <NewLine UId="427" />
+              <Access Scope="LocalVariable" UId="428">
+                <Symbol UId="429">
+                  <Component Name="QSTATUS" UId="430">
+                    <BooleanAttribute Name="HasQuotes" UId="431">true</BooleanAttribute>
+                  </Component>
+                </Symbol>
+              </Access>
+              <Blank UId="432" />
+              <Token Text=":=" UId="433" />
+              <Blank UId="434" />
+              <Access Scope="LocalVariable" UId="435">
+                <Symbol UId="436">
+                  <Component Name="QSTATUS" UId="437">
+                    <BooleanAttribute Name="HasQuotes" UId="438">true</BooleanAttribute>
+                  </Component>
+                </Symbol>
+              </Access>
+              <Blank UId="439" />
+              <Token Text="OR" UId="440" />
+              <Blank UId="441" />
+              <Token Text="(" UId="442" />
+              <Token Text="(" UId="443" />
+              <Token Text="NOT" UId="444" />
+              <Blank UId="445" />
+              <Access Scope="GlobalVariable" UId="446">
+                <Symbol UId="447">
+                  <Component Name="F04462_-K92|F-DQ4x24VDC/2APMHF" UId="448" />
+                  <Token Text="." UId="449" />
+                  <Component Name="DISABLED" UId="450">
+                    <BooleanAttribute Name="HasQuotes" UId="451">true</BooleanAttribute>
+                  </Component>
+                </Symbol>
+              </Access>
+              <Token Text=")" UId="452" />
+              <Blank UId="453" />
+              <Token Text="AND" UId="454" />
+              <Blank UId="455" />
+              <Token Text="(" UId="456" />
+              <Access Scope="GlobalVariable" UId="457">
+                <Symbol UId="458">
+                  <Component Name="F04462_-K92|F-DQ4x24VDC/2APMHF" UId="459" />
+                  <Token Text="." UId="460" />
+                  <Component Name="QBAD" UId="461">
+                    <BooleanAttribute Name="HasQuotes" UId="462">true</BooleanAttribute>
+                  </Component>
+                </Symbol>
+              </Access>
+              <Token Text=")" UId="463" />
+              <Token Text=")" UId="464" />
+              <Token Text=";" UId="465" />
+              <NewLine UId="466" />
+              <LineComment Inserted="true" UId="467">
+                <Text UId="468">  -K96 | F-DQ 4x24VDC/2A PM HF </Text>
+              </LineComment>
+              <NewLine UId="469" />
+              <Access Scope="LocalVariable" UId="470">
+                <Symbol UId="471">
+                  <Component Name="QSTATUS" UId="472">
+                    <BooleanAttribute Name="HasQuotes" UId="473">true</BooleanAttribute>
+                  </Component>
+                </Symbol>
+              </Access>
+              <Blank UId="474" />
+              <Token Text=":=" UId="475" />
+              <Blank UId="476" />
+              <Access Scope="LocalVariable" UId="477">
+                <Symbol UId="478">
+                  <Component Name="QSTATUS" UId="479">
+                    <BooleanAttribute Name="HasQuotes" UId="480">true</BooleanAttribute>
+                  </Component>
+                </Symbol>
+              </Access>
+              <Blank UId="481" />
+              <Token Text="OR" UId="482" />
+              <Blank UId="483" />
+              <Token Text="(" UId="484" />
+              <Token Text="(" UId="485" />
+              <Token Text="NOT" UId="486" />
+              <Blank UId="487" />
+              <Access Scope="GlobalVariable" UId="488">
+                <Symbol UId="489">
+                  <Component Name="F04467_-K96|F-DQ4x24VDC/2APMHF" UId="490" />
+                  <Token Text="." UId="491" />
+                  <Component Name="DISABLED" UId="492">
+                    <BooleanAttribute Name="HasQuotes" UId="493">true</BooleanAttribute>
+                  </Component>
+                </Symbol>
+              </Access>
+              <Token Text=")" UId="494" />
+              <Blank UId="495" />
+              <Token Text="AND" UId="496" />
+              <Blank UId="497" />
+              <Token Text="(" UId="498" />
+              <Access Scope="GlobalVariable" UId="499">
+                <Symbol UId="500">
+                  <Component Name="F04467_-K96|F-DQ4x24VDC/2APMHF" UId="501" />
+                  <Token Text="." UId="502" />
+                  <Component Name="QBAD" UId="503">
+                    <BooleanAttribute Name="HasQuotes" UId="504">true</BooleanAttribute>
+                  </Component>
+                </Symbol>
+              </Access>
+              <Token Text=")" UId="505" />
+              <Token Text=")" UId="506" />
+              <Token Text=";" UId="507" />
+              <NewLine UId="508" />
+              <LineComment Inserted="true" UId="509">
+                <Text UId="510">      -K82 (F-DI 8x24VDC HF_1) </Text>
+              </LineComment>
+              <NewLine UId="511" />
+              <Access Scope="LocalVariable" UId="512">
+                <Symbol UId="513">
+                  <Component Name="QSTATUS" UId="514">
+                    <BooleanAttribute Name="HasQuotes" UId="515">true</BooleanAttribute>
+                  </Component>
+                </Symbol>
+              </Access>
+              <Blank UId="516" />
+              <Token Text=":=" UId="517" />
+              <Blank UId="518" />
+              <Access Scope="LocalVariable" UId="519">
+                <Symbol UId="520">
+                  <Component Name="QSTATUS" UId="521">
+                    <BooleanAttribute Name="HasQuotes" UId="522">true</BooleanAttribute>
+                  </Component>
+                </Symbol>
+              </Access>
+              <Blank UId="523" />
+              <Token Text="OR" UId="524" />
+              <Blank UId="525" />
+              <Token Text="(" UId="526" />
+              <Token Text="(" UId="527" />
+              <Token Text="NOT" UId="528" />
+              <Blank UId="529" />
+              <Access Scope="GlobalVariable" UId="530">
+                <Symbol UId="531">
+                  <Component Name="F04476_-K82(F-DI8x24VDCHF_1)" UId="532" />
+                  <Token Text="." UId="533" />
+                  <Component Name="DISABLED" UId="534">
+                    <BooleanAttribute Name="HasQuotes" UId="535">true</BooleanAttribute>
+                  </Component>
+                </Symbol>
+              </Access>
+              <Token Text=")" UId="536" />
+              <Blank UId="537" />
+              <Token Text="AND" UId="538" />
+              <Blank UId="539" />
+              <Token Text="(" UId="540" />
+              <Access Scope="GlobalVariable" UId="541">
+                <Symbol UId="542">
+                  <Component Name="F04476_-K82(F-DI8x24VDCHF_1)" UId="543" />
+                  <Token Text="." UId="544" />
+                  <Component Name="QBAD" UId="545">
+                    <BooleanAttribute Name="HasQuotes" UId="546">true</BooleanAttribute>
+                  </Component>
+                </Symbol>
+              </Access>
+              <Token Text=")" UId="547" />
+              <Token Text=")" UId="548" />
+              <Token Text=";" UId="549" />
+              <NewLine UId="550" />
+              <Access Scope="LocalVariable" UId="551">
+                <Symbol UId="552">
+                  <Component Name="QSTATUS" UId="553">
+                    <BooleanAttribute Name="HasQuotes" UId="554">true</BooleanAttribute>
+                  </Component>
+                </Symbol>
+              </Access>
+              <Blank UId="555" />
+              <Token Text=":=" UId="556" />
+              <Blank UId="557" />
+              <Access Scope="LocalVariable" UId="558">
+                <Symbol UId="559">
+                  <Component Name="QSTATUS" UId="560">
+                    <BooleanAttribute Name="HasQuotes" UId="561">true</BooleanAttribute>
+                  </Component>
+                </Symbol>
+              </Access>
+              <Blank UId="562" />
+              <Token Text="OR" UId="563" />
+              <Blank UId="564" />
+              <Token Text="NOT" UId="565" />
+              <Blank UId="566" />
+              <Access Scope="LocalVariable" UId="567">
+                <Symbol UId="568">
+                  <Component Name="RIOforFA_VALUE_STATUS" UId="569">
+                    <BooleanAttribute Name="HasQuotes" UId="570">true</BooleanAttribute>
+                  </Component>
+                </Symbol>
+              </Access>
+              <Token Text=";" UId="571" />
+              <NewLine UId="572" />
+            </StructuredText>
+          </NetworkSource>
+          <ProgrammingLanguage>SCL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="5" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="6" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="7" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="8" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="9" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <MultilingualText ID="B" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="C" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="D" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.FB>
+</Document>

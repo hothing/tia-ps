@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V15.1" />
+  <DocumentInfo>
+    <Created>2020-06-12T07:35:41.9130859Z</Created>
+    <ExportSetting>None</ExportSetting>
+    <InstalledProducts>
+      <Product>
+        <DisplayName>Totally Integrated Automation Portal</DisplayName>
+        <DisplayVersion>V15.1</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>TIA Portal Openness</DisplayName>
+        <DisplayVersion>V15.1</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>STEP 7 Professional</DisplayName>
+        <DisplayVersion>V15.1</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>STEP 7 Safety</DisplayName>
+        <DisplayVersion>V15.1</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>WinCC Advanced</DisplayName>
+        <DisplayVersion>V15.1</DisplayVersion>
+      </Product>
+    </InstalledProducts>
+  </DocumentInfo>
+  <SW.Blocks.GlobalDB ID="0">
+    <AttributeList>
+      <Interface>
+        <Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v3">
+          <Section Name="Static">
+            <Member Name="emer_ok" Datatype="Bool">
+              <Comment>
+                <MultiLanguageText Lang="en-US">Emergency circuit is ok</MultiLanguageText>
+              </Comment>
+              <StartValue>TRUE</StartValue>
+            </Member>
+            <Member Name="cont_volt_ok" Datatype="Bool">
+              <Comment>
+                <MultiLanguageText Lang="en-US">Mains voltage is on</MultiLanguageText>
+              </Comment>
+              <StartValue>TRUE</StartValue>
+            </Member>
+            <Member Name="pwr_ok" Datatype="Bool">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">Power is suplleing</MultiLanguageText>
+              </Comment>
+              <StartValue>TRUE</StartValue>
+            </Member>
+            <Member Name="sd_ok" Datatype="Bool">
+              <Comment>
+                <MultiLanguageText Lang="en-US">Safety doors are ok (locked)</MultiLanguageText>
+              </Comment>
+              <StartValue>TRUE</StartValue>
+            </Member>
+            <Member Name="ES1GD01_desk_is_act" Datatype="Bool">
+              <Comment>
+                <MultiLanguageText Lang="en-US">Desk ESMGD01 is active</MultiLanguageText>
+              </Comment>
+              <StartValue>FALSE</StartValue>
+            </Member>
+            <Member Name="ES1GD02_desk_is_act" Datatype="Bool">
+              <Comment>
+                <MultiLanguageText Lang="en-US">Desk ESMGD02 is active</MultiLanguageText>
+              </Comment>
+              <StartValue>FALSE</StartValue>
+            </Member>
+            <Member Name="ES1GD03_desk_is_act" Datatype="Bool">
+              <Comment>
+                <MultiLanguageText Lang="en-US">Desk ESMGD03 is active</MultiLanguageText>
+              </Comment>
+              <StartValue>FALSE</StartValue>
+            </Member>
+            <Member Name="ES1GT07_desk_is_act" Datatype="Bool">
+              <Comment>
+                <MultiLanguageText Lang="en-US">Desk ES1GT07 is active</MultiLanguageText>
+              </Comment>
+              <StartValue>FALSE</StartValue>
+            </Member>
+            <Member Name="ack" Datatype="Bool">
+              <Comment>
+                <MultiLanguageText Lang="en-US">Acknowledge Button</MultiLanguageText>
+              </Comment>
+              <StartValue>FALSE</StartValue>
+            </Member>
+            <Member Name="horn_on" Datatype="Bool">
+              <Comment>
+                <MultiLanguageText Lang="en-US">Horn on Signal</MultiLanguageText>
+              </Comment>
+              <StartValue>FALSE</StartValue>
+            </Member>
+            <Member Name="sum_flt" Datatype="Bool">
+              <Comment>
+                <MultiLanguageText Lang="en-US">Summary fault</MultiLanguageText>
+              </Comment>
+              <StartValue>TRUE</StartValue>
+            </Member>
+            <Member Name="emer_mode" Datatype="Bool" Remanence="Retain">
+              <Comment>
+                <MultiLanguageText Lang="en-US">Emergency mode is active</MultiLanguageText>
+              </Comment>
+              <StartValue>FALSE</StartValue>
+            </Member>
+            <Member Name="emer_elcar_lift_cmd" Datatype="Bool" Remanence="Retain">
+              <Comment>
+                <MultiLanguageText Lang="en-US">Emergency mode: lift electrode carriage command</MultiLanguageText>
+              </Comment>
+              <StartValue>FALSE</StartValue>
+            </Member>
+            <Member Name="emer_pump_on_cmd" Datatype="Bool">
+              <Comment>
+                <MultiLanguageText Lang="en-US">Emergency mode: pump ON command</MultiLanguageText>
+              </Comment>
+              <StartValue>FALSE</StartValue>
+            </Member>
+            <Member Name="melt_on" Datatype="Bool">
+              <Comment>
+                <MultiLanguageText Lang="en-US">Melt is ON</MultiLanguageText>
+              </Comment>
+              <StartValue>FALSE</StartValue>
+            </Member>
+          </Section>
+        </Sections>
+      </Interface>
+      <MemoryLayout>Optimized</MemoryLayout>
+      <MemoryReserve>0</MemoryReserve>
+      <Name>GLOB_VAR</Name>
+      <Number>201</Number>
+      <ProgrammingLanguage>DB</ProgrammingLanguage>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <MultilingualText ID="4" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="5" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="6" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.GlobalDB>
+</Document>

@@ -1,0 +1,926 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V15.1" />
+  <DocumentInfo>
+    <Created>2020-06-12T07:35:41.9912109Z</Created>
+    <ExportSetting>None</ExportSetting>
+    <InstalledProducts>
+      <Product>
+        <DisplayName>Totally Integrated Automation Portal</DisplayName>
+        <DisplayVersion>V15.1</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>TIA Portal Openness</DisplayName>
+        <DisplayVersion>V15.1</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>STEP 7 Professional</DisplayName>
+        <DisplayVersion>V15.1</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>STEP 7 Safety</DisplayName>
+        <DisplayVersion>V15.1</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>WinCC Advanced</DisplayName>
+        <DisplayVersion>V15.1</DisplayVersion>
+      </Product>
+    </InstalledProducts>
+  </DocumentInfo>
+  <SW.Blocks.GlobalDB ID="0">
+    <AttributeList>
+      <HeaderAuthor>atec_osm</HeaderAuthor>
+      <HeaderFamily>COMMON</HeaderFamily>
+      <HeaderName>AnaVal</HeaderName>
+      <HeaderVersion>2.0</HeaderVersion>
+      <Interface>
+        <Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v3">
+          <Section Name="Static">
+            <Member Name="ES1LD1_CV01" Datatype="Real">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">Control Valve Dedusting System Actual Value</MultiLanguageText>
+              </Comment>
+              <StartValue>0.4340278</StartValue>
+            </Member>
+            <Member Name="ES1LV1_PT01" Datatype="Real">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">Pressure Transmitter MPS FL</MultiLanguageText>
+              </Comment>
+              <StartValue>0.0</StartValue>
+            </Member>
+            <Member Name="ES1LT1_XT01_volt" Datatype="Real">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">Actual voltage transducer</MultiLanguageText>
+              </Comment>
+              <StartValue>0.07559317</StartValue>
+            </Member>
+            <Member Name="ES1LT1_XT01_pwr" Datatype="Real">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">Actual power transducer</MultiLanguageText>
+              </Comment>
+              <StartValue>0.0</StartValue>
+            </Member>
+            <Member Name="ES1LT1_XT01_cur" Datatype="Real">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">Actual current transducer</MultiLanguageText>
+              </Comment>
+              <StartValue>0.01446759</StartValue>
+            </Member>
+            <Member Name="ES1LT1_QT01" Datatype="Real">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">Earth Leakage Current</MultiLanguageText>
+              </Comment>
+              <StartValue>0.0</StartValue>
+            </Member>
+            <Member Name="ES1LV1_PT02" Datatype="Real">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">Pressure Transmitter MPS RL</MultiLanguageText>
+              </Comment>
+              <StartValue>0.0</StartValue>
+            </Member>
+            <Member Name="ES1LT1_XS01_temp1" Datatype="Real">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">Transformer Actual Temperatur Coil U</MultiLanguageText>
+              </Comment>
+              <StartValue>0.0</StartValue>
+            </Member>
+            <Member Name="ES1LT1_XS01_temp2" Datatype="Real">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">Transformer Actual Temperatur Coil V</MultiLanguageText>
+              </Comment>
+              <StartValue>0.0</StartValue>
+            </Member>
+            <Member Name="ES1LT1_XS01_temp3" Datatype="Real">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">Transformer Actual Temperatur Coil W</MultiLanguageText>
+              </Comment>
+              <StartValue>0.0</StartValue>
+            </Member>
+            <Member Name="ES1LA2_PT01" Datatype="Real">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">Pressure Transmitter Sluice Alloy Addion Actual value</MultiLanguageText>
+              </Comment>
+              <StartValue>0.0</StartValue>
+            </Member>
+            <Member Name="ES1LE2_M01pos" Datatype="Real">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">X-Adjustment Actual position</MultiLanguageText>
+              </Comment>
+              <StartValue>3.011068</StartValue>
+            </Member>
+            <Member Name="ES1LE2_M02pos" Datatype="Real">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">Y-Adjustment Actual position</MultiLanguageText>
+              </Comment>
+              <StartValue>9.103733</StartValue>
+            </Member>
+            <Member Name="ES1LC3_TT02" Datatype="Real">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">Temperature Transmitter Power Ram Outer Pipe RL Actual value</MultiLanguageText>
+              </Comment>
+              <StartValue>35.42028</StartValue>
+            </Member>
+            <Member Name="ES1LC3_TT04" Datatype="Real">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">TT Conduction Rail 1+2 RL Actual value</MultiLanguageText>
+              </Comment>
+              <StartValue>35.32263</StartValue>
+            </Member>
+            <Member Name="ES1LC3_TT06" Datatype="Real">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">Temperature Transmitter Gas Hood RL Actual value</MultiLanguageText>
+              </Comment>
+              <StartValue>35.03689</StartValue>
+            </Member>
+            <Member Name="ES1LE2_XT01" Datatype="Real">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">Actual Voltage Power Ram</MultiLanguageText>
+              </Comment>
+              <StartValue>0.0</StartValue>
+            </Member>
+            <Member Name="ES1LE3_PT01" Datatype="Real">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">Pressure Transmitter Protective Gas Hood 1 Actual value</MultiLanguageText>
+              </Comment>
+              <StartValue>5000.0</StartValue>
+            </Member>
+            <Member Name="ES1LE3_PT02" Datatype="Real">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">Pressure Transmitter Protective Gas Hood 2 Actual value</MultiLanguageText>
+              </Comment>
+              <StartValue>0.8289928</StartValue>
+            </Member>
+            <Member Name="ES1LE3_QT01_O2" Datatype="Real">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">Oxygen Measurement System</MultiLanguageText>
+              </Comment>
+              <StartValue>16.27732</StartValue>
+            </Member>
+            <Member Name="ES1LE3_QT01_O2hw" Datatype="Real">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">Oxygen Measurement System</MultiLanguageText>
+              </Comment>
+              <StartValue>0.0</StartValue>
+            </Member>
+            <Member Name="ES1LE3_XT01" Datatype="Real">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">Current Measuring Hood RL 1 act current</MultiLanguageText>
+              </Comment>
+              <StartValue>0.001808449</StartValue>
+            </Member>
+            <Member Name="ES1LE3_XT02" Datatype="Real">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">Current Measuring Hood RL 2 act current</MultiLanguageText>
+              </Comment>
+              <StartValue>0.002893519</StartValue>
+            </Member>
+            <Member Name="ES1LE3_XT03" Datatype="Real">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">Current Measuring Hood RL 3 act current</MultiLanguageText>
+              </Comment>
+              <StartValue>0.004340278</StartValue>
+            </Member>
+            <Member Name="ES1LE3_XT04" Datatype="Real">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">Current Measuring Hood RL 4 act current</MultiLanguageText>
+              </Comment>
+              <StartValue>0.004340278</StartValue>
+            </Member>
+            <Member Name="ES1LZ1_PT01" Datatype="Real">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">Pressure Transmitter Atmosphere</MultiLanguageText>
+              </Comment>
+              <StartValue>998.1193</StartValue>
+            </Member>
+            <Member Name="ES1LC1_CV01" Datatype="Real">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">Actual value Control valve RL Heat Exchanger</MultiLanguageText>
+              </Comment>
+              <StartValue>90.39714</StartValue>
+            </Member>
+            <Member Name="ES1LC1_PT01" Datatype="Real">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">Foreward Line Strainer Pressure Actual value</MultiLanguageText>
+              </Comment>
+              <StartValue>4.021122</StartValue>
+            </Member>
+            <Member Name="ES1LC1_PT02" Datatype="Real">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">Return Line Strainer Pressure Actual value</MultiLanguageText>
+              </Comment>
+              <StartValue>3.932292</StartValue>
+            </Member>
+            <Member Name="ES1LC1_dP02" Datatype="Real">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">Differential pressure strainer</MultiLanguageText>
+              </Comment>
+              <StartValue>0.08883071</StartValue>
+            </Member>
+            <Member Name="ES1LC1_PT03" Datatype="Real">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">Pressure Transmitter CW Tank</MultiLanguageText>
+              </Comment>
+              <StartValue>0.142636</StartValue>
+            </Member>
+            <Member Name="ES1LC1_QT01" Datatype="Real">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">CW Tank actual conductivity</MultiLanguageText>
+              </Comment>
+              <StartValue>28.39265</StartValue>
+            </Member>
+            <Member Name="ES1LC1_TT01" Datatype="Real">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">CW Tank Temperature Actual value</MultiLanguageText>
+              </Comment>
+              <StartValue>27.74523</StartValue>
+            </Member>
+            <Member Name="ES1LC1_TT02" Datatype="Real">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">Temperature Transmitter CW Recooling HE FL Actual value</MultiLanguageText>
+              </Comment>
+              <StartValue>25.96571</StartValue>
+            </Member>
+            <Member Name="ES1LC1_TT03" Datatype="Real">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">Temperature Transmitter CW Recooling HE RL Actual value</MultiLanguageText>
+              </Comment>
+              <StartValue>28.54456</StartValue>
+            </Member>
+            <Member Name="ES1LC1_TT04" Datatype="Real">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">Temperature Transmitter CW HE FL Actual value</MultiLanguageText>
+              </Comment>
+              <StartValue>28.51201</StartValue>
+            </Member>
+            <Member Name="ES1LC3_TT01" Datatype="Real">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">TT Electrode Column RL Actual value</MultiLanguageText>
+              </Comment>
+              <StartValue>31.20298</StartValue>
+            </Member>
+            <Member Name="ES1LC5_CV01" Datatype="Real">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">Actual value Control Valve CW Melt Station 1 RL</MultiLanguageText>
+              </Comment>
+              <StartValue>0.0</StartValue>
+            </Member>
+            <Member Name="ES1LC5_CV02" Datatype="Real">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">Actual value Control Valve CW Baseplate 1 RL</MultiLanguageText>
+              </Comment>
+              <StartValue>24.86979</StartValue>
+            </Member>
+            <Member Name="ES1LC5_FT01" Datatype="Real">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">Flow Transmitter CW Static Mould MS1 RL Actual value</MultiLanguageText>
+              </Comment>
+              <StartValue>0.01808449</StartValue>
+            </Member>
+            <Member Name="ES1LC5_FT02" Datatype="Real">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">Flow Transmitter CW Baseplate MS1 RL Actual value</MultiLanguageText>
+              </Comment>
+              <StartValue>0.0</StartValue>
+            </Member>
+            <Member Name="ES1LC5_PT01" Datatype="Real">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">Pressure Transmitter CW Melt Station 1 RL Actual value</MultiLanguageText>
+              </Comment>
+              <StartValue>0.2583912</StartValue>
+            </Member>
+            <Member Name="ES1LC5_PT02" Datatype="Real">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">Pressure Transmitter CW Baseplate 1 RL value</MultiLanguageText>
+              </Comment>
+              <StartValue>0.2690972</StartValue>
+            </Member>
+            <Member Name="ES1LC5_TT01" Datatype="Real">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">Temperature Transmitter CW Melt Station 1+2 FL Actual value</MultiLanguageText>
+              </Comment>
+              <StartValue>27.81756</StartValue>
+            </Member>
+            <Member Name="ES1LC5_TT02" Datatype="Real">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">TT CW Static Mould MS1 RL Actual value</MultiLanguageText>
+              </Comment>
+              <StartValue>24.4647</StartValue>
+            </Member>
+            <Member Name="ES1LC5_TT04" Datatype="Real">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">Temperature Transmitter CW Baseplate 1 RL Actual value</MultiLanguageText>
+              </Comment>
+              <StartValue>23.22049</StartValue>
+            </Member>
+            <Member Name="ES1LC5_TT07" Datatype="Real">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">TT Baseplate Clamp MS1 RL Actual value</MultiLanguageText>
+              </Comment>
+              <StartValue>26.63845</StartValue>
+            </Member>
+            <Member Name="ES1LC5_TT08" Datatype="Real">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">TT Current Pipes MS1 RL Actual value</MultiLanguageText>
+              </Comment>
+              <StartValue>26.89887</StartValue>
+            </Member>
+            <Member Name="ES1LC6_CV01" Datatype="Real">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">Actual value Control Valve CW Melt Station 2 RL</MultiLanguageText>
+              </Comment>
+              <StartValue>12.68446</StartValue>
+            </Member>
+            <Member Name="ES1LC6_CV02" Datatype="Real">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">Actual value Control Valve CW Baseplate 2 RL</MultiLanguageText>
+              </Comment>
+              <StartValue>0.0</StartValue>
+            </Member>
+            <Member Name="ES1LC6_FT01" Datatype="Real">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">Flow Transmitter CW Static Mould MS2 RL Actual value</MultiLanguageText>
+              </Comment>
+              <StartValue>19.81698</StartValue>
+            </Member>
+            <Member Name="ES1LC6_FT02" Datatype="Real">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">Flow Transmitter CW Baseplate 2 RL Actual value</MultiLanguageText>
+              </Comment>
+              <StartValue>12.2092</StartValue>
+            </Member>
+            <Member Name="ES1LC6_PT01" Datatype="Real">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">Pressure Transmitter CW Melt Station 2 RL Actual value</MultiLanguageText>
+              </Comment>
+              <StartValue>2.757234</StartValue>
+            </Member>
+            <Member Name="ES1LC6_PT02" Datatype="Real">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">Pressure Transmitter CW Baseplate 2 RL value</MultiLanguageText>
+              </Comment>
+              <StartValue>0.9088542</StartValue>
+            </Member>
+            <Member Name="ES1LC6_TT02" Datatype="Real">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">Temperature Transmitter CW Static Mould MS2 RL Actual value</MultiLanguageText>
+              </Comment>
+              <StartValue>28.67477</StartValue>
+            </Member>
+            <Member Name="ES1LC6_TT04" Datatype="Real">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">Temperature Transmitter CW Baseplate 2 RL Actual value</MultiLanguageText>
+              </Comment>
+              <StartValue>25.78125</StartValue>
+            </Member>
+            <Member Name="ES1LC6_TT07" Datatype="Real">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">TT Baseplate Clamp MS2 RL Actual value</MultiLanguageText>
+              </Comment>
+              <StartValue>33.60098</StartValue>
+            </Member>
+            <Member Name="ES1LC6_TT08" Datatype="Real">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">TT Current Pipes MS2 RL Actual value</MultiLanguageText>
+              </Comment>
+              <StartValue>31.83594</StartValue>
+            </Member>
+            <Member Name="ES1LC7_CV01" Datatype="Real">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">Actual value Control Valve CW Module Recooling HE RL</MultiLanguageText>
+              </Comment>
+              <StartValue>80.30238</StartValue>
+            </Member>
+            <Member Name="ES1LC7_PT10" Datatype="Real">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">Pressure Transmitter CW Module Pump FL Actual value</MultiLanguageText>
+              </Comment>
+              <StartValue>1.918113</StartValue>
+            </Member>
+            <Member Name="ES1LC7_TT01" Datatype="Real">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">Temperature Transmitter CW Transductor RL Actual value</MultiLanguageText>
+              </Comment>
+              <StartValue>34.69329</StartValue>
+            </Member>
+            <Member Name="ES1LC7_TT02" Datatype="Real">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">TT CW Current Condution F&amp;amp;B RL Actual value</MultiLanguageText>
+              </Comment>
+              <StartValue>34.11097</StartValue>
+            </Member>
+            <Member Name="ES1LC7_TT10" Datatype="Real">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">Temperature Transmitter CW Module Pump FL Actual value</MultiLanguageText>
+              </Comment>
+              <StartValue>33.26823</StartValue>
+            </Member>
+            <Member Name="ES1LC7_TT12" Datatype="Real">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">Temperature Transmitter CW Module HE FL Actual value</MultiLanguageText>
+              </Comment>
+              <StartValue>35.43837</StartValue>
+            </Member>
+            <Member Name="ES1LC7_TT13" Datatype="Real">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">Temperature Transmitter CW Module HE RL Actual value</MultiLanguageText>
+              </Comment>
+              <StartValue>33.70226</StartValue>
+            </Member>
+            <Member Name="ES1LC7_TT14" Datatype="Real">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">TT CW Module Recooling HE RL Actual value</MultiLanguageText>
+              </Comment>
+              <StartValue>34.76924</StartValue>
+            </Member>
+            <Member Name="ES1LC7_TT15" Datatype="Real">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">TT CW Module Recooling HE FL Actual value</MultiLanguageText>
+              </Comment>
+              <StartValue>26.20081</StartValue>
+            </Member>
+            <Member Name="ES1LC7_TT16" Datatype="Real">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">TT CW Vacuum Dry Screw Pump RL Actual value</MultiLanguageText>
+              </Comment>
+              <StartValue>11.25</StartValue>
+            </Member>
+            <Member Name="ES1LC7_TT17" Datatype="Real">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">TT CW Vacuum Roots Pump RL Actual value</MultiLanguageText>
+              </Comment>
+              <StartValue>0.0</StartValue>
+            </Member>
+            <Member Name="ES1LC9_QT01" Datatype="Real">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <StartValue>0.0</StartValue>
+            </Member>
+            <Member Name="ES1LC9_TT01" Datatype="Real">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <StartValue>25.22787</StartValue>
+            </Member>
+            <Member Name="ES1LC9_FT01" Datatype="Real">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <StartValue>15.78993</StartValue>
+            </Member>
+            <Member Name="ES1LC9_FT02" Datatype="Real">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <StartValue>4.954789</StartValue>
+            </Member>
+            <Member Name="ES1LC9_PT01" Datatype="Real">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <StartValue>3.00897</StartValue>
+            </Member>
+            <Member Name="ES1LG1_CV01" Datatype="Real">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">Control Valve Ar PGH Act Flow</MultiLanguageText>
+              </Comment>
+              <StartValue>0.0</StartValue>
+            </Member>
+            <Member Name="ES1LG1_CV02" Datatype="Real">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">Control Valve N2 PGH Act Flow</MultiLanguageText>
+              </Comment>
+              <StartValue>80.0</StartValue>
+            </Member>
+            <Member Name="AX1LD3_PT01" Datatype="Real">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">Dedusting line pressure</MultiLanguageText>
+              </Comment>
+              <StartValue>3.338397</StartValue>
+            </Member>
+            <Member Name="AX1LD3_PT02" Datatype="Real">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">Dedusting filter pressure</MultiLanguageText>
+              </Comment>
+              <StartValue>1.215277</StartValue>
+            </Member>
+          </Section>
+        </Sections>
+      </Interface>
+      <MemoryLayout>Optimized</MemoryLayout>
+      <MemoryReserve>100</MemoryReserve>
+      <Name>ai</Name>
+      <Number>2</Number>
+      <ProgrammingLanguage>DB</ProgrammingLanguage>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <MultilingualText ID="4" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="5" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="6" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.GlobalDB>
+</Document>

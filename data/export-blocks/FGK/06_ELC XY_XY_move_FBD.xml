@@ -1,0 +1,2090 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V15.1" />
+  <DocumentInfo>
+    <Created>2020-06-12T07:35:48.9443359Z</Created>
+    <ExportSetting>None</ExportSetting>
+    <InstalledProducts>
+      <Product>
+        <DisplayName>Totally Integrated Automation Portal</DisplayName>
+        <DisplayVersion>V15.1</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>TIA Portal Openness</DisplayName>
+        <DisplayVersion>V15.1</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>STEP 7 Professional</DisplayName>
+        <DisplayVersion>V15.1</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>STEP 7 Safety</DisplayName>
+        <DisplayVersion>V15.1</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>WinCC Advanced</DisplayName>
+        <DisplayVersion>V15.1</DisplayVersion>
+      </Product>
+    </InstalledProducts>
+  </DocumentInfo>
+  <SW.Blocks.FC ID="0">
+    <AttributeList>
+      <Interface>
+        <Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v3">
+          <Section Name="Input" />
+          <Section Name="Output" />
+          <Section Name="InOut" />
+          <Section Name="Temp">
+            <Member Name="tcsf" Datatype="Bool" />
+            <Member Name="tlock_rgt" Datatype="Bool" />
+            <Member Name="tlock_lft" Datatype="Bool" />
+            <Member Name="tlock_fwd" Datatype="Bool" />
+            <Member Name="tlock_bwd" Datatype="Bool" />
+            <Member Name="tlock_melt" Datatype="Bool" />
+            <Member Name="tmove_cmd" Datatype="Bool" />
+            <Member Name="tlock_ext" Datatype="Bool" />
+            <Member Name="tQ1" Datatype="Bool" />
+            <Member Name="tQ2" Datatype="Bool" />
+            <Member Name="tQ3" Datatype="Bool" />
+            <Member Name="tBypass" Datatype="Bool" />
+            <Member Name="tBool" Datatype="Bool" />
+            <Member Name="tPosX" Datatype="Real" />
+            <Member Name="tPosY" Datatype="Real" />
+            <Member Name="tCmdLeft" Datatype="Bool" />
+            <Member Name="tCmdRight" Datatype="Bool" />
+            <Member Name="tCmdFwd" Datatype="Bool" />
+            <Member Name="tCmdBwd" Datatype="Bool" />
+            <Member Name="tCmdCenter" Datatype="Bool" />
+            <Member Name="tCmdEn" Datatype="Bool" />
+          </Section>
+          <Section Name="Constant" />
+          <Section Name="Return">
+            <Member Name="Ret_Val" Datatype="Void" />
+          </Section>
+        </Sections>
+      </Interface>
+      <MemoryLayout>Standard</MemoryLayout>
+      <Name>XY_move</Name>
+      <Number>801</Number>
+      <ProgrammingLanguage>FBD</ProgrammingLanguage>
+      <SetENOAutomatically>False</SetENOAutomatically>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <SW.Blocks.CompileUnit ID="4" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource>
+            <FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v3">
+              <Parts>
+                <Access Scope="GlobalVariable" UId="21">
+                  <Symbol>
+                    <Component Name="GLOB_VAR" />
+                    <Component Name="pwr_ok" />
+                  </Symbol>
+                </Access>
+                <Access Scope="LocalVariable" UId="22">
+                  <Symbol>
+                    <Component Name="tcsf" />
+                  </Symbol>
+                </Access>
+                <Part Name="Coil" UId="23">
+                  <Negated Name="in" />
+                </Part>
+              </Parts>
+              <Wires>
+                <Wire UId="24">
+                  <IdentCon UId="21" />
+                  <NameCon UId="23" Name="in" />
+                </Wire>
+                <Wire UId="25">
+                  <IdentCon UId="22" />
+                  <NameCon UId="23" Name="operand" />
+                </Wire>
+              </Wires>
+            </FlgNet>
+          </NetworkSource>
+          <ProgrammingLanguage>FBD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="5" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="6" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="7" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="8" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="9" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>common system fault</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="B" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource>
+            <FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v3">
+              <Parts>
+                <Access Scope="GlobalVariable" UId="21">
+                  <Symbol>
+                    <Component Name="ES1LE2" />
+                    <Component Name="PS01_pgmin" />
+                    <Component Name="qout" />
+                  </Symbol>
+                </Access>
+                <Access Scope="GlobalVariable" UId="22">
+                  <Symbol>
+                    <Component Name="XY_DB" />
+                    <Component Name="lock_ext" />
+                  </Symbol>
+                </Access>
+                <Access Scope="LocalVariable" UId="23">
+                  <Symbol>
+                    <Component Name="tlock_ext" />
+                  </Symbol>
+                </Access>
+                <Part Name="O" UId="24">
+                  <TemplateValue Name="Card" Type="Cardinality">2</TemplateValue>
+                </Part>
+                <Part Name="Coil" UId="25" />
+              </Parts>
+              <Wires>
+                <Wire UId="26">
+                  <IdentCon UId="21" />
+                  <NameCon UId="24" Name="in1" />
+                </Wire>
+                <Wire UId="27">
+                  <IdentCon UId="22" />
+                  <NameCon UId="24" Name="in2" />
+                </Wire>
+                <Wire UId="28">
+                  <NameCon UId="24" Name="out" />
+                  <NameCon UId="25" Name="in" />
+                </Wire>
+                <Wire UId="29">
+                  <IdentCon UId="23" />
+                  <NameCon UId="25" Name="operand" />
+                </Wire>
+              </Wires>
+            </FlgNet>
+          </NetworkSource>
+          <ProgrammingLanguage>FBD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="C" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="D" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="E" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="F" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="10" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>Lock extern</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="11" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="12" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource>
+            <FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v3">
+              <Parts>
+                <Access Scope="GlobalVariable" UId="21">
+                  <Symbol>
+                    <Component Name="ES1LE2_M02pos_AI" />
+                    <Component Name="oActVal" />
+                  </Symbol>
+                </Access>
+                <Access Scope="LocalVariable" UId="22">
+                  <Symbol>
+                    <Component Name="tPosY" />
+                  </Symbol>
+                </Access>
+                <Access Scope="GlobalVariable" UId="23">
+                  <Symbol>
+                    <Component Name="ES1LE2_M01pos_AI" />
+                    <Component Name="oActVal" />
+                  </Symbol>
+                </Access>
+                <Access Scope="LocalVariable" UId="24">
+                  <Symbol>
+                    <Component Name="tPosX" />
+                  </Symbol>
+                </Access>
+                <Part Name="Move" UId="25" DisabledENO="true">
+                  <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+                </Part>
+                <Part Name="Move" UId="26" DisabledENO="true">
+                  <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+                </Part>
+              </Parts>
+              <Wires>
+                <Wire UId="29">
+                  <OpenCon UId="27" />
+                  <NameCon UId="25" Name="en" />
+                </Wire>
+                <Wire UId="30">
+                  <IdentCon UId="21" />
+                  <NameCon UId="25" Name="in" />
+                </Wire>
+                <Wire UId="31">
+                  <NameCon UId="25" Name="out1" />
+                  <IdentCon UId="22" />
+                </Wire>
+                <Wire UId="32">
+                  <OpenCon UId="28" />
+                  <NameCon UId="26" Name="en" />
+                </Wire>
+                <Wire UId="33">
+                  <IdentCon UId="23" />
+                  <NameCon UId="26" Name="in" />
+                </Wire>
+                <Wire UId="34">
+                  <NameCon UId="26" Name="out1" />
+                  <IdentCon UId="24" />
+                </Wire>
+              </Wires>
+            </FlgNet>
+          </NetworkSource>
+          <ProgrammingLanguage>FBD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="13" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="14" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="15" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="16" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="17" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="18" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="19" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource>
+            <FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v3">
+              <Parts>
+                <Access Scope="GlobalVariable" UId="21">
+                  <Symbol>
+                    <Component Name="ES1GD02_S32_l" />
+                  </Symbol>
+                </Access>
+                <Access Scope="GlobalVariable" UId="22">
+                  <Symbol>
+                    <Component Name="XY_misc" />
+                    <Component Name="XY_CmdLeft" />
+                  </Symbol>
+                </Access>
+                <Access Scope="LocalVariable" UId="23">
+                  <Symbol>
+                    <Component Name="tCmdLeft" />
+                  </Symbol>
+                </Access>
+                <Access Scope="GlobalVariable" UId="24">
+                  <Symbol>
+                    <Component Name="ES1GD02_S32_r" />
+                  </Symbol>
+                </Access>
+                <Access Scope="GlobalVariable" UId="25">
+                  <Symbol>
+                    <Component Name="XY_misc" />
+                    <Component Name="XY_CmdRight" />
+                  </Symbol>
+                </Access>
+                <Access Scope="LocalVariable" UId="26">
+                  <Symbol>
+                    <Component Name="tCmdRight" />
+                  </Symbol>
+                </Access>
+                <Access Scope="GlobalVariable" UId="27">
+                  <Symbol>
+                    <Component Name="ES1GD02_S32_fwd" />
+                  </Symbol>
+                </Access>
+                <Access Scope="GlobalVariable" UId="28">
+                  <Symbol>
+                    <Component Name="XY_misc" />
+                    <Component Name="XY_CmdFwd" />
+                  </Symbol>
+                </Access>
+                <Access Scope="LocalVariable" UId="29">
+                  <Symbol>
+                    <Component Name="tCmdFwd" />
+                  </Symbol>
+                </Access>
+                <Access Scope="GlobalVariable" UId="30">
+                  <Symbol>
+                    <Component Name="ES1GD02_S32_bwd" />
+                  </Symbol>
+                </Access>
+                <Access Scope="GlobalVariable" UId="31">
+                  <Symbol>
+                    <Component Name="XY_misc" />
+                    <Component Name="XY_CmdBwd" />
+                  </Symbol>
+                </Access>
+                <Access Scope="LocalVariable" UId="32">
+                  <Symbol>
+                    <Component Name="tCmdBwd" />
+                  </Symbol>
+                </Access>
+                <Access Scope="GlobalVariable" UId="33">
+                  <Symbol>
+                    <Component Name="ES1GD02_SP13_pos" />
+                  </Symbol>
+                </Access>
+                <Access Scope="GlobalVariable" UId="34">
+                  <Symbol>
+                    <Component Name="XY_misc" />
+                    <Component Name="XY_CmdCenter" />
+                  </Symbol>
+                </Access>
+                <Access Scope="LocalVariable" UId="35">
+                  <Symbol>
+                    <Component Name="tCmdCenter" />
+                  </Symbol>
+                </Access>
+                <Access Scope="GlobalVariable" UId="36">
+                  <Symbol>
+                    <Component Name="GLOB_VAR" />
+                    <Component Name="ES1GD02_desk_is_act" />
+                  </Symbol>
+                </Access>
+                <Access Scope="GlobalVariable" UId="37">
+                  <Symbol>
+                    <Component Name="XY_misc" />
+                    <Component Name="XY_CmdEn" />
+                  </Symbol>
+                </Access>
+                <Access Scope="LocalVariable" UId="38">
+                  <Symbol>
+                    <Component Name="tCmdEn" />
+                  </Symbol>
+                </Access>
+                <Part Name="O" UId="39">
+                  <TemplateValue Name="Card" Type="Cardinality">2</TemplateValue>
+                </Part>
+                <Part Name="Coil" UId="40" />
+                <Part Name="O" UId="41">
+                  <TemplateValue Name="Card" Type="Cardinality">2</TemplateValue>
+                </Part>
+                <Part Name="Coil" UId="42" />
+                <Part Name="O" UId="43">
+                  <TemplateValue Name="Card" Type="Cardinality">2</TemplateValue>
+                </Part>
+                <Part Name="Coil" UId="44" />
+                <Part Name="O" UId="45">
+                  <TemplateValue Name="Card" Type="Cardinality">2</TemplateValue>
+                </Part>
+                <Part Name="Coil" UId="46" />
+                <Part Name="O" UId="47">
+                  <TemplateValue Name="Card" Type="Cardinality">2</TemplateValue>
+                </Part>
+                <Part Name="Coil" UId="48" />
+                <Part Name="X" UId="49">
+                  <TemplateValue Name="Card" Type="Cardinality">2</TemplateValue>
+                </Part>
+                <Part Name="Coil" UId="50" />
+              </Parts>
+              <Wires>
+                <Wire UId="51">
+                  <IdentCon UId="21" />
+                  <NameCon UId="39" Name="in1" />
+                </Wire>
+                <Wire UId="52">
+                  <IdentCon UId="22" />
+                  <NameCon UId="39" Name="in2" />
+                </Wire>
+                <Wire UId="53">
+                  <NameCon UId="39" Name="out" />
+                  <NameCon UId="40" Name="in" />
+                </Wire>
+                <Wire UId="54">
+                  <IdentCon UId="23" />
+                  <NameCon UId="40" Name="operand" />
+                </Wire>
+                <Wire UId="55">
+                  <IdentCon UId="24" />
+                  <NameCon UId="41" Name="in1" />
+                </Wire>
+                <Wire UId="56">
+                  <IdentCon UId="25" />
+                  <NameCon UId="41" Name="in2" />
+                </Wire>
+                <Wire UId="57">
+                  <NameCon UId="41" Name="out" />
+                  <NameCon UId="42" Name="in" />
+                </Wire>
+                <Wire UId="58">
+                  <IdentCon UId="26" />
+                  <NameCon UId="42" Name="operand" />
+                </Wire>
+                <Wire UId="59">
+                  <IdentCon UId="27" />
+                  <NameCon UId="43" Name="in1" />
+                </Wire>
+                <Wire UId="60">
+                  <IdentCon UId="28" />
+                  <NameCon UId="43" Name="in2" />
+                </Wire>
+                <Wire UId="61">
+                  <NameCon UId="43" Name="out" />
+                  <NameCon UId="44" Name="in" />
+                </Wire>
+                <Wire UId="62">
+                  <IdentCon UId="29" />
+                  <NameCon UId="44" Name="operand" />
+                </Wire>
+                <Wire UId="63">
+                  <IdentCon UId="30" />
+                  <NameCon UId="45" Name="in1" />
+                </Wire>
+                <Wire UId="64">
+                  <IdentCon UId="31" />
+                  <NameCon UId="45" Name="in2" />
+                </Wire>
+                <Wire UId="65">
+                  <NameCon UId="45" Name="out" />
+                  <NameCon UId="46" Name="in" />
+                </Wire>
+                <Wire UId="66">
+                  <IdentCon UId="32" />
+                  <NameCon UId="46" Name="operand" />
+                </Wire>
+                <Wire UId="67">
+                  <IdentCon UId="33" />
+                  <NameCon UId="47" Name="in1" />
+                </Wire>
+                <Wire UId="68">
+                  <IdentCon UId="34" />
+                  <NameCon UId="47" Name="in2" />
+                </Wire>
+                <Wire UId="69">
+                  <NameCon UId="47" Name="out" />
+                  <NameCon UId="48" Name="in" />
+                </Wire>
+                <Wire UId="70">
+                  <IdentCon UId="35" />
+                  <NameCon UId="48" Name="operand" />
+                </Wire>
+                <Wire UId="71">
+                  <IdentCon UId="36" />
+                  <NameCon UId="49" Name="in1" />
+                </Wire>
+                <Wire UId="72">
+                  <IdentCon UId="37" />
+                  <NameCon UId="49" Name="in2" />
+                </Wire>
+                <Wire UId="73">
+                  <NameCon UId="49" Name="out" />
+                  <NameCon UId="50" Name="in" />
+                </Wire>
+                <Wire UId="74">
+                  <IdentCon UId="38" />
+                  <NameCon UId="50" Name="operand" />
+                </Wire>
+              </Wires>
+            </FlgNet>
+          </NetworkSource>
+          <ProgrammingLanguage>FBD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="1A" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="1B" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="1C" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="1D" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="1E" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>Commands with test feature</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="1F" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="20" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource>
+            <FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v3">
+              <Parts>
+                <Access Scope="LocalVariable" UId="21">
+                  <Symbol>
+                    <Component Name="tcsf" />
+                  </Symbol>
+                </Access>
+                <Access Scope="LiteralConstant" UId="22">
+                  <Constant>
+                    <ConstantType>Bool</ConstantType>
+                    <ConstantValue>false</ConstantValue>
+                  </Constant>
+                </Access>
+                <Access Scope="LocalVariable" UId="23">
+                  <Symbol>
+                    <Component Name="tlock_ext" />
+                  </Symbol>
+                </Access>
+                <Access Scope="GlobalVariable" UId="24">
+                  <Symbol>
+                    <Component Name="ES1LE2" />
+                    <Component Name="M01_GZ02_nrpos" />
+                    <Component Name="qout" />
+                  </Symbol>
+                </Access>
+                <Access Scope="GlobalVariable" UId="25">
+                  <Symbol>
+                    <Component Name="ES1LE2" />
+                    <Component Name="M01_GZ01_nlpos" />
+                    <Component Name="qout" />
+                  </Symbol>
+                </Access>
+                <Access Scope="GlobalVariable" UId="26">
+                  <Symbol>
+                    <Component Name="ES1LE2" />
+                    <Component Name="M02_GZ02_nfpos" />
+                    <Component Name="qout" />
+                  </Symbol>
+                </Access>
+                <Access Scope="GlobalVariable" UId="27">
+                  <Symbol>
+                    <Component Name="ES1LE2" />
+                    <Component Name="M02_GZ01_nbpos" />
+                    <Component Name="qout" />
+                  </Symbol>
+                </Access>
+                <Access Scope="LocalVariable" UId="28">
+                  <Symbol>
+                    <Component Name="tCmdEn" />
+                  </Symbol>
+                </Access>
+                <Access Scope="LocalVariable" UId="29">
+                  <Symbol>
+                    <Component Name="tCmdRight" />
+                  </Symbol>
+                </Access>
+                <Access Scope="LocalVariable" UId="30">
+                  <Symbol>
+                    <Component Name="tCmdLeft" />
+                  </Symbol>
+                </Access>
+                <Access Scope="LocalVariable" UId="31">
+                  <Symbol>
+                    <Component Name="tCmdFwd" />
+                  </Symbol>
+                </Access>
+                <Access Scope="LocalVariable" UId="32">
+                  <Symbol>
+                    <Component Name="tCmdBwd" />
+                  </Symbol>
+                </Access>
+                <Access Scope="LocalVariable" UId="33">
+                  <Symbol>
+                    <Component Name="tCmdCenter" />
+                  </Symbol>
+                </Access>
+                <Access Scope="LiteralConstant" UId="34">
+                  <Constant>
+                    <ConstantType>Bool</ConstantType>
+                    <ConstantValue>false</ConstantValue>
+                  </Constant>
+                </Access>
+                <Access Scope="LiteralConstant" UId="35">
+                  <Constant>
+                    <ConstantType>Bool</ConstantType>
+                    <ConstantValue>false</ConstantValue>
+                  </Constant>
+                </Access>
+                <Access Scope="GlobalVariable" UId="36">
+                  <Symbol>
+                    <Component Name="valid" />
+                    <Component Name="ES1LE2_M01pos" />
+                  </Symbol>
+                </Access>
+                <Access Scope="GlobalVariable" UId="37">
+                  <Symbol>
+                    <Component Name="valid" />
+                    <Component Name="ES1LE2_M02pos" />
+                  </Symbol>
+                </Access>
+                <Access Scope="LocalVariable" UId="38">
+                  <Symbol>
+                    <Component Name="tPosX" />
+                  </Symbol>
+                </Access>
+                <Access Scope="LocalVariable" UId="39">
+                  <Symbol>
+                    <Component Name="tPosY" />
+                  </Symbol>
+                </Access>
+                <Access Scope="GlobalVariable" UId="40">
+                  <Symbol>
+                    <Component Name="XY_PARAM" />
+                    <Component Name="MAX_POS" />
+                  </Symbol>
+                </Access>
+                <Access Scope="GlobalVariable" UId="41">
+                  <Symbol>
+                    <Component Name="XY_PARAM" />
+                    <Component Name="POS_TOL" />
+                  </Symbol>
+                </Access>
+                <Access Scope="GlobalVariable" UId="42">
+                  <Symbol>
+                    <Component Name="ES1LE2" />
+                    <Component Name="M01" />
+                    <Component Name="auto_on_R" />
+                  </Symbol>
+                </Access>
+                <Access Scope="GlobalVariable" UId="43">
+                  <Symbol>
+                    <Component Name="ES1LE2" />
+                    <Component Name="M01" />
+                    <Component Name="auto_on_L" />
+                  </Symbol>
+                </Access>
+                <Access Scope="LocalVariable" UId="44">
+                  <Symbol>
+                    <Component Name="tlock_rgt" />
+                  </Symbol>
+                </Access>
+                <Access Scope="LocalVariable" UId="45">
+                  <Symbol>
+                    <Component Name="tlock_lft" />
+                  </Symbol>
+                </Access>
+                <Access Scope="GlobalVariable" UId="46">
+                  <Symbol>
+                    <Component Name="ES1LE2" />
+                    <Component Name="M02" />
+                    <Component Name="auto_on_R" />
+                  </Symbol>
+                </Access>
+                <Access Scope="GlobalVariable" UId="47">
+                  <Symbol>
+                    <Component Name="ES1LE2" />
+                    <Component Name="M02" />
+                    <Component Name="auto_on_L" />
+                  </Symbol>
+                </Access>
+                <Access Scope="LocalVariable" UId="48">
+                  <Symbol>
+                    <Component Name="tlock_fwd" />
+                  </Symbol>
+                </Access>
+                <Access Scope="LocalVariable" UId="49">
+                  <Symbol>
+                    <Component Name="tlock_bwd" />
+                  </Symbol>
+                </Access>
+                <Access Scope="GlobalVariable" UId="50">
+                  <Symbol>
+                    <Component Name="XY_DB" />
+                    <Component Name="cent_runs" />
+                  </Symbol>
+                </Access>
+                <Access Scope="GlobalVariable" UId="51">
+                  <Symbol>
+                    <Component Name="XY_DB" />
+                    <Component Name="cent_done" />
+                  </Symbol>
+                </Access>
+                <Call UId="52">
+                  <CallInfo Name="XY_CTRL" BlockType="FB">
+                    <Instance Scope="GlobalVariable" UId="53">
+                      <Component Name="XY_MOVE_ID" />
+                    </Instance>
+                    <Parameter Name="CSF" Section="Input" Type="Bool" />
+                    <Parameter Name="DIS_LOCK" Section="Input" Type="Bool" />
+                    <Parameter Name="Lock_ext" Section="Input" Type="Bool" />
+                    <Parameter Name="Lock_right" Section="Input" Type="Bool" />
+                    <Parameter Name="Lock_left" Section="Input" Type="Bool" />
+                    <Parameter Name="Lock_fwd" Section="Input" Type="Bool" />
+                    <Parameter Name="Lock_rev" Section="Input" Type="Bool" />
+                    <Parameter Name="desk_on" Section="Input" Type="Bool" />
+                    <Parameter Name="desk_r" Section="Input" Type="Bool" />
+                    <Parameter Name="desk_l" Section="Input" Type="Bool" />
+                    <Parameter Name="desk_fwd" Section="Input" Type="Bool" />
+                    <Parameter Name="desk_rev" Section="Input" Type="Bool" />
+                    <Parameter Name="desk_center" Section="Input" Type="Bool" />
+                    <Parameter Name="auto_center_on" Section="Input" Type="Bool" />
+                    <Parameter Name="auto_center_off" Section="Input" Type="Bool" />
+                    <Parameter Name="X_pos_valid" Section="Input" Type="Bool" />
+                    <Parameter Name="Y_pos_valid" Section="Input" Type="Bool" />
+                    <Parameter Name="X_pos" Section="Input" Type="Real" />
+                    <Parameter Name="Y_pos" Section="Input" Type="Real" />
+                    <Parameter Name="Max_pos" Section="Input" Type="Real" />
+                    <Parameter Name="Hyst" Section="Input" Type="Real" />
+                    <Parameter Name="X_ON_R" Section="Output" Type="Bool" />
+                    <Parameter Name="X_ON_L" Section="Output" Type="Bool" />
+                    <Parameter Name="X_LOCK_R" Section="Output" Type="Bool" />
+                    <Parameter Name="X_LOCK_L" Section="Output" Type="Bool" />
+                    <Parameter Name="Y_ON_R" Section="Output" Type="Bool" />
+                    <Parameter Name="Y_ON_L" Section="Output" Type="Bool" />
+                    <Parameter Name="Y_LOCK_R" Section="Output" Type="Bool" />
+                    <Parameter Name="Y_LOCK_L" Section="Output" Type="Bool" />
+                    <Parameter Name="QCENTERING" Section="Output" Type="Bool" />
+                    <Parameter Name="QZERO" Section="Output" Type="Bool" />
+                    <Parameter Name="USTATUS" Section="Output" Type="Word" />
+                  </CallInfo>
+                  <Negated Name="Lock_right" />
+                  <Negated Name="Lock_left" />
+                  <Negated Name="Lock_fwd" />
+                  <Negated Name="Lock_rev" />
+                </Call>
+              </Parts>
+              <Wires>
+                <Wire UId="56">
+                  <OpenCon UId="54" />
+                  <NameCon UId="52" Name="en" />
+                </Wire>
+                <Wire UId="57">
+                  <IdentCon UId="21" />
+                  <NameCon UId="52" Name="CSF" />
+                </Wire>
+                <Wire UId="58">
+                  <IdentCon UId="22" />
+                  <NameCon UId="52" Name="DIS_LOCK" />
+                </Wire>
+                <Wire UId="59">
+                  <IdentCon UId="23" />
+                  <NameCon UId="52" Name="Lock_ext" />
+                </Wire>
+                <Wire UId="60">
+                  <IdentCon UId="24" />
+                  <NameCon UId="52" Name="Lock_right" />
+                </Wire>
+                <Wire UId="61">
+                  <IdentCon UId="25" />
+                  <NameCon UId="52" Name="Lock_left" />
+                </Wire>
+                <Wire UId="62">
+                  <IdentCon UId="26" />
+                  <NameCon UId="52" Name="Lock_fwd" />
+                </Wire>
+                <Wire UId="63">
+                  <IdentCon UId="27" />
+                  <NameCon UId="52" Name="Lock_rev" />
+                </Wire>
+                <Wire UId="64">
+                  <IdentCon UId="28" />
+                  <NameCon UId="52" Name="desk_on" />
+                </Wire>
+                <Wire UId="65">
+                  <IdentCon UId="29" />
+                  <NameCon UId="52" Name="desk_r" />
+                </Wire>
+                <Wire UId="66">
+                  <IdentCon UId="30" />
+                  <NameCon UId="52" Name="desk_l" />
+                </Wire>
+                <Wire UId="67">
+                  <IdentCon UId="31" />
+                  <NameCon UId="52" Name="desk_fwd" />
+                </Wire>
+                <Wire UId="68">
+                  <IdentCon UId="32" />
+                  <NameCon UId="52" Name="desk_rev" />
+                </Wire>
+                <Wire UId="69">
+                  <IdentCon UId="33" />
+                  <NameCon UId="52" Name="desk_center" />
+                </Wire>
+                <Wire UId="70">
+                  <IdentCon UId="34" />
+                  <NameCon UId="52" Name="auto_center_on" />
+                </Wire>
+                <Wire UId="71">
+                  <IdentCon UId="35" />
+                  <NameCon UId="52" Name="auto_center_off" />
+                </Wire>
+                <Wire UId="72">
+                  <IdentCon UId="36" />
+                  <NameCon UId="52" Name="X_pos_valid" />
+                </Wire>
+                <Wire UId="73">
+                  <IdentCon UId="37" />
+                  <NameCon UId="52" Name="Y_pos_valid" />
+                </Wire>
+                <Wire UId="74">
+                  <IdentCon UId="38" />
+                  <NameCon UId="52" Name="X_pos" />
+                </Wire>
+                <Wire UId="75">
+                  <IdentCon UId="39" />
+                  <NameCon UId="52" Name="Y_pos" />
+                </Wire>
+                <Wire UId="76">
+                  <IdentCon UId="40" />
+                  <NameCon UId="52" Name="Max_pos" />
+                </Wire>
+                <Wire UId="77">
+                  <IdentCon UId="41" />
+                  <NameCon UId="52" Name="Hyst" />
+                </Wire>
+                <Wire UId="78">
+                  <NameCon UId="52" Name="X_ON_R" />
+                  <IdentCon UId="42" />
+                </Wire>
+                <Wire UId="79">
+                  <NameCon UId="52" Name="X_ON_L" />
+                  <IdentCon UId="43" />
+                </Wire>
+                <Wire UId="80">
+                  <NameCon UId="52" Name="X_LOCK_R" />
+                  <IdentCon UId="44" />
+                </Wire>
+                <Wire UId="81">
+                  <NameCon UId="52" Name="X_LOCK_L" />
+                  <IdentCon UId="45" />
+                </Wire>
+                <Wire UId="82">
+                  <NameCon UId="52" Name="Y_ON_R" />
+                  <IdentCon UId="46" />
+                </Wire>
+                <Wire UId="83">
+                  <NameCon UId="52" Name="Y_ON_L" />
+                  <IdentCon UId="47" />
+                </Wire>
+                <Wire UId="84">
+                  <NameCon UId="52" Name="Y_LOCK_R" />
+                  <IdentCon UId="48" />
+                </Wire>
+                <Wire UId="85">
+                  <NameCon UId="52" Name="Y_LOCK_L" />
+                  <IdentCon UId="49" />
+                </Wire>
+                <Wire UId="86">
+                  <NameCon UId="52" Name="QCENTERING" />
+                  <IdentCon UId="50" />
+                </Wire>
+                <Wire UId="87">
+                  <NameCon UId="52" Name="QZERO" />
+                  <IdentCon UId="51" />
+                </Wire>
+                <Wire UId="88">
+                  <NameCon UId="52" Name="USTATUS" />
+                  <OpenCon UId="55" />
+                </Wire>
+              </Wires>
+            </FlgNet>
+          </NetworkSource>
+          <ProgrammingLanguage>FBD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="21" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="22" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="23" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="24" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="25" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>Call Funktionblock XY Move</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="26" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="27" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource>
+            <FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v3">
+              <Parts>
+                <Access Scope="GlobalVariable" UId="21">
+                  <Symbol>
+                    <Component Name="ES1LE2" />
+                    <Component Name="M01_GZ02_nrpos" />
+                    <Component Name="qout" />
+                  </Symbol>
+                </Access>
+                <Access Scope="LocalVariable" UId="22">
+                  <Symbol>
+                    <Component Name="tlock_rgt" />
+                  </Symbol>
+                </Access>
+                <Access Scope="GlobalVariable" UId="23">
+                  <Symbol>
+                    <Component Name="HOOD_DB" />
+                    <Component Name="xy_seal_ok" />
+                  </Symbol>
+                </Access>
+                <Access Scope="GlobalVariable" UId="24">
+                  <Symbol>
+                    <Component Name="ELC_DB" />
+                    <Component Name="lock_move" />
+                  </Symbol>
+                </Access>
+                <Access Scope="GlobalVariable" UId="25">
+                  <Symbol>
+                    <Component Name="XY_DB" />
+                    <Component Name="lock_ext" />
+                  </Symbol>
+                </Access>
+                <Access Scope="LiteralConstant" UId="26">
+                  <Constant>
+                    <ConstantType>Byte</ConstantType>
+                    <ConstantValue>16#1</ConstantValue>
+                  </Constant>
+                </Access>
+                <Access Scope="LiteralConstant" UId="27">
+                  <Constant>
+                    <ConstantType>Word</ConstantType>
+                    <ConstantValue>16#1</ConstantValue>
+                  </Constant>
+                </Access>
+                <Access Scope="GlobalVariable" UId="28">
+                  <Symbol>
+                    <Component Name="ES1LE2" />
+                    <Component Name="M01" />
+                    <Component Name="lock_R" />
+                  </Symbol>
+                </Access>
+                <Call UId="29">
+                  <CallInfo Name="Lock" BlockType="FB">
+                    <Instance Scope="GlobalVariable" UId="30">
+                      <Component Name="ES1LE2_M01_LockRight" />
+                    </Instance>
+                    <Parameter Name="iLock1" Section="Input" Type="Bool" />
+                    <Parameter Name="iLock2" Section="Input" Type="Bool" />
+                    <Parameter Name="iLock3" Section="Input" Type="Bool" />
+                    <Parameter Name="iLock4" Section="Input" Type="Bool" />
+                    <Parameter Name="iLock5" Section="Input" Type="Bool" />
+                    <Parameter Name="iLock6" Section="Input" Type="Bool" />
+                    <Parameter Name="iLock7" Section="Input" Type="Bool" />
+                    <Parameter Name="iLock8" Section="Input" Type="Bool" />
+                    <Parameter Name="iLock9" Section="Input" Type="Bool" />
+                    <Parameter Name="iLock10" Section="Input" Type="Bool" />
+                    <Parameter Name="iLock11" Section="Input" Type="Bool" />
+                    <Parameter Name="iLock12" Section="Input" Type="Bool" />
+                    <Parameter Name="iLock13" Section="Input" Type="Bool" />
+                    <Parameter Name="pLockLogic" Section="Input" Type="Byte" />
+                    <Parameter Name="pUnmasked" Section="Input" Type="Word" />
+                    <Parameter Name="qLock" Section="Output" Type="Bool" />
+                    <Parameter Name="qMasked" Section="Output" Type="Bool" />
+                    <Parameter Name="qStatus" Section="Output" Type="Word" />
+                    <Parameter Name="ioMask" Section="InOut" Type="Word" />
+                  </CallInfo>
+                  <Negated Name="iLock1" />
+                </Call>
+              </Parts>
+              <Wires>
+                <Wire UId="43">
+                  <OpenCon UId="31" />
+                  <NameCon UId="29" Name="en" />
+                </Wire>
+                <Wire UId="44">
+                  <IdentCon UId="21" />
+                  <NameCon UId="29" Name="iLock1" />
+                </Wire>
+                <Wire UId="45">
+                  <IdentCon UId="22" />
+                  <NameCon UId="29" Name="iLock2" />
+                </Wire>
+                <Wire UId="46">
+                  <IdentCon UId="23" />
+                  <NameCon UId="29" Name="iLock3" />
+                </Wire>
+                <Wire UId="47">
+                  <IdentCon UId="24" />
+                  <NameCon UId="29" Name="iLock4" />
+                </Wire>
+                <Wire UId="48">
+                  <IdentCon UId="25" />
+                  <NameCon UId="29" Name="iLock5" />
+                </Wire>
+                <Wire UId="49">
+                  <OpenCon UId="32" />
+                  <NameCon UId="29" Name="iLock6" />
+                </Wire>
+                <Wire UId="50">
+                  <OpenCon UId="33" />
+                  <NameCon UId="29" Name="iLock7" />
+                </Wire>
+                <Wire UId="51">
+                  <OpenCon UId="34" />
+                  <NameCon UId="29" Name="iLock8" />
+                </Wire>
+                <Wire UId="52">
+                  <OpenCon UId="35" />
+                  <NameCon UId="29" Name="iLock9" />
+                </Wire>
+                <Wire UId="53">
+                  <OpenCon UId="36" />
+                  <NameCon UId="29" Name="iLock10" />
+                </Wire>
+                <Wire UId="54">
+                  <OpenCon UId="37" />
+                  <NameCon UId="29" Name="iLock11" />
+                </Wire>
+                <Wire UId="55">
+                  <OpenCon UId="38" />
+                  <NameCon UId="29" Name="iLock12" />
+                </Wire>
+                <Wire UId="56">
+                  <OpenCon UId="39" />
+                  <NameCon UId="29" Name="iLock13" />
+                </Wire>
+                <Wire UId="57">
+                  <IdentCon UId="26" />
+                  <NameCon UId="29" Name="pLockLogic" />
+                </Wire>
+                <Wire UId="58">
+                  <IdentCon UId="27" />
+                  <NameCon UId="29" Name="pUnmasked" />
+                </Wire>
+                <Wire UId="59">
+                  <OpenCon UId="40" />
+                  <NameCon UId="29" Name="ioMask" />
+                </Wire>
+                <Wire UId="60">
+                  <NameCon UId="29" Name="qLock" />
+                  <IdentCon UId="28" />
+                </Wire>
+                <Wire UId="61">
+                  <NameCon UId="29" Name="qMasked" />
+                  <OpenCon UId="41" />
+                </Wire>
+                <Wire UId="62">
+                  <NameCon UId="29" Name="qStatus" />
+                  <OpenCon UId="42" />
+                </Wire>
+              </Wires>
+            </FlgNet>
+          </NetworkSource>
+          <ProgrammingLanguage>FBD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="28" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="29" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="2A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="2B" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="2C" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>Lock X right</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="2D" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="2E" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource>
+            <FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v3">
+              <Parts>
+                <Access Scope="GlobalVariable" UId="21">
+                  <Symbol>
+                    <Component Name="ES1LE2" />
+                    <Component Name="M01_GZ01_nlpos" />
+                    <Component Name="qout" />
+                  </Symbol>
+                </Access>
+                <Access Scope="LocalVariable" UId="22">
+                  <Symbol>
+                    <Component Name="tlock_lft" />
+                  </Symbol>
+                </Access>
+                <Access Scope="GlobalVariable" UId="23">
+                  <Symbol>
+                    <Component Name="HOOD_DB" />
+                    <Component Name="xy_seal_ok" />
+                  </Symbol>
+                </Access>
+                <Access Scope="GlobalVariable" UId="24">
+                  <Symbol>
+                    <Component Name="ELC_DB" />
+                    <Component Name="lock_move" />
+                  </Symbol>
+                </Access>
+                <Access Scope="GlobalVariable" UId="25">
+                  <Symbol>
+                    <Component Name="XY_DB" />
+                    <Component Name="lock_ext" />
+                  </Symbol>
+                </Access>
+                <Access Scope="LiteralConstant" UId="26">
+                  <Constant>
+                    <ConstantType>Word</ConstantType>
+                    <ConstantValue>16#1</ConstantValue>
+                  </Constant>
+                </Access>
+                <Access Scope="GlobalVariable" UId="27">
+                  <Symbol>
+                    <Component Name="ES1LE2" />
+                    <Component Name="M01" />
+                    <Component Name="lock_L" />
+                  </Symbol>
+                </Access>
+                <Call UId="28">
+                  <CallInfo Name="Lock" BlockType="FB">
+                    <Instance Scope="GlobalVariable" UId="29">
+                      <Component Name="ES1LE2_M01_LockLeft" />
+                    </Instance>
+                    <Parameter Name="iLock1" Section="Input" Type="Bool" />
+                    <Parameter Name="iLock2" Section="Input" Type="Bool" />
+                    <Parameter Name="iLock3" Section="Input" Type="Bool" />
+                    <Parameter Name="iLock4" Section="Input" Type="Bool" />
+                    <Parameter Name="iLock5" Section="Input" Type="Bool" />
+                    <Parameter Name="iLock6" Section="Input" Type="Bool" />
+                    <Parameter Name="iLock7" Section="Input" Type="Bool" />
+                    <Parameter Name="iLock8" Section="Input" Type="Bool" />
+                    <Parameter Name="iLock9" Section="Input" Type="Bool" />
+                    <Parameter Name="iLock10" Section="Input" Type="Bool" />
+                    <Parameter Name="iLock11" Section="Input" Type="Bool" />
+                    <Parameter Name="iLock12" Section="Input" Type="Bool" />
+                    <Parameter Name="iLock13" Section="Input" Type="Bool" />
+                    <Parameter Name="pLockLogic" Section="Input" Type="Byte" />
+                    <Parameter Name="pUnmasked" Section="Input" Type="Word" />
+                    <Parameter Name="qLock" Section="Output" Type="Bool" />
+                    <Parameter Name="qMasked" Section="Output" Type="Bool" />
+                    <Parameter Name="qStatus" Section="Output" Type="Word" />
+                    <Parameter Name="ioMask" Section="InOut" Type="Word" />
+                  </CallInfo>
+                  <Negated Name="iLock1" />
+                </Call>
+              </Parts>
+              <Wires>
+                <Wire UId="43">
+                  <OpenCon UId="30" />
+                  <NameCon UId="28" Name="en" />
+                </Wire>
+                <Wire UId="44">
+                  <IdentCon UId="21" />
+                  <NameCon UId="28" Name="iLock1" />
+                </Wire>
+                <Wire UId="45">
+                  <IdentCon UId="22" />
+                  <NameCon UId="28" Name="iLock2" />
+                </Wire>
+                <Wire UId="46">
+                  <IdentCon UId="23" />
+                  <NameCon UId="28" Name="iLock3" />
+                </Wire>
+                <Wire UId="47">
+                  <IdentCon UId="24" />
+                  <NameCon UId="28" Name="iLock4" />
+                </Wire>
+                <Wire UId="48">
+                  <IdentCon UId="25" />
+                  <NameCon UId="28" Name="iLock5" />
+                </Wire>
+                <Wire UId="49">
+                  <OpenCon UId="31" />
+                  <NameCon UId="28" Name="iLock6" />
+                </Wire>
+                <Wire UId="50">
+                  <OpenCon UId="32" />
+                  <NameCon UId="28" Name="iLock7" />
+                </Wire>
+                <Wire UId="51">
+                  <OpenCon UId="33" />
+                  <NameCon UId="28" Name="iLock8" />
+                </Wire>
+                <Wire UId="52">
+                  <OpenCon UId="34" />
+                  <NameCon UId="28" Name="iLock9" />
+                </Wire>
+                <Wire UId="53">
+                  <OpenCon UId="35" />
+                  <NameCon UId="28" Name="iLock10" />
+                </Wire>
+                <Wire UId="54">
+                  <OpenCon UId="36" />
+                  <NameCon UId="28" Name="iLock11" />
+                </Wire>
+                <Wire UId="55">
+                  <OpenCon UId="37" />
+                  <NameCon UId="28" Name="iLock12" />
+                </Wire>
+                <Wire UId="56">
+                  <OpenCon UId="38" />
+                  <NameCon UId="28" Name="iLock13" />
+                </Wire>
+                <Wire UId="57">
+                  <OpenCon UId="39" />
+                  <NameCon UId="28" Name="pLockLogic" />
+                </Wire>
+                <Wire UId="58">
+                  <IdentCon UId="26" />
+                  <NameCon UId="28" Name="pUnmasked" />
+                </Wire>
+                <Wire UId="59">
+                  <OpenCon UId="40" />
+                  <NameCon UId="28" Name="ioMask" />
+                </Wire>
+                <Wire UId="60">
+                  <NameCon UId="28" Name="qLock" />
+                  <IdentCon UId="27" />
+                </Wire>
+                <Wire UId="61">
+                  <NameCon UId="28" Name="qMasked" />
+                  <OpenCon UId="41" />
+                </Wire>
+                <Wire UId="62">
+                  <NameCon UId="28" Name="qStatus" />
+                  <OpenCon UId="42" />
+                </Wire>
+              </Wires>
+            </FlgNet>
+          </NetworkSource>
+          <ProgrammingLanguage>FBD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="2F" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="30" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="31" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="32" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="33" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>Lock X left</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="34" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="35" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource>
+            <FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v3">
+              <Parts>
+                <Access Scope="GlobalVariable" UId="21">
+                  <Symbol>
+                    <Component Name="ES1LE2" />
+                    <Component Name="M02_GZ02_nfpos" />
+                    <Component Name="qout" />
+                  </Symbol>
+                </Access>
+                <Access Scope="LocalVariable" UId="22">
+                  <Symbol>
+                    <Component Name="tlock_fwd" />
+                  </Symbol>
+                </Access>
+                <Access Scope="GlobalVariable" UId="23">
+                  <Symbol>
+                    <Component Name="HOOD_DB" />
+                    <Component Name="xy_seal_ok" />
+                  </Symbol>
+                </Access>
+                <Access Scope="GlobalVariable" UId="24">
+                  <Symbol>
+                    <Component Name="ELC_DB" />
+                    <Component Name="lock_move" />
+                  </Symbol>
+                </Access>
+                <Access Scope="LocalVariable" UId="25">
+                  <Symbol>
+                    <Component Name="tlock_melt" />
+                  </Symbol>
+                </Access>
+                <Access Scope="LiteralConstant" UId="26">
+                  <Constant>
+                    <ConstantType>Word</ConstantType>
+                    <ConstantValue>16#1</ConstantValue>
+                  </Constant>
+                </Access>
+                <Access Scope="GlobalVariable" UId="27">
+                  <Symbol>
+                    <Component Name="ES1LE2" />
+                    <Component Name="M02" />
+                    <Component Name="lock_R" />
+                  </Symbol>
+                </Access>
+                <Call UId="28">
+                  <CallInfo Name="Lock" BlockType="FB">
+                    <Instance Scope="GlobalVariable" UId="29">
+                      <Component Name="ES1LE2_M02_LockFwd" />
+                    </Instance>
+                    <Parameter Name="iLock1" Section="Input" Type="Bool" />
+                    <Parameter Name="iLock2" Section="Input" Type="Bool" />
+                    <Parameter Name="iLock3" Section="Input" Type="Bool" />
+                    <Parameter Name="iLock4" Section="Input" Type="Bool" />
+                    <Parameter Name="iLock5" Section="Input" Type="Bool" />
+                    <Parameter Name="iLock6" Section="Input" Type="Bool" />
+                    <Parameter Name="iLock7" Section="Input" Type="Bool" />
+                    <Parameter Name="iLock8" Section="Input" Type="Bool" />
+                    <Parameter Name="iLock9" Section="Input" Type="Bool" />
+                    <Parameter Name="iLock10" Section="Input" Type="Bool" />
+                    <Parameter Name="iLock11" Section="Input" Type="Bool" />
+                    <Parameter Name="iLock12" Section="Input" Type="Bool" />
+                    <Parameter Name="iLock13" Section="Input" Type="Bool" />
+                    <Parameter Name="pLockLogic" Section="Input" Type="Byte" />
+                    <Parameter Name="pUnmasked" Section="Input" Type="Word" />
+                    <Parameter Name="qLock" Section="Output" Type="Bool" />
+                    <Parameter Name="qMasked" Section="Output" Type="Bool" />
+                    <Parameter Name="qStatus" Section="Output" Type="Word" />
+                    <Parameter Name="ioMask" Section="InOut" Type="Word" />
+                  </CallInfo>
+                  <Negated Name="iLock1" />
+                </Call>
+              </Parts>
+              <Wires>
+                <Wire UId="43">
+                  <OpenCon UId="30" />
+                  <NameCon UId="28" Name="en" />
+                </Wire>
+                <Wire UId="44">
+                  <IdentCon UId="21" />
+                  <NameCon UId="28" Name="iLock1" />
+                </Wire>
+                <Wire UId="45">
+                  <IdentCon UId="22" />
+                  <NameCon UId="28" Name="iLock2" />
+                </Wire>
+                <Wire UId="46">
+                  <IdentCon UId="23" />
+                  <NameCon UId="28" Name="iLock3" />
+                </Wire>
+                <Wire UId="47">
+                  <IdentCon UId="24" />
+                  <NameCon UId="28" Name="iLock4" />
+                </Wire>
+                <Wire UId="48">
+                  <IdentCon UId="25" />
+                  <NameCon UId="28" Name="iLock5" />
+                </Wire>
+                <Wire UId="49">
+                  <OpenCon UId="31" />
+                  <NameCon UId="28" Name="iLock6" />
+                </Wire>
+                <Wire UId="50">
+                  <OpenCon UId="32" />
+                  <NameCon UId="28" Name="iLock7" />
+                </Wire>
+                <Wire UId="51">
+                  <OpenCon UId="33" />
+                  <NameCon UId="28" Name="iLock8" />
+                </Wire>
+                <Wire UId="52">
+                  <OpenCon UId="34" />
+                  <NameCon UId="28" Name="iLock9" />
+                </Wire>
+                <Wire UId="53">
+                  <OpenCon UId="35" />
+                  <NameCon UId="28" Name="iLock10" />
+                </Wire>
+                <Wire UId="54">
+                  <OpenCon UId="36" />
+                  <NameCon UId="28" Name="iLock11" />
+                </Wire>
+                <Wire UId="55">
+                  <OpenCon UId="37" />
+                  <NameCon UId="28" Name="iLock12" />
+                </Wire>
+                <Wire UId="56">
+                  <OpenCon UId="38" />
+                  <NameCon UId="28" Name="iLock13" />
+                </Wire>
+                <Wire UId="57">
+                  <OpenCon UId="39" />
+                  <NameCon UId="28" Name="pLockLogic" />
+                </Wire>
+                <Wire UId="58">
+                  <IdentCon UId="26" />
+                  <NameCon UId="28" Name="pUnmasked" />
+                </Wire>
+                <Wire UId="59">
+                  <OpenCon UId="40" />
+                  <NameCon UId="28" Name="ioMask" />
+                </Wire>
+                <Wire UId="60">
+                  <NameCon UId="28" Name="qLock" />
+                  <IdentCon UId="27" />
+                </Wire>
+                <Wire UId="61">
+                  <NameCon UId="28" Name="qMasked" />
+                  <OpenCon UId="41" />
+                </Wire>
+                <Wire UId="62">
+                  <NameCon UId="28" Name="qStatus" />
+                  <OpenCon UId="42" />
+                </Wire>
+              </Wires>
+            </FlgNet>
+          </NetworkSource>
+          <ProgrammingLanguage>FBD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="36" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="37" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="38" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="39" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="3A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>Lock Y Forward</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="3B" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="3C" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource>
+            <FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v3">
+              <Parts>
+                <Access Scope="GlobalVariable" UId="21">
+                  <Symbol>
+                    <Component Name="ES1LE2" />
+                    <Component Name="M02_GZ01_nbpos" />
+                    <Component Name="qout" />
+                  </Symbol>
+                </Access>
+                <Access Scope="LocalVariable" UId="22">
+                  <Symbol>
+                    <Component Name="tlock_bwd" />
+                  </Symbol>
+                </Access>
+                <Access Scope="GlobalVariable" UId="23">
+                  <Symbol>
+                    <Component Name="HOOD_DB" />
+                    <Component Name="xy_seal_ok" />
+                  </Symbol>
+                </Access>
+                <Access Scope="GlobalVariable" UId="24">
+                  <Symbol>
+                    <Component Name="ELC_DB" />
+                    <Component Name="lock_move" />
+                  </Symbol>
+                </Access>
+                <Access Scope="LocalVariable" UId="25">
+                  <Symbol>
+                    <Component Name="tlock_melt" />
+                  </Symbol>
+                </Access>
+                <Access Scope="LiteralConstant" UId="26">
+                  <Constant>
+                    <ConstantType>Word</ConstantType>
+                    <ConstantValue>16#1</ConstantValue>
+                  </Constant>
+                </Access>
+                <Access Scope="GlobalVariable" UId="27">
+                  <Symbol>
+                    <Component Name="ES1LE2" />
+                    <Component Name="M02" />
+                    <Component Name="lock_L" />
+                  </Symbol>
+                </Access>
+                <Call UId="28">
+                  <CallInfo Name="Lock" BlockType="FB">
+                    <Instance Scope="GlobalVariable" UId="29">
+                      <Component Name="ES1LE2_M02_LockBwd" />
+                    </Instance>
+                    <Parameter Name="iLock1" Section="Input" Type="Bool" />
+                    <Parameter Name="iLock2" Section="Input" Type="Bool" />
+                    <Parameter Name="iLock3" Section="Input" Type="Bool" />
+                    <Parameter Name="iLock4" Section="Input" Type="Bool" />
+                    <Parameter Name="iLock5" Section="Input" Type="Bool" />
+                    <Parameter Name="iLock6" Section="Input" Type="Bool" />
+                    <Parameter Name="iLock7" Section="Input" Type="Bool" />
+                    <Parameter Name="iLock8" Section="Input" Type="Bool" />
+                    <Parameter Name="iLock9" Section="Input" Type="Bool" />
+                    <Parameter Name="iLock10" Section="Input" Type="Bool" />
+                    <Parameter Name="iLock11" Section="Input" Type="Bool" />
+                    <Parameter Name="iLock12" Section="Input" Type="Bool" />
+                    <Parameter Name="iLock13" Section="Input" Type="Bool" />
+                    <Parameter Name="pLockLogic" Section="Input" Type="Byte" />
+                    <Parameter Name="pUnmasked" Section="Input" Type="Word" />
+                    <Parameter Name="qLock" Section="Output" Type="Bool" />
+                    <Parameter Name="qMasked" Section="Output" Type="Bool" />
+                    <Parameter Name="qStatus" Section="Output" Type="Word" />
+                    <Parameter Name="ioMask" Section="InOut" Type="Word" />
+                  </CallInfo>
+                  <Negated Name="iLock1" />
+                </Call>
+              </Parts>
+              <Wires>
+                <Wire UId="43">
+                  <OpenCon UId="30" />
+                  <NameCon UId="28" Name="en" />
+                </Wire>
+                <Wire UId="44">
+                  <IdentCon UId="21" />
+                  <NameCon UId="28" Name="iLock1" />
+                </Wire>
+                <Wire UId="45">
+                  <IdentCon UId="22" />
+                  <NameCon UId="28" Name="iLock2" />
+                </Wire>
+                <Wire UId="46">
+                  <IdentCon UId="23" />
+                  <NameCon UId="28" Name="iLock3" />
+                </Wire>
+                <Wire UId="47">
+                  <IdentCon UId="24" />
+                  <NameCon UId="28" Name="iLock4" />
+                </Wire>
+                <Wire UId="48">
+                  <IdentCon UId="25" />
+                  <NameCon UId="28" Name="iLock5" />
+                </Wire>
+                <Wire UId="49">
+                  <OpenCon UId="31" />
+                  <NameCon UId="28" Name="iLock6" />
+                </Wire>
+                <Wire UId="50">
+                  <OpenCon UId="32" />
+                  <NameCon UId="28" Name="iLock7" />
+                </Wire>
+                <Wire UId="51">
+                  <OpenCon UId="33" />
+                  <NameCon UId="28" Name="iLock8" />
+                </Wire>
+                <Wire UId="52">
+                  <OpenCon UId="34" />
+                  <NameCon UId="28" Name="iLock9" />
+                </Wire>
+                <Wire UId="53">
+                  <OpenCon UId="35" />
+                  <NameCon UId="28" Name="iLock10" />
+                </Wire>
+                <Wire UId="54">
+                  <OpenCon UId="36" />
+                  <NameCon UId="28" Name="iLock11" />
+                </Wire>
+                <Wire UId="55">
+                  <OpenCon UId="37" />
+                  <NameCon UId="28" Name="iLock12" />
+                </Wire>
+                <Wire UId="56">
+                  <OpenCon UId="38" />
+                  <NameCon UId="28" Name="iLock13" />
+                </Wire>
+                <Wire UId="57">
+                  <OpenCon UId="39" />
+                  <NameCon UId="28" Name="pLockLogic" />
+                </Wire>
+                <Wire UId="58">
+                  <IdentCon UId="26" />
+                  <NameCon UId="28" Name="pUnmasked" />
+                </Wire>
+                <Wire UId="59">
+                  <OpenCon UId="40" />
+                  <NameCon UId="28" Name="ioMask" />
+                </Wire>
+                <Wire UId="60">
+                  <NameCon UId="28" Name="qLock" />
+                  <IdentCon UId="27" />
+                </Wire>
+                <Wire UId="61">
+                  <NameCon UId="28" Name="qMasked" />
+                  <OpenCon UId="41" />
+                </Wire>
+                <Wire UId="62">
+                  <NameCon UId="28" Name="qStatus" />
+                  <OpenCon UId="42" />
+                </Wire>
+              </Wires>
+            </FlgNet>
+          </NetworkSource>
+          <ProgrammingLanguage>FBD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="3D" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="3E" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="3F" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="40" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="41" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>Lock Y  Backward</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="42" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="43" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource>
+            <FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v3">
+              <Parts>
+                <Access Scope="GlobalVariable" UId="21">
+                  <Symbol>
+                    <Component Name="AlwaysFALSE" />
+                  </Symbol>
+                </Access>
+                <Access Scope="GlobalVariable" UId="22">
+                  <Symbol>
+                    <Component Name="ES1LE2" />
+                    <Component Name="M01" />
+                    <Component Name="hw_lock_R" />
+                  </Symbol>
+                </Access>
+                <Part Name="Coil" UId="23" />
+              </Parts>
+              <Wires>
+                <Wire UId="24">
+                  <IdentCon UId="21" />
+                  <NameCon UId="23" Name="in" />
+                </Wire>
+                <Wire UId="25">
+                  <IdentCon UId="22" />
+                  <NameCon UId="23" Name="operand" />
+                </Wire>
+              </Wires>
+            </FlgNet>
+          </NetworkSource>
+          <ProgrammingLanguage>FBD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="44" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="45" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="46" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="47" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="48" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>Hardwarelock M01 Right</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="49" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="4A" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource>
+            <FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v3">
+              <Parts>
+                <Access Scope="GlobalVariable" UId="21">
+                  <Symbol>
+                    <Component Name="AlwaysFALSE" />
+                  </Symbol>
+                </Access>
+                <Access Scope="GlobalVariable" UId="22">
+                  <Symbol>
+                    <Component Name="ES1LE2" />
+                    <Component Name="M01" />
+                    <Component Name="hw_lock_L" />
+                  </Symbol>
+                </Access>
+                <Part Name="Coil" UId="23" />
+              </Parts>
+              <Wires>
+                <Wire UId="24">
+                  <IdentCon UId="21" />
+                  <NameCon UId="23" Name="in" />
+                </Wire>
+                <Wire UId="25">
+                  <IdentCon UId="22" />
+                  <NameCon UId="23" Name="operand" />
+                </Wire>
+              </Wires>
+            </FlgNet>
+          </NetworkSource>
+          <ProgrammingLanguage>FBD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="4B" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="4C" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="4D" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="4E" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="4F" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>Hardwarelock M01 Left</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="50" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="51" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource>
+            <FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v3">
+              <Parts>
+                <Access Scope="GlobalVariable" UId="21">
+                  <Symbol>
+                    <Component Name="AlwaysFALSE" />
+                  </Symbol>
+                </Access>
+                <Access Scope="GlobalVariable" UId="22">
+                  <Symbol>
+                    <Component Name="ES1LE2" />
+                    <Component Name="M02" />
+                    <Component Name="hw_lock_R" />
+                  </Symbol>
+                </Access>
+                <Part Name="Coil" UId="23" />
+              </Parts>
+              <Wires>
+                <Wire UId="24">
+                  <IdentCon UId="21" />
+                  <NameCon UId="23" Name="in" />
+                </Wire>
+                <Wire UId="25">
+                  <IdentCon UId="22" />
+                  <NameCon UId="23" Name="operand" />
+                </Wire>
+              </Wires>
+            </FlgNet>
+          </NetworkSource>
+          <ProgrammingLanguage>FBD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="52" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="53" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="54" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="55" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="56" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>Hardwarelock M02 Right</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="57" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="58" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource>
+            <FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v3">
+              <Parts>
+                <Access Scope="GlobalVariable" UId="21">
+                  <Symbol>
+                    <Component Name="AlwaysFALSE" />
+                  </Symbol>
+                </Access>
+                <Access Scope="GlobalVariable" UId="22">
+                  <Symbol>
+                    <Component Name="ES1LE2" />
+                    <Component Name="M02" />
+                    <Component Name="hw_lock_L" />
+                  </Symbol>
+                </Access>
+                <Part Name="Coil" UId="23" />
+              </Parts>
+              <Wires>
+                <Wire UId="24">
+                  <IdentCon UId="21" />
+                  <NameCon UId="23" Name="in" />
+                </Wire>
+                <Wire UId="25">
+                  <IdentCon UId="22" />
+                  <NameCon UId="23" Name="operand" />
+                </Wire>
+              </Wires>
+            </FlgNet>
+          </NetworkSource>
+          <ProgrammingLanguage>FBD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="59" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="5A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="5B" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="5C" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="5D" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>Hardwarelock M02 Left</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="5E" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <MultilingualText ID="5F" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="60" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text>ESM XY-shift</Text>
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="61" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.FC>
+</Document>

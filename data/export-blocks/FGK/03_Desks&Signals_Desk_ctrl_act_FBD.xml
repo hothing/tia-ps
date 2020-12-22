@@ -1,0 +1,618 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V15.1" />
+  <DocumentInfo>
+    <Created>2020-06-12T07:35:54.7568359Z</Created>
+    <ExportSetting>None</ExportSetting>
+    <InstalledProducts>
+      <Product>
+        <DisplayName>Totally Integrated Automation Portal</DisplayName>
+        <DisplayVersion>V15.1</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>TIA Portal Openness</DisplayName>
+        <DisplayVersion>V15.1</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>STEP 7 Professional</DisplayName>
+        <DisplayVersion>V15.1</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>STEP 7 Safety</DisplayName>
+        <DisplayVersion>V15.1</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>WinCC Advanced</DisplayName>
+        <DisplayVersion>V15.1</DisplayVersion>
+      </Product>
+    </InstalledProducts>
+  </DocumentInfo>
+  <SW.Blocks.FC ID="0">
+    <AttributeList>
+      <AutoNumber>false</AutoNumber>
+      <Interface>
+        <Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v3">
+          <Section Name="Input" />
+          <Section Name="Output" />
+          <Section Name="InOut" />
+          <Section Name="Temp">
+            <Member Name="_gt07_pulse_on" Datatype="Bool" />
+            <Member Name="_gd01_pulse_on" Datatype="Bool" />
+            <Member Name="_gd02_pulse_on" Datatype="Bool" />
+            <Member Name="_gd03_pulse_on" Datatype="Bool" />
+            <Member Name="_gd04_pulse_on" Datatype="Bool" />
+            <Member Name="tDeactivate" Datatype="Bool" />
+          </Section>
+          <Section Name="Constant" />
+          <Section Name="Return">
+            <Member Name="Ret_Val" Datatype="Void" />
+          </Section>
+        </Sections>
+      </Interface>
+      <MemoryLayout>Standard</MemoryLayout>
+      <Name>Desk_ctrl_act</Name>
+      <Number>201</Number>
+      <ProgrammingLanguage>FBD</ProgrammingLanguage>
+      <SetENOAutomatically>False</SetENOAutomatically>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <SW.Blocks.CompileUnit ID="4" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource>
+            <FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v3">
+              <Parts>
+                <Access Scope="GlobalVariable" UId="21">
+                  <Symbol>
+                    <Component Name="Desk_Misc" />
+                    <Component Name="GD01_deact1" />
+                  </Symbol>
+                </Access>
+                <Access Scope="GlobalVariable" UId="22">
+                  <Symbol>
+                    <Component Name="Desk_Misc" />
+                    <Component Name="GD01_deact2" />
+                  </Symbol>
+                </Access>
+                <Access Scope="LocalVariable" UId="23">
+                  <Symbol>
+                    <Component Name="tDeactivate" />
+                  </Symbol>
+                </Access>
+                <Access Scope="GlobalVariable" UId="24">
+                  <Symbol>
+                    <Component Name="ES1GD01_SP13_desk_on" />
+                  </Symbol>
+                </Access>
+                <Access Scope="LocalVariable" UId="25">
+                  <Symbol>
+                    <Component Name="tDeactivate" />
+                  </Symbol>
+                </Access>
+                <Access Scope="GlobalVariable" UId="26">
+                  <Symbol>
+                    <Component Name="GLOB_VAR" />
+                    <Component Name="ES1GD01_desk_is_act" />
+                  </Symbol>
+                </Access>
+                <Part Name="O" UId="27">
+                  <TemplateValue Name="Card" Type="Cardinality">2</TemplateValue>
+                </Part>
+                <Part Name="Coil" UId="28" />
+                <Call UId="29">
+                  <CallInfo Name="DESK_ACT" BlockType="FB">
+                    <Instance Scope="GlobalVariable" UId="30">
+                      <Component Name="ES1GD01_ACTIVE" />
+                    </Instance>
+                    <Parameter Name="iDeskButton" Section="Input" Type="Bool" />
+                    <Parameter Name="iExtDeactivate" Section="Input" Type="Bool" />
+                    <Parameter Name="qActive" Section="Output" Type="Bool" />
+                  </CallInfo>
+                </Call>
+              </Parts>
+              <Wires>
+                <Wire UId="32">
+                  <IdentCon UId="21" />
+                  <NameCon UId="27" Name="in1" />
+                </Wire>
+                <Wire UId="33">
+                  <IdentCon UId="22" />
+                  <NameCon UId="27" Name="in2" />
+                </Wire>
+                <Wire UId="34">
+                  <NameCon UId="27" Name="out" />
+                  <NameCon UId="28" Name="in" />
+                </Wire>
+                <Wire UId="35">
+                  <IdentCon UId="23" />
+                  <NameCon UId="28" Name="operand" />
+                </Wire>
+                <Wire UId="36">
+                  <OpenCon UId="31" />
+                  <NameCon UId="29" Name="en" />
+                </Wire>
+                <Wire UId="37">
+                  <IdentCon UId="24" />
+                  <NameCon UId="29" Name="iDeskButton" />
+                </Wire>
+                <Wire UId="38">
+                  <IdentCon UId="25" />
+                  <NameCon UId="29" Name="iExtDeactivate" />
+                </Wire>
+                <Wire UId="39">
+                  <NameCon UId="29" Name="qActive" />
+                  <IdentCon UId="26" />
+                </Wire>
+              </Wires>
+            </FlgNet>
+          </NetworkSource>
+          <ProgrammingLanguage>FBD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="5" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="6" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="7" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="8" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="9" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>desk +ES1GD01 activation</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="B" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource>
+            <FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v3">
+              <Parts>
+                <Access Scope="GlobalVariable" UId="21">
+                  <Symbol>
+                    <Component Name="ES1GD03_SP13_desk_on" />
+                  </Symbol>
+                </Access>
+                <Access Scope="LiteralConstant" UId="22">
+                  <Constant>
+                    <ConstantType>Bool</ConstantType>
+                    <ConstantValue>false</ConstantValue>
+                  </Constant>
+                </Access>
+                <Access Scope="GlobalVariable" UId="23">
+                  <Symbol>
+                    <Component Name="GLOB_VAR" />
+                    <Component Name="ES1GD03_desk_is_act" />
+                  </Symbol>
+                </Access>
+                <Call UId="24">
+                  <CallInfo Name="DESK_ACT" BlockType="FB">
+                    <Instance Scope="GlobalVariable" UId="25">
+                      <Component Name="ES1GD03_ACTIVE" />
+                    </Instance>
+                    <Parameter Name="iDeskButton" Section="Input" Type="Bool" />
+                    <Parameter Name="iExtDeactivate" Section="Input" Type="Bool" />
+                    <Parameter Name="qActive" Section="Output" Type="Bool" />
+                  </CallInfo>
+                </Call>
+              </Parts>
+              <Wires>
+                <Wire UId="27">
+                  <OpenCon UId="26" />
+                  <NameCon UId="24" Name="en" />
+                </Wire>
+                <Wire UId="28">
+                  <IdentCon UId="21" />
+                  <NameCon UId="24" Name="iDeskButton" />
+                </Wire>
+                <Wire UId="29">
+                  <IdentCon UId="22" />
+                  <NameCon UId="24" Name="iExtDeactivate" />
+                </Wire>
+                <Wire UId="30">
+                  <NameCon UId="24" Name="qActive" />
+                  <IdentCon UId="23" />
+                </Wire>
+              </Wires>
+            </FlgNet>
+          </NetworkSource>
+          <ProgrammingLanguage>FBD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="C" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="D" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="E" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="F" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="10" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>desk +ES1GD03 activation</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="11" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="12" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource>
+            <FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v3">
+              <Parts>
+                <Access Scope="GlobalVariable" UId="21">
+                  <Symbol>
+                    <Component Name="Desk_Misc" />
+                    <Component Name="GT07_deact1" />
+                  </Symbol>
+                </Access>
+                <Access Scope="GlobalVariable" UId="22">
+                  <Symbol>
+                    <Component Name="Desk_Misc" />
+                    <Component Name="GT07_deact2" />
+                  </Symbol>
+                </Access>
+                <Access Scope="LocalVariable" UId="23">
+                  <Symbol>
+                    <Component Name="tDeactivate" />
+                  </Symbol>
+                </Access>
+                <Access Scope="GlobalVariable" UId="24">
+                  <Symbol>
+                    <Component Name="ES1GT07_SP33_desk_on" />
+                  </Symbol>
+                </Access>
+                <Access Scope="LocalVariable" UId="25">
+                  <Symbol>
+                    <Component Name="tDeactivate" />
+                  </Symbol>
+                </Access>
+                <Access Scope="GlobalVariable" UId="26">
+                  <Symbol>
+                    <Component Name="GLOB_VAR" />
+                    <Component Name="ES1GT07_desk_is_act" />
+                  </Symbol>
+                </Access>
+                <Access Scope="GlobalVariable" UId="27">
+                  <Symbol>
+                    <Component Name="GLOB_VAR" />
+                    <Component Name="ES1GT07_desk_is_act" />
+                  </Symbol>
+                </Access>
+                <Access Scope="GlobalVariable" UId="28">
+                  <Symbol>
+                    <Component Name="GLOB_VAR" />
+                    <Component Name="ES1GD02_desk_is_act" />
+                  </Symbol>
+                </Access>
+                <Part Name="O" UId="29">
+                  <TemplateValue Name="Card" Type="Cardinality">2</TemplateValue>
+                </Part>
+                <Part Name="Coil" UId="30" />
+                <Call UId="31">
+                  <CallInfo Name="DESK_ACT" BlockType="FB">
+                    <Instance Scope="GlobalVariable" UId="32">
+                      <Component Name="ES1GT07_ACTIVE" />
+                    </Instance>
+                    <Parameter Name="iDeskButton" Section="Input" Type="Bool" />
+                    <Parameter Name="iExtDeactivate" Section="Input" Type="Bool" />
+                    <Parameter Name="qActive" Section="Output" Type="Bool" />
+                  </CallInfo>
+                </Call>
+                <Part Name="Coil" UId="33" />
+              </Parts>
+              <Wires>
+                <Wire UId="35">
+                  <IdentCon UId="21" />
+                  <NameCon UId="29" Name="in1" />
+                </Wire>
+                <Wire UId="36">
+                  <IdentCon UId="22" />
+                  <NameCon UId="29" Name="in2" />
+                </Wire>
+                <Wire UId="37">
+                  <NameCon UId="29" Name="out" />
+                  <NameCon UId="30" Name="in" />
+                </Wire>
+                <Wire UId="38">
+                  <IdentCon UId="23" />
+                  <NameCon UId="30" Name="operand" />
+                </Wire>
+                <Wire UId="39">
+                  <OpenCon UId="34" />
+                  <NameCon UId="31" Name="en" />
+                </Wire>
+                <Wire UId="40">
+                  <IdentCon UId="24" />
+                  <NameCon UId="31" Name="iDeskButton" />
+                </Wire>
+                <Wire UId="41">
+                  <IdentCon UId="25" />
+                  <NameCon UId="31" Name="iExtDeactivate" />
+                </Wire>
+                <Wire UId="42">
+                  <NameCon UId="31" Name="qActive" />
+                  <IdentCon UId="26" />
+                </Wire>
+                <Wire UId="43">
+                  <IdentCon UId="27" />
+                  <NameCon UId="33" Name="in" />
+                </Wire>
+                <Wire UId="44">
+                  <IdentCon UId="28" />
+                  <NameCon UId="33" Name="operand" />
+                </Wire>
+              </Wires>
+            </FlgNet>
+          </NetworkSource>
+          <ProgrammingLanguage>FBD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="13" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="14" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="15" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="16" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="17" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>desk +ESRGT07 activation</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="18" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="19" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource>
+            <FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v3">
+              <Parts>
+                <Access Scope="GlobalVariable" UId="21">
+                  <Symbol>
+                    <Component Name="GLOB_VAR" />
+                    <Component Name="ES1GD01_desk_is_act" />
+                  </Symbol>
+                </Access>
+                <Access Scope="GlobalVariable" UId="22">
+                  <Symbol>
+                    <Component Name="GLOB_VAR" />
+                    <Component Name="ES1GT07_desk_is_act" />
+                  </Symbol>
+                </Access>
+                <Access Scope="GlobalVariable" UId="23">
+                  <Symbol>
+                    <Component Name="Desk_Misc" />
+                    <Component Name="GD01_deact1" />
+                  </Symbol>
+                </Access>
+                <Access Scope="GlobalVariable" UId="24">
+                  <Symbol>
+                    <Component Name="Desk_Misc" />
+                    <Component Name="GT07_deact1" />
+                  </Symbol>
+                </Access>
+                <Call UId="25">
+                  <CallInfo Name="DESKS_SELECTOR" BlockType="FB">
+                    <Instance Scope="GlobalVariable" UId="26">
+                      <Component Name="DESKS_SELECTOR_DB" />
+                    </Instance>
+                    <Parameter Name="iDesk1" Section="Input" Type="Bool" />
+                    <Parameter Name="iDesk2" Section="Input" Type="Bool" />
+                    <Parameter Name="iDesk3" Section="Input" Type="Bool" />
+                    <Parameter Name="iDesk4" Section="Input" Type="Bool" />
+                    <Parameter Name="qDeactivate1" Section="Output" Type="Bool" />
+                    <Parameter Name="qDeactivate2" Section="Output" Type="Bool" />
+                    <Parameter Name="qDeactivate3" Section="Output" Type="Bool" />
+                    <Parameter Name="qDeactivate4" Section="Output" Type="Bool" />
+                  </CallInfo>
+                </Call>
+              </Parts>
+              <Wires>
+                <Wire UId="32">
+                  <OpenCon UId="27" />
+                  <NameCon UId="25" Name="en" />
+                </Wire>
+                <Wire UId="33">
+                  <IdentCon UId="21" />
+                  <NameCon UId="25" Name="iDesk1" />
+                </Wire>
+                <Wire UId="34">
+                  <IdentCon UId="22" />
+                  <NameCon UId="25" Name="iDesk2" />
+                </Wire>
+                <Wire UId="35">
+                  <OpenCon UId="28" />
+                  <NameCon UId="25" Name="iDesk3" />
+                </Wire>
+                <Wire UId="36">
+                  <OpenCon UId="29" />
+                  <NameCon UId="25" Name="iDesk4" />
+                </Wire>
+                <Wire UId="37">
+                  <NameCon UId="25" Name="qDeactivate1" />
+                  <IdentCon UId="23" />
+                </Wire>
+                <Wire UId="38">
+                  <NameCon UId="25" Name="qDeactivate2" />
+                  <IdentCon UId="24" />
+                </Wire>
+                <Wire UId="39">
+                  <NameCon UId="25" Name="qDeactivate3" />
+                  <OpenCon UId="30" />
+                </Wire>
+                <Wire UId="40">
+                  <NameCon UId="25" Name="qDeactivate4" />
+                  <OpenCon UId="31" />
+                </Wire>
+              </Wires>
+            </FlgNet>
+          </NetworkSource>
+          <ProgrammingLanguage>FBD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="1A" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="1B" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="1C" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="1D" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="1E" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>desk selections</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="1F" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="20" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource />
+          <ProgrammingLanguage>FBD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="21" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="22" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="23" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="24" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="25" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="26" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <MultilingualText ID="27" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="28" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text>Desk activation</Text>
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="29" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.FC>
+</Document>

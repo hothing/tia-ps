@@ -1,0 +1,620 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V15.1" />
+  <DocumentInfo>
+    <Created>2020-06-12T07:35:38.3037109Z</Created>
+    <ExportSetting>None</ExportSetting>
+    <InstalledProducts>
+      <Product>
+        <DisplayName>Totally Integrated Automation Portal</DisplayName>
+        <DisplayVersion>V15.1</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>TIA Portal Openness</DisplayName>
+        <DisplayVersion>V15.1</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>STEP 7 Professional</DisplayName>
+        <DisplayVersion>V15.1</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>STEP 7 Safety</DisplayName>
+        <DisplayVersion>V15.1</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>WinCC Advanced</DisplayName>
+        <DisplayVersion>V15.1</DisplayVersion>
+      </Product>
+    </InstalledProducts>
+  </DocumentInfo>
+  <SW.Blocks.GlobalDB ID="0">
+    <AttributeList>
+      <Interface>
+        <Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v3">
+          <Section Name="Static">
+            <Member Name="ES1GD01_S34_on" Datatype="Bool">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">ES1GD01 Control Voltage ON</MultiLanguageText>
+              </Comment>
+              <StartValue>TRUE</StartValue>
+            </Member>
+            <Member Name="ES1GD01_S43_off" Datatype="Bool">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">ES1GD01 Circuit Breaker off</MultiLanguageText>
+              </Comment>
+              <StartValue>FALSE</StartValue>
+            </Member>
+            <Member Name="ES1GD01_S43_auto" Datatype="Bool">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">ES1GD01 Circuit Breaker auto</MultiLanguageText>
+              </Comment>
+              <StartValue>TRUE</StartValue>
+            </Member>
+            <Member Name="ES1GD01_S48_rc_key" Datatype="Bool">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">ES1GD01 Remote Control Key</MultiLanguageText>
+              </Comment>
+              <StartValue>FALSE</StartValue>
+            </Member>
+            <Member Name="ES1GD01_noemst" Datatype="Bool">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">Emergency Stop ES1GD01 ok</MultiLanguageText>
+              </Comment>
+              <StartValue>TRUE</StartValue>
+            </Member>
+            <Member Name="ES1GD02_act" Datatype="Bool">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">Remote Control active</MultiLanguageText>
+              </Comment>
+              <StartValue>FALSE</StartValue>
+            </Member>
+            <Member Name="ES1GD03_noemst" Datatype="Bool">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">Emergency Stop ES1GD03 ok</MultiLanguageText>
+              </Comment>
+              <StartValue>TRUE</StartValue>
+            </Member>
+            <Member Name="ES1GT71_noemst" Datatype="Bool">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">Emergency Stop ES1GT71 ok</MultiLanguageText>
+              </Comment>
+              <StartValue>TRUE</StartValue>
+            </Member>
+            <Member Name="ES1GT72_noemst" Datatype="Bool">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">Emergency Stop ES1GT72 ok</MultiLanguageText>
+              </Comment>
+              <StartValue>TRUE</StartValue>
+            </Member>
+            <Member Name="ES1GT74_noemst" Datatype="Bool">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">SPARE Emergency Stop ES1GT74 ok</MultiLanguageText>
+              </Comment>
+              <StartValue>TRUE</StartValue>
+            </Member>
+            <Member Name="ES1GT07_noemst" Datatype="Bool">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">Emergency Stop Portal Desk</MultiLanguageText>
+              </Comment>
+              <StartValue>TRUE</StartValue>
+            </Member>
+            <Member Name="ES1YD01_noemst" Datatype="Bool">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">Emergency Stop ES1YD01 ok</MultiLanguageText>
+              </Comment>
+              <StartValue>TRUE</StartValue>
+            </Member>
+            <Member Name="ES1YM01_emst_res" Datatype="Bool">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">Emergency Stop Reset</MultiLanguageText>
+              </Comment>
+              <StartValue>FALSE</StartValue>
+            </Member>
+            <Member Name="ES1LE1_GY02_cls" Datatype="Bool">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">Safety door Top Platform closed</MultiLanguageText>
+              </Comment>
+              <StartValue>TRUE</StartValue>
+            </Member>
+            <Member Name="ES1LE1_GY04_ncls" Datatype="Bool">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">Spindle Break not Closed</MultiLanguageText>
+              </Comment>
+              <StartValue>TRUE</StartValue>
+            </Member>
+            <Member Name="ES1LE3_GY01_pos" Datatype="Bool">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">Hood Fitted</MultiLanguageText>
+              </Comment>
+              <StartValue>FALSE</StartValue>
+            </Member>
+            <Member Name="ES1LE3_GY03_nlck" Datatype="Bool">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">Hood not Locked</MultiLanguageText>
+              </Comment>
+              <StartValue>TRUE</StartValue>
+            </Member>
+            <Member Name="ES1LE4_GY01_cls" Datatype="Bool">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">Ladder Hood closed</MultiLanguageText>
+              </Comment>
+              <StartValue>TRUE</StartValue>
+            </Member>
+            <Member Name="ES1GT07_SP52" Datatype="Bool">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">Hood upwards</MultiLanguageText>
+              </Comment>
+              <StartValue>FALSE</StartValue>
+            </Member>
+            <Member Name="ES1GT07_SP57" Datatype="Bool">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">Hood downwards</MultiLanguageText>
+              </Comment>
+              <StartValue>FALSE</StartValue>
+            </Member>
+            <Member Name="ES1GD01_S43" Datatype="Bool">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">Circuit Breaker switch Auto mode</MultiLanguageText>
+              </Comment>
+              <StartValue>FALSE</StartValue>
+            </Member>
+            <Member Name="ES1LS1_XS01_GY01_cls" Datatype="Bool">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <StartValue>FALSE</StartValue>
+            </Member>
+            <Member Name="ES1LT1_XS01_GY01_cls" Datatype="Bool">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <StartValue>FALSE</StartValue>
+            </Member>
+            <Member Name="___outputs___" Datatype="Int">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <StartValue>0</StartValue>
+            </Member>
+            <Member Name="emer_undel_on" Datatype="Bool">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">Emergency line Undelayed ok</MultiLanguageText>
+              </Comment>
+              <StartValue>TRUE</StartValue>
+            </Member>
+            <Member Name="emer_del_on" Datatype="Bool">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">Emergency line Delayed ok</MultiLanguageText>
+              </Comment>
+              <StartValue>TRUE</StartValue>
+            </Member>
+            <Member Name="sd_undel_on" Datatype="Bool">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">Emergency &amp; SDoors  line Undelayed ok</MultiLanguageText>
+              </Comment>
+              <StartValue>TRUE</StartValue>
+            </Member>
+            <Member Name="sd_del_on" Datatype="Bool">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">Emergency &amp; SDoors  line Delayed ok</MultiLanguageText>
+              </Comment>
+              <StartValue>TRUE</StartValue>
+            </Member>
+            <Member Name="mcb_rel_undel" Datatype="Bool">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">MCB release undelayed ok</MultiLanguageText>
+              </Comment>
+              <StartValue>FALSE</StartValue>
+            </Member>
+            <Member Name="mcb_rel_del" Datatype="Bool">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">MCB release delayed ok</MultiLanguageText>
+              </Comment>
+              <StartValue>FALSE</StartValue>
+            </Member>
+            <Member Name="ES1YM01_emer_undel_on" Datatype="Bool">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">Emergency line Undelayed out</MultiLanguageText>
+              </Comment>
+              <StartValue>TRUE</StartValue>
+            </Member>
+            <Member Name="ES1YM01_emer_undel_err" Datatype="Bool">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">Emergency line Undelayed error</MultiLanguageText>
+              </Comment>
+              <StartValue>FALSE</StartValue>
+            </Member>
+            <Member Name="ES1YM01_emer_del_on" Datatype="Bool">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">Emergency line Delayed out</MultiLanguageText>
+              </Comment>
+              <StartValue>TRUE</StartValue>
+            </Member>
+            <Member Name="ES1YM01_emer_del_err" Datatype="Bool">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">Emergency line Delayed error</MultiLanguageText>
+              </Comment>
+              <StartValue>FALSE</StartValue>
+            </Member>
+            <Member Name="ES1LA1_M01_rel_err" Datatype="Bool">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">Screw Conveyer release Error</MultiLanguageText>
+              </Comment>
+              <StartValue>FALSE</StartValue>
+            </Member>
+            <Member Name="ES1LE1_EV02_rel_on" Datatype="Bool">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">Spindle Break Release on</MultiLanguageText>
+              </Comment>
+              <StartValue>TRUE</StartValue>
+            </Member>
+            <Member Name="ES1LE1_EV02_rel_err" Datatype="Bool">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">Spindle Break Release error</MultiLanguageText>
+              </Comment>
+              <StartValue>FALSE</StartValue>
+            </Member>
+            <Member Name="ES1LE1_M01_rel_on" Datatype="Bool">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">Electrode Carriage Safe Release on</MultiLanguageText>
+              </Comment>
+              <StartValue>TRUE</StartValue>
+            </Member>
+            <Member Name="ES1LE1_M01_rel_err" Datatype="Bool">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">Electrode Carriage Safe Release error</MultiLanguageText>
+              </Comment>
+              <StartValue>FALSE</StartValue>
+            </Member>
+            <Member Name="ES1LE2_M01_rel_err" Datatype="Bool">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">X-Drive Safe Release error</MultiLanguageText>
+              </Comment>
+              <StartValue>FALSE</StartValue>
+            </Member>
+            <Member Name="ES1LE2_M02_rel_err" Datatype="Bool">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">Y-Drive Safe Release error</MultiLanguageText>
+              </Comment>
+              <StartValue>FALSE</StartValue>
+            </Member>
+            <Member Name="ES1LE3_M01_rel_on" Datatype="Bool">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">Protective Gas Hood Safe Release on</MultiLanguageText>
+              </Comment>
+              <StartValue>TRUE</StartValue>
+            </Member>
+            <Member Name="ES1LE3_M01_rel_err" Datatype="Bool">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">Protective Gas Hood Safe Release error</MultiLanguageText>
+              </Comment>
+              <StartValue>FALSE</StartValue>
+            </Member>
+            <Member Name="ES1LE4_EV01_rel_on" Datatype="Bool">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">Pneumatic Valve Power Ram Safe Release on</MultiLanguageText>
+              </Comment>
+              <StartValue>TRUE</StartValue>
+            </Member>
+            <Member Name="ES1LE4_EV01_rel_err" Datatype="Bool">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">Pneumatic Valve Power Ram Safe Release error</MultiLanguageText>
+              </Comment>
+              <StartValue>FALSE</StartValue>
+            </Member>
+            <Member Name="ES1LE4_EV02_rel_on" Datatype="Bool">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">Pneumatic Valve Current Pipes Cylinders Safe Release on</MultiLanguageText>
+              </Comment>
+              <StartValue>TRUE</StartValue>
+            </Member>
+            <Member Name="ES1LE4_EV02_rel_err" Datatype="Bool">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">Pneumatic Valve Current Pipes Cylinders Safe Release error</MultiLanguageText>
+              </Comment>
+              <StartValue>FALSE</StartValue>
+            </Member>
+            <Member Name="ES1LE4_M01_rel_on" Datatype="Bool">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">Portal Swiveling Safe Release on</MultiLanguageText>
+              </Comment>
+              <StartValue>TRUE</StartValue>
+            </Member>
+            <Member Name="ES1LE4_M01_rel_err" Datatype="Bool">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">Portal Swiveling Safe Release error</MultiLanguageText>
+              </Comment>
+              <StartValue>FALSE</StartValue>
+            </Member>
+            <Member Name="ES1LM1_EV01_rel_on" Datatype="Bool">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">Pneumatic Valve Baseplate Clamp MS1 Cylinders Safe Release on</MultiLanguageText>
+              </Comment>
+              <StartValue>TRUE</StartValue>
+            </Member>
+            <Member Name="ES1LM1_EV01_rel_err" Datatype="Bool">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">Pneumatic Valve Baseplate Clamp MS1 Cylinders Safe Release error</MultiLanguageText>
+              </Comment>
+              <StartValue>FALSE</StartValue>
+            </Member>
+            <Member Name="ES1LM2_EV01_rel_on" Datatype="Bool">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">Pneumatic Valve Baseplate Clamp MS2 Cylinders Safe Release on</MultiLanguageText>
+              </Comment>
+              <StartValue>TRUE</StartValue>
+            </Member>
+            <Member Name="ES1LM2_EV01_rel_err" Datatype="Bool">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">Pneumatic Valve Baseplate Clamp MS2 Cylinders Safe Release error</MultiLanguageText>
+              </Comment>
+              <StartValue>FALSE</StartValue>
+            </Member>
+            <Member Name="ES1LS1_XS01_rel_on" Datatype="Bool">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">MCB Safety Release on</MultiLanguageText>
+              </Comment>
+              <StartValue>TRUE</StartValue>
+            </Member>
+            <Member Name="ES1LS1_XS01_rel_err" Datatype="Bool">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">MCB Safety Release error</MultiLanguageText>
+              </Comment>
+              <StartValue>FALSE</StartValue>
+            </Member>
+            <Member Name="ES1LE1_M01_STO" Datatype="Bool">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">Electrode Carriage Safe Torque off Ok</MultiLanguageText>
+              </Comment>
+              <StartValue>TRUE</StartValue>
+            </Member>
+            <Member Name="ES1LE1_M01_STO_err" Datatype="Bool">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">Electrode Carriage Safe Torque off error</MultiLanguageText>
+              </Comment>
+              <StartValue>FALSE</StartValue>
+            </Member>
+            <Member Name="ES1LE3_M01_STO" Datatype="Bool">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">Protective Gas Hood Safe Torque off Ok</MultiLanguageText>
+              </Comment>
+              <StartValue>TRUE</StartValue>
+            </Member>
+            <Member Name="ES1LE3_M01_STO_err" Datatype="Bool">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">Protective Gas Hood Safe Torque off error</MultiLanguageText>
+              </Comment>
+              <StartValue>FALSE</StartValue>
+            </Member>
+            <Member Name="ES1LE4_M01_STO" Datatype="Bool">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">Portal Swiveling Safe Torque off Ok</MultiLanguageText>
+              </Comment>
+              <StartValue>TRUE</StartValue>
+            </Member>
+            <Member Name="ES1LE4_M01_STO_err" Datatype="Bool">
+              <AttributeList>
+                <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+              </AttributeList>
+              <Comment>
+                <MultiLanguageText Lang="en-US">Portal Swiveling Safe Torque off error</MultiLanguageText>
+              </Comment>
+              <StartValue>FALSE</StartValue>
+            </Member>
+          </Section>
+        </Sections>
+      </Interface>
+      <MemoryLayout>Standard</MemoryLayout>
+      <Name>Safety</Name>
+      <Number>608</Number>
+      <ProgrammingLanguage>DB</ProgrammingLanguage>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <MultilingualText ID="4" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="5" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="6" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.GlobalDB>
+</Document>

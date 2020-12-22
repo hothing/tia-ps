@@ -1,0 +1,339 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V15.1" />
+  <DocumentInfo>
+    <Created>2020-06-12T07:35:56.2568359Z</Created>
+    <ExportSetting>None</ExportSetting>
+    <InstalledProducts>
+      <Product>
+        <DisplayName>Totally Integrated Automation Portal</DisplayName>
+        <DisplayVersion>V15.1</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>TIA Portal Openness</DisplayName>
+        <DisplayVersion>V15.1</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>STEP 7 Professional</DisplayName>
+        <DisplayVersion>V15.1</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>STEP 7 Safety</DisplayName>
+        <DisplayVersion>V15.1</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>WinCC Advanced</DisplayName>
+        <DisplayVersion>V15.1</DisplayVersion>
+      </Product>
+    </InstalledProducts>
+  </DocumentInfo>
+  <SW.Blocks.FC ID="0">
+    <AttributeList>
+      <Interface>
+        <Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v3">
+          <Section Name="Input" />
+          <Section Name="Output" />
+          <Section Name="InOut" />
+          <Section Name="Temp">
+            <Member Name="_cont_reset" Datatype="Bool" />
+            <Member Name="_rVal" Datatype="Real" />
+          </Section>
+          <Section Name="Constant" />
+          <Section Name="Return">
+            <Member Name="Ret_Val" Datatype="Void" />
+          </Section>
+        </Sections>
+      </Interface>
+      <MemoryLayout>Optimized</MemoryLayout>
+      <Name>SIM_PROC</Name>
+      <Number>194</Number>
+      <ProgrammingLanguage>FBD</ProgrammingLanguage>
+      <SetENOAutomatically>False</SetENOAutomatically>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <SW.Blocks.CompileUnit ID="4" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource>
+            <FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v3">
+              <Parts>
+                <Access Scope="GlobalVariable" UId="21">
+                  <Symbol>
+                    <Component Name="ES1LE1" />
+                    <Component Name="M01" />
+                    <Component Name="qerr" />
+                  </Symbol>
+                </Access>
+                <Access Scope="GlobalVariable" UId="22">
+                  <Symbol>
+                    <Component Name="ES1LE1" />
+                    <Component Name="M01" />
+                    <Component Name="qrdy" />
+                  </Symbol>
+                </Access>
+                <Access Scope="GlobalVariable" UId="23">
+                  <Symbol>
+                    <Component Name="ELC_DB" />
+                    <Component Name="servo_on" />
+                  </Symbol>
+                </Access>
+                <Access Scope="LocalVariable" UId="24">
+                  <Symbol>
+                    <Component Name="_cont_reset" />
+                  </Symbol>
+                </Access>
+                <Part Name="O" UId="25">
+                  <TemplateValue Name="Card" Type="Cardinality">3</TemplateValue>
+                  <Negated Name="in2" />
+                  <Negated Name="in3" />
+                </Part>
+                <Part Name="Coil" UId="26" />
+              </Parts>
+              <Wires>
+                <Wire UId="27">
+                  <IdentCon UId="21" />
+                  <NameCon UId="25" Name="in1" />
+                </Wire>
+                <Wire UId="28">
+                  <IdentCon UId="22" />
+                  <NameCon UId="25" Name="in2" />
+                </Wire>
+                <Wire UId="29">
+                  <IdentCon UId="23" />
+                  <NameCon UId="25" Name="in3" />
+                </Wire>
+                <Wire UId="30">
+                  <NameCon UId="25" Name="out" />
+                  <NameCon UId="26" Name="in" />
+                </Wire>
+                <Wire UId="31">
+                  <IdentCon UId="24" />
+                  <NameCon UId="26" Name="operand" />
+                </Wire>
+              </Wires>
+            </FlgNet>
+          </NetworkSource>
+          <ProgrammingLanguage>FBD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="5" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="6" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="7" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="8" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="9" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>TEST PID (0)</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="B" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource>
+            <FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v3">
+              <Parts>
+                <Access Scope="GlobalVariable" UId="21">
+                  <Symbol>
+                    <Component Name="ELC_DB" />
+                    <Component Name="servo_set" />
+                  </Symbol>
+                </Access>
+                <Access Scope="GlobalVariable" UId="22">
+                  <Symbol>
+                    <Component Name="TimeSrvc" />
+                    <Component Name="PrevCycle" />
+                  </Symbol>
+                </Access>
+                <Access Scope="GlobalVariable" UId="23">
+                  <Symbol>
+                    <Component Name="Profibus" />
+                    <Component Name="ES1LE1_M01" />
+                    <Component Name="pos_act" />
+                  </Symbol>
+                </Access>
+                <Access Scope="LocalVariable" UId="24">
+                  <Symbol>
+                    <Component Name="_rVal" />
+                  </Symbol>
+                </Access>
+                <Call UId="25">
+                  <CallInfo Name="ESR_MECH_MODEL" BlockType="FB">
+                    <Instance Scope="GlobalVariable" UId="26">
+                      <Component Name="ESR_MECH_MODEL_DB" />
+                    </Instance>
+                    <Parameter Name="SIM" Section="Input" Type="Bool" />
+                    <Parameter Name="RES" Section="Input" Type="Bool" />
+                    <Parameter Name="VX" Section="Input" Type="Real" />
+                    <Parameter Name="MR" Section="Input" Type="Real" />
+                    <Parameter Name="SAMPLE_T" Section="Input" Type="Time" />
+                    <Parameter Name="qDeep" Section="Output" Type="Real" />
+                    <Parameter Name="qPosErr" Section="Output" Type="Bool" />
+                    <Parameter Name="Me" Section="InOut" Type="Real" />
+                    <Parameter Name="Mi" Section="InOut" Type="Real" />
+                    <Parameter Name="Ms" Section="InOut" Type="Real" />
+                    <Parameter Name="Le" Section="InOut" Type="Real" />
+                    <Parameter Name="Li" Section="InOut" Type="Real" />
+                    <Parameter Name="Ls" Section="InOut" Type="Real" />
+                    <Parameter Name="X1" Section="InOut" Type="Real" />
+                  </CallInfo>
+                </Call>
+              </Parts>
+              <Wires>
+                <Wire UId="38">
+                  <OpenCon UId="27" />
+                  <NameCon UId="25" Name="en" />
+                </Wire>
+                <Wire UId="39">
+                  <OpenCon UId="28" />
+                  <NameCon UId="25" Name="SIM" />
+                </Wire>
+                <Wire UId="40">
+                  <OpenCon UId="29" />
+                  <NameCon UId="25" Name="RES" />
+                </Wire>
+                <Wire UId="41">
+                  <IdentCon UId="21" />
+                  <NameCon UId="25" Name="VX" />
+                </Wire>
+                <Wire UId="42">
+                  <OpenCon UId="30" />
+                  <NameCon UId="25" Name="MR" />
+                </Wire>
+                <Wire UId="43">
+                  <IdentCon UId="22" />
+                  <NameCon UId="25" Name="SAMPLE_T" />
+                </Wire>
+                <Wire UId="44">
+                  <OpenCon UId="31" />
+                  <NameCon UId="25" Name="Me" />
+                </Wire>
+                <Wire UId="45">
+                  <OpenCon UId="32" />
+                  <NameCon UId="25" Name="Mi" />
+                </Wire>
+                <Wire UId="46">
+                  <OpenCon UId="33" />
+                  <NameCon UId="25" Name="Ms" />
+                </Wire>
+                <Wire UId="47">
+                  <OpenCon UId="34" />
+                  <NameCon UId="25" Name="Le" />
+                </Wire>
+                <Wire UId="48">
+                  <OpenCon UId="35" />
+                  <NameCon UId="25" Name="Li" />
+                </Wire>
+                <Wire UId="49">
+                  <OpenCon UId="36" />
+                  <NameCon UId="25" Name="Ls" />
+                </Wire>
+                <Wire UId="50">
+                  <IdentCon UId="23" />
+                  <NameCon UId="25" Name="X1" />
+                </Wire>
+                <Wire UId="51">
+                  <NameCon UId="25" Name="qDeep" />
+                  <IdentCon UId="24" />
+                </Wire>
+                <Wire UId="52">
+                  <NameCon UId="25" Name="qPosErr" />
+                  <OpenCon UId="37" />
+                </Wire>
+              </Wires>
+            </FlgNet>
+          </NetworkSource>
+          <ProgrammingLanguage>FBD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="C" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="D" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>X1(0) = 3950 mm
+</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="E" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="F" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="10" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>ESR mechanical model</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="11" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <MultilingualText ID="12" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="13" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="14" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.FC>
+</Document>

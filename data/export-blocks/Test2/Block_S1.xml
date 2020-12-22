@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V16" />
+  <DocumentInfo>
+    <Created>2020-12-17T10:22:04.9411875Z</Created>
+    <ExportSetting>WithReadOnly</ExportSetting>
+    <InstalledProducts>
+      <Product>
+        <DisplayName>Totally Integrated Automation Portal</DisplayName>
+        <DisplayVersion>V16 Update 2</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>TIA Portal Version Control Interface</DisplayName>
+        <DisplayVersion>V16 Update 2</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Openness</DisplayName>
+        <DisplayVersion>V16 Update 2</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>STEP 7 Professional</DisplayName>
+        <DisplayVersion>V16 Update 2</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>STEP 7 Safety</DisplayName>
+        <DisplayVersion>V16</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>WinCC Advanced / Unified PC</DisplayName>
+        <DisplayVersion>V16 Update 2</DisplayVersion>
+      </Product>
+    </InstalledProducts>
+  </DocumentInfo>
+  <SW.Blocks.FC ID="0">
+    <AttributeList>
+      <CodeModifiedDate ReadOnly="true">2020-12-17T10:18:16.964766Z</CodeModifiedDate>
+      <CompileDate ReadOnly="true">2020-12-17T10:18:16.964766Z</CompileDate>
+      <CreationDate ReadOnly="true">2020-12-17T10:17:02.6275941Z</CreationDate>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v4">
+  <Section Name="Input">
+    <Member Name="iEnable" Datatype="Bool" />
+    <Member Name="iStart" Datatype="Int" />
+  </Section>
+  <Section Name="Output" />
+  <Section Name="InOut">
+    <Member Name="ioCount" Datatype="Int" />
+  </Section>
+  <Section Name="Temp" />
+  <Section Name="Constant" />
+  <Section Name="Return">
+    <Member Name="Ret_Val" Datatype="Void" />
+  </Section>
+</Sections></Interface>
+      <InterfaceModifiedDate ReadOnly="true">2020-12-17T10:17:32.4776481Z</InterfaceModifiedDate>
+      <IsConsistent ReadOnly="true">true</IsConsistent>
+      <LibraryConformanceStatus ReadOnly="true">The object is library-conformant.</LibraryConformanceStatus>
+      <MemoryLayout>Optimized</MemoryLayout>
+      <ModifiedDate ReadOnly="true">2020-12-17T10:18:16.964766Z</ModifiedDate>
+      <Name>Block_S1</Name>
+      <Number>3</Number>
+      <ParameterModified ReadOnly="true">2020-12-17T10:17:32.4776481Z</ParameterModified>
+      <ProgrammingLanguage>SCL</ProgrammingLanguage>
+      <SetENOAutomatically>false</SetENOAutomatically>
+      <StructureModified ReadOnly="true">2020-12-17T10:17:32.4776481Z</StructureModified>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <SW.Blocks.CompileUnit ID="3" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><StructuredText xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StructuredText/v3">
+  <Token Text="IF" UId="21" />
+  <Blank UId="22" />
+  <Access Scope="LocalVariable" UId="23">
+    <Symbol UId="24">
+      <Component Name="iEnable" UId="25" />
+    </Symbol>
+  </Access>
+  <Blank UId="26" />
+  <Token Text="THEN" UId="27" />
+  <NewLine UId="28" />
+  <Blank Num="4" UId="29" />
+  <Access Scope="LocalVariable" UId="30">
+    <Symbol UId="31">
+      <Component Name="ioCount" UId="32" />
+    </Symbol>
+  </Access>
+  <Blank UId="33" />
+  <Token Text=":=" UId="34" />
+  <Blank UId="35" />
+  <Access Scope="LocalVariable" UId="36">
+    <Symbol UId="37">
+      <Component Name="ioCount" UId="38" />
+    </Symbol>
+  </Access>
+  <Blank UId="39" />
+  <Token Text="+" UId="40" />
+  <Blank UId="41" />
+  <Access Scope="LiteralConstant" UId="42">
+    <Constant UId="43">
+      <ConstantType Informative="true" UId="44">Int</ConstantType>
+      <ConstantValue UId="45">1</ConstantValue>
+      <StringAttribute Name="Format" Informative="true">Dec_signed</StringAttribute>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="46" />
+  <NewLine UId="47" />
+  <Token Text="ELSE" UId="48" />
+  <NewLine UId="49" />
+  <Blank Num="4" UId="50" />
+  <Access Scope="LocalVariable" UId="51">
+    <Symbol UId="52">
+      <Component Name="ioCount" UId="53" />
+    </Symbol>
+  </Access>
+  <Blank UId="54" />
+  <Token Text=":=" UId="55" />
+  <Blank UId="56" />
+  <Access Scope="LocalVariable" UId="57">
+    <Symbol UId="58">
+      <Component Name="iStart" UId="59" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="60" />
+  <NewLine UId="61" />
+  <Token Text="END_IF" UId="62" />
+  <Token Text=";" UId="63" />
+  <NewLine UId="64" />
+  <Blank Num="4" UId="65" />
+</StructuredText></NetworkSource>
+          <ProgrammingLanguage>SCL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="4" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="5" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="6" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="7" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <MultilingualText ID="8" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="9" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.FC>
+</Document>

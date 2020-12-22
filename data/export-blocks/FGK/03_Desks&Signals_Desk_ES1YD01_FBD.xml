@@ -1,0 +1,883 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V15.1" />
+  <DocumentInfo>
+    <Created>2020-06-12T07:35:54.3974609Z</Created>
+    <ExportSetting>None</ExportSetting>
+    <InstalledProducts>
+      <Product>
+        <DisplayName>Totally Integrated Automation Portal</DisplayName>
+        <DisplayVersion>V15.1</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>TIA Portal Openness</DisplayName>
+        <DisplayVersion>V15.1</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>STEP 7 Professional</DisplayName>
+        <DisplayVersion>V15.1</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>STEP 7 Safety</DisplayName>
+        <DisplayVersion>V15.1</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>WinCC Advanced</DisplayName>
+        <DisplayVersion>V15.1</DisplayVersion>
+      </Product>
+    </InstalledProducts>
+  </DocumentInfo>
+  <SW.Blocks.FC ID="0">
+    <AttributeList>
+      <Interface>
+        <Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v3">
+          <Section Name="Input" />
+          <Section Name="Output" />
+          <Section Name="InOut" />
+          <Section Name="Temp" />
+          <Section Name="Constant" />
+          <Section Name="Return">
+            <Member Name="Ret_Val" Datatype="Void" />
+          </Section>
+        </Sections>
+      </Interface>
+      <MemoryLayout>Optimized</MemoryLayout>
+      <Name>Desk_ES1YD01</Name>
+      <Number>164</Number>
+      <ProgrammingLanguage>FBD</ProgrammingLanguage>
+      <SetENOAutomatically>False</SetENOAutomatically>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <SW.Blocks.CompileUnit ID="4" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource>
+            <FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v3">
+              <Parts>
+                <Access Scope="GlobalVariable" UId="21">
+                  <Symbol>
+                    <Component Name="ES1YD01_S14_act" />
+                  </Symbol>
+                </Access>
+                <Access Scope="GlobalVariable" UId="22">
+                  <Symbol>
+                    <Component Name="ES1YD01_S16_ack" />
+                  </Symbol>
+                </Access>
+                <Access Scope="GlobalVariable" UId="23">
+                  <Symbol>
+                    <Component Name="ES1YD01_S18_ltest" />
+                  </Symbol>
+                </Access>
+                <Access Scope="GlobalVariable" UId="24">
+                  <Symbol>
+                    <Component Name="ES1LE1_GY02_opn" />
+                  </Symbol>
+                </Access>
+                <Access Scope="GlobalVariable" UId="25">
+                  <Symbol>
+                    <Component Name="Safety" />
+                    <Component Name="ES1LE1_GY02_cls" />
+                  </Symbol>
+                </Access>
+                <Access Scope="LiteralConstant" UId="26">
+                  <Constant>
+                    <ConstantType>Bool</ConstantType>
+                    <ConstantValue>false</ConstantValue>
+                  </Constant>
+                </Access>
+                <Access Scope="GlobalVariable" UId="27">
+                  <Symbol>
+                    <Component Name="ES1LS1_XS01_cb_is_on" />
+                  </Symbol>
+                </Access>
+                <Access Scope="LiteralConstant" UId="28">
+                  <Constant>
+                    <ConstantType>Bool</ConstantType>
+                    <ConstantValue>false</ConstantValue>
+                  </Constant>
+                </Access>
+                <Access Scope="GlobalVariable" UId="29">
+                  <Symbol>
+                    <Component Name="Clock_1Hz" />
+                  </Symbol>
+                </Access>
+                <Access Scope="GlobalVariable" UId="30">
+                  <Symbol>
+                    <Component Name="TimeSrvc" />
+                    <Component Name="TimePLC" />
+                  </Symbol>
+                </Access>
+                <Access Scope="GlobalVariable" UId="31">
+                  <Symbol>
+                    <Component Name="ES1YD01_E15" />
+                  </Symbol>
+                </Access>
+                <Access Scope="GlobalVariable" UId="32">
+                  <Symbol>
+                    <Component Name="ES1YD01_E17" />
+                  </Symbol>
+                </Access>
+                <Access Scope="GlobalVariable" UId="33">
+                  <Symbol>
+                    <Component Name="F-ES1LE1_GY02_unlck_cmd" />
+                  </Symbol>
+                </Access>
+                <Call UId="34">
+                  <CallInfo Name="SAFETY_DESK" BlockType="FB">
+                    <Instance Scope="GlobalVariable" UId="35">
+                      <Component Name="ES1YD01" />
+                    </Instance>
+                    <Parameter Name="PB_REQ" Section="Input" Type="Bool" />
+                    <Parameter Name="PB_ACK" Section="Input" Type="Bool" />
+                    <Parameter Name="PB_LTEST" Section="Input" Type="Bool" />
+                    <Parameter Name="FB_LSO" Section="Input" Type="Bool" />
+                    <Parameter Name="FB_LOCKED" Section="Input" Type="Bool" />
+                    <Parameter Name="CONFIRM_MODE" Section="Input" Type="Bool" />
+                    <Parameter Name="EXT_LOCK" Section="Input" Type="Bool" />
+                    <Parameter Name="EXT_UNLOCK" Section="Input" Type="Bool" />
+                    <Parameter Name="flash" Section="Input" Type="Bool" />
+                    <Parameter Name="Timestamp" Section="Input" Type="Date_And_Time" />
+                    <Parameter Name="QLED_EN" Section="Output" Type="Bool" />
+                    <Parameter Name="QLED_DIS" Section="Output" Type="Bool" />
+                    <Parameter Name="QUNLOCK" Section="Output" Type="Bool" />
+                    <Parameter Name="QLOCK" Section="Output" Type="Bool" />
+                    <Parameter Name="QCONF_REQ" Section="Output" Type="Bool" />
+                    <Parameter Name="QFAULT" Section="Output" Type="Bool" />
+                    <Parameter Name="USTATUS" Section="Output" Type="Word" />
+                    <Parameter Name="OP_EN" Section="InOut" Type="Bool" />
+                    <Parameter Name="OP_UNLOCK_CMD" Section="InOut" Type="Bool" />
+                    <Parameter Name="OP_CONFIRM_REQ" Section="InOut" Type="Bool" />
+                    <Parameter Name="OP_CONFIRM_CMD" Section="InOut" Type="Bool" />
+                    <Parameter Name="OP_ACKN" Section="InOut" Type="Bool" />
+                  </CallInfo>
+                </Call>
+              </Parts>
+              <Wires>
+                <Wire UId="46">
+                  <OpenCon UId="36" />
+                  <NameCon UId="34" Name="en" />
+                </Wire>
+                <Wire UId="47">
+                  <IdentCon UId="21" />
+                  <NameCon UId="34" Name="PB_REQ" />
+                </Wire>
+                <Wire UId="48">
+                  <IdentCon UId="22" />
+                  <NameCon UId="34" Name="PB_ACK" />
+                </Wire>
+                <Wire UId="49">
+                  <IdentCon UId="23" />
+                  <NameCon UId="34" Name="PB_LTEST" />
+                </Wire>
+                <Wire UId="50">
+                  <IdentCon UId="24" />
+                  <NameCon UId="34" Name="FB_LSO" />
+                </Wire>
+                <Wire UId="51">
+                  <IdentCon UId="25" />
+                  <NameCon UId="34" Name="FB_LOCKED" />
+                </Wire>
+                <Wire UId="52">
+                  <IdentCon UId="26" />
+                  <NameCon UId="34" Name="CONFIRM_MODE" />
+                </Wire>
+                <Wire UId="53">
+                  <IdentCon UId="27" />
+                  <NameCon UId="34" Name="EXT_LOCK" />
+                </Wire>
+                <Wire UId="54">
+                  <IdentCon UId="28" />
+                  <NameCon UId="34" Name="EXT_UNLOCK" />
+                </Wire>
+                <Wire UId="55">
+                  <IdentCon UId="29" />
+                  <NameCon UId="34" Name="flash" />
+                </Wire>
+                <Wire UId="56">
+                  <IdentCon UId="30" />
+                  <NameCon UId="34" Name="Timestamp" />
+                </Wire>
+                <Wire UId="57">
+                  <OpenCon UId="37" />
+                  <NameCon UId="34" Name="OP_EN" />
+                </Wire>
+                <Wire UId="58">
+                  <OpenCon UId="38" />
+                  <NameCon UId="34" Name="OP_UNLOCK_CMD" />
+                </Wire>
+                <Wire UId="59">
+                  <OpenCon UId="39" />
+                  <NameCon UId="34" Name="OP_CONFIRM_REQ" />
+                </Wire>
+                <Wire UId="60">
+                  <OpenCon UId="40" />
+                  <NameCon UId="34" Name="OP_CONFIRM_CMD" />
+                </Wire>
+                <Wire UId="61">
+                  <OpenCon UId="41" />
+                  <NameCon UId="34" Name="OP_ACKN" />
+                </Wire>
+                <Wire UId="62">
+                  <NameCon UId="34" Name="QLED_EN" />
+                  <IdentCon UId="31" />
+                </Wire>
+                <Wire UId="63">
+                  <NameCon UId="34" Name="QLED_DIS" />
+                  <IdentCon UId="32" />
+                </Wire>
+                <Wire UId="64">
+                  <NameCon UId="34" Name="QUNLOCK" />
+                  <IdentCon UId="33" />
+                </Wire>
+                <Wire UId="65">
+                  <NameCon UId="34" Name="QLOCK" />
+                  <OpenCon UId="42" />
+                </Wire>
+                <Wire UId="66">
+                  <NameCon UId="34" Name="QCONF_REQ" />
+                  <OpenCon UId="43" />
+                </Wire>
+                <Wire UId="67">
+                  <NameCon UId="34" Name="QFAULT" />
+                  <OpenCon UId="44" />
+                </Wire>
+                <Wire UId="68">
+                  <NameCon UId="34" Name="USTATUS" />
+                  <OpenCon UId="45" />
+                </Wire>
+              </Wires>
+            </FlgNet>
+          </NetworkSource>
+          <ProgrammingLanguage>FBD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="5" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="6" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="7" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="8" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="9" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>Access door ES1YD01 control</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="B" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource>
+            <FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v3">
+              <Parts>
+                <Access Scope="LiteralConstant" UId="21">
+                  <Constant>
+                    <ConstantType>String</ConstantType>
+                    <ConstantValue>'ES1YD01_S16_ack-ES1YD01 Access Acknowldege'</ConstantValue>
+                  </Constant>
+                </Access>
+                <Access Scope="GlobalVariable" UId="22">
+                  <Symbol>
+                    <Component Name="ES1YD01_S16_ack" />
+                  </Symbol>
+                </Access>
+                <Access Scope="LiteralConstant" UId="23">
+                  <Constant>
+                    <ConstantType>Bool</ConstantType>
+                    <ConstantValue>true</ConstantValue>
+                  </Constant>
+                </Access>
+                <Access Scope="LiteralConstant" UId="24">
+                  <Constant>
+                    <ConstantType>Bool</ConstantType>
+                    <ConstantValue>true</ConstantValue>
+                  </Constant>
+                </Access>
+                <Access Scope="GlobalVariable" UId="25">
+                  <Symbol>
+                    <Component Name="PLC_PrevCycle" />
+                  </Symbol>
+                </Access>
+                <Access Scope="GlobalVariable" UId="26">
+                  <Symbol>
+                    <Component Name="TimeSrvc" />
+                    <Component Name="TimePLC" />
+                  </Symbol>
+                </Access>
+                <Access Scope="GlobalVariable" UId="27">
+                  <Symbol>
+                    <Component Name="AlmReq" />
+                  </Symbol>
+                </Access>
+                <Access Scope="GlobalVariable" UId="28">
+                  <Symbol>
+                    <Component Name="HornReq" />
+                  </Symbol>
+                </Access>
+                <Call UId="29">
+                  <CallInfo Name="DigMon" BlockType="FB">
+                    <Instance Scope="GlobalVariable" UId="30">
+                      <Component Name="ES1YD01_S16_ack_DI" />
+                    </Instance>
+                    <Parameter Name="pTagComment" Section="Input" Type="String[80]" />
+                    <Parameter Name="iINP" Section="Input" Type="Bool" />
+                    <Parameter Name="iINP_MSG_NEG" Section="Input" Type="Bool" />
+                    <Parameter Name="iINP_MSG_LOCK" Section="Input" Type="Bool" />
+                    <Parameter Name="iINP_MSG_TYPE" Section="Input" Type="Bool" />
+                    <Parameter Name="iLIOP_SEL" Section="Input" Type="Bool" />
+                    <Parameter Name="iL_SIM" Section="Input" Type="Bool" />
+                    <Parameter Name="iINP_SIM" Section="Input" Type="Bool" />
+                    <Parameter Name="iFLUT_TIME" Section="Input" Type="Int" />
+                    <Parameter Name="iPrevCycle" Section="Input" Type="Int" />
+                    <Parameter Name="iTimestamp" Section="Input" Type="Date_And_Time" />
+                    <Parameter Name="qOUT" Section="Output" Type="Bool" />
+                    <Parameter Name="qERR" Section="Output" Type="Bool" />
+                    <Parameter Name="qSIM" Section="Output" Type="Bool" />
+                    <Parameter Name="qHmiAlmAckn" Section="Output" Type="Bool" />
+                    <Parameter Name="ioAlarm" Section="InOut" Type="Bool" />
+                    <Parameter Name="ioHornReq" Section="InOut" Type="Bool" />
+                  </CallInfo>
+                </Call>
+              </Parts>
+              <Wires>
+                <Wire UId="41">
+                  <OpenCon UId="31" />
+                  <NameCon UId="29" Name="en" />
+                </Wire>
+                <Wire UId="42">
+                  <IdentCon UId="21" />
+                  <NameCon UId="29" Name="pTagComment" />
+                </Wire>
+                <Wire UId="43">
+                  <IdentCon UId="22" />
+                  <NameCon UId="29" Name="iINP" />
+                </Wire>
+                <Wire UId="44">
+                  <IdentCon UId="23" />
+                  <NameCon UId="29" Name="iINP_MSG_NEG" />
+                </Wire>
+                <Wire UId="45">
+                  <OpenCon UId="32" />
+                  <NameCon UId="29" Name="iINP_MSG_LOCK" />
+                </Wire>
+                <Wire UId="46">
+                  <IdentCon UId="24" />
+                  <NameCon UId="29" Name="iINP_MSG_TYPE" />
+                </Wire>
+                <Wire UId="47">
+                  <OpenCon UId="33" />
+                  <NameCon UId="29" Name="iLIOP_SEL" />
+                </Wire>
+                <Wire UId="48">
+                  <OpenCon UId="34" />
+                  <NameCon UId="29" Name="iL_SIM" />
+                </Wire>
+                <Wire UId="49">
+                  <OpenCon UId="35" />
+                  <NameCon UId="29" Name="iINP_SIM" />
+                </Wire>
+                <Wire UId="50">
+                  <OpenCon UId="36" />
+                  <NameCon UId="29" Name="iFLUT_TIME" />
+                </Wire>
+                <Wire UId="51">
+                  <IdentCon UId="25" />
+                  <NameCon UId="29" Name="iPrevCycle" />
+                </Wire>
+                <Wire UId="52">
+                  <IdentCon UId="26" />
+                  <NameCon UId="29" Name="iTimestamp" />
+                </Wire>
+                <Wire UId="53">
+                  <IdentCon UId="27" />
+                  <NameCon UId="29" Name="ioAlarm" />
+                </Wire>
+                <Wire UId="54">
+                  <IdentCon UId="28" />
+                  <NameCon UId="29" Name="ioHornReq" />
+                </Wire>
+                <Wire UId="55">
+                  <NameCon UId="29" Name="qSIM" />
+                  <OpenCon UId="37" />
+                </Wire>
+                <Wire UId="56">
+                  <NameCon UId="29" Name="qOUT" />
+                  <OpenCon UId="38" />
+                </Wire>
+                <Wire UId="57">
+                  <NameCon UId="29" Name="qHmiAlmAckn" />
+                  <OpenCon UId="39" />
+                </Wire>
+                <Wire UId="58">
+                  <NameCon UId="29" Name="qERR" />
+                  <OpenCon UId="40" />
+                </Wire>
+              </Wires>
+            </FlgNet>
+          </NetworkSource>
+          <ProgrammingLanguage>FBD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="C" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="D" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="E" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="F" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="10" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>ES1YD01_S16_ack - ES1YD01 Access Acknowldege</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="11" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="12" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource>
+            <FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v3">
+              <Parts>
+                <Access Scope="LiteralConstant" UId="21">
+                  <Constant>
+                    <ConstantType>String</ConstantType>
+                    <ConstantValue>'ES1YD01_S18_ltest-ES1YD01 Lamp Test'</ConstantValue>
+                  </Constant>
+                </Access>
+                <Access Scope="GlobalVariable" UId="22">
+                  <Symbol>
+                    <Component Name="ES1YD01_S18_ltest" />
+                  </Symbol>
+                </Access>
+                <Access Scope="LiteralConstant" UId="23">
+                  <Constant>
+                    <ConstantType>Bool</ConstantType>
+                    <ConstantValue>true</ConstantValue>
+                  </Constant>
+                </Access>
+                <Access Scope="LiteralConstant" UId="24">
+                  <Constant>
+                    <ConstantType>Bool</ConstantType>
+                    <ConstantValue>true</ConstantValue>
+                  </Constant>
+                </Access>
+                <Access Scope="GlobalVariable" UId="25">
+                  <Symbol>
+                    <Component Name="PLC_PrevCycle" />
+                  </Symbol>
+                </Access>
+                <Access Scope="GlobalVariable" UId="26">
+                  <Symbol>
+                    <Component Name="TimeSrvc" />
+                    <Component Name="TimePLC" />
+                  </Symbol>
+                </Access>
+                <Access Scope="GlobalVariable" UId="27">
+                  <Symbol>
+                    <Component Name="AlmReq" />
+                  </Symbol>
+                </Access>
+                <Access Scope="GlobalVariable" UId="28">
+                  <Symbol>
+                    <Component Name="HornReq" />
+                  </Symbol>
+                </Access>
+                <Call UId="29">
+                  <CallInfo Name="DigMon" BlockType="FB">
+                    <Instance Scope="GlobalVariable" UId="30">
+                      <Component Name="ES1YD01_S18_ltest_DI" />
+                    </Instance>
+                    <Parameter Name="pTagComment" Section="Input" Type="String[80]" />
+                    <Parameter Name="iINP" Section="Input" Type="Bool" />
+                    <Parameter Name="iINP_MSG_NEG" Section="Input" Type="Bool" />
+                    <Parameter Name="iINP_MSG_LOCK" Section="Input" Type="Bool" />
+                    <Parameter Name="iINP_MSG_TYPE" Section="Input" Type="Bool" />
+                    <Parameter Name="iLIOP_SEL" Section="Input" Type="Bool" />
+                    <Parameter Name="iL_SIM" Section="Input" Type="Bool" />
+                    <Parameter Name="iINP_SIM" Section="Input" Type="Bool" />
+                    <Parameter Name="iFLUT_TIME" Section="Input" Type="Int" />
+                    <Parameter Name="iPrevCycle" Section="Input" Type="Int" />
+                    <Parameter Name="iTimestamp" Section="Input" Type="Date_And_Time" />
+                    <Parameter Name="qOUT" Section="Output" Type="Bool" />
+                    <Parameter Name="qERR" Section="Output" Type="Bool" />
+                    <Parameter Name="qSIM" Section="Output" Type="Bool" />
+                    <Parameter Name="qHmiAlmAckn" Section="Output" Type="Bool" />
+                    <Parameter Name="ioAlarm" Section="InOut" Type="Bool" />
+                    <Parameter Name="ioHornReq" Section="InOut" Type="Bool" />
+                  </CallInfo>
+                </Call>
+              </Parts>
+              <Wires>
+                <Wire UId="41">
+                  <OpenCon UId="31" />
+                  <NameCon UId="29" Name="en" />
+                </Wire>
+                <Wire UId="42">
+                  <IdentCon UId="21" />
+                  <NameCon UId="29" Name="pTagComment" />
+                </Wire>
+                <Wire UId="43">
+                  <IdentCon UId="22" />
+                  <NameCon UId="29" Name="iINP" />
+                </Wire>
+                <Wire UId="44">
+                  <IdentCon UId="23" />
+                  <NameCon UId="29" Name="iINP_MSG_NEG" />
+                </Wire>
+                <Wire UId="45">
+                  <OpenCon UId="32" />
+                  <NameCon UId="29" Name="iINP_MSG_LOCK" />
+                </Wire>
+                <Wire UId="46">
+                  <IdentCon UId="24" />
+                  <NameCon UId="29" Name="iINP_MSG_TYPE" />
+                </Wire>
+                <Wire UId="47">
+                  <OpenCon UId="33" />
+                  <NameCon UId="29" Name="iLIOP_SEL" />
+                </Wire>
+                <Wire UId="48">
+                  <OpenCon UId="34" />
+                  <NameCon UId="29" Name="iL_SIM" />
+                </Wire>
+                <Wire UId="49">
+                  <OpenCon UId="35" />
+                  <NameCon UId="29" Name="iINP_SIM" />
+                </Wire>
+                <Wire UId="50">
+                  <OpenCon UId="36" />
+                  <NameCon UId="29" Name="iFLUT_TIME" />
+                </Wire>
+                <Wire UId="51">
+                  <IdentCon UId="25" />
+                  <NameCon UId="29" Name="iPrevCycle" />
+                </Wire>
+                <Wire UId="52">
+                  <IdentCon UId="26" />
+                  <NameCon UId="29" Name="iTimestamp" />
+                </Wire>
+                <Wire UId="53">
+                  <IdentCon UId="27" />
+                  <NameCon UId="29" Name="ioAlarm" />
+                </Wire>
+                <Wire UId="54">
+                  <IdentCon UId="28" />
+                  <NameCon UId="29" Name="ioHornReq" />
+                </Wire>
+                <Wire UId="55">
+                  <NameCon UId="29" Name="qSIM" />
+                  <OpenCon UId="37" />
+                </Wire>
+                <Wire UId="56">
+                  <NameCon UId="29" Name="qOUT" />
+                  <OpenCon UId="38" />
+                </Wire>
+                <Wire UId="57">
+                  <NameCon UId="29" Name="qHmiAlmAckn" />
+                  <OpenCon UId="39" />
+                </Wire>
+                <Wire UId="58">
+                  <NameCon UId="29" Name="qERR" />
+                  <OpenCon UId="40" />
+                </Wire>
+              </Wires>
+            </FlgNet>
+          </NetworkSource>
+          <ProgrammingLanguage>FBD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="13" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="14" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="15" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="16" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="17" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>ES1YD01_S18_ltest - ES1YD01 Lamp Test</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="18" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="19" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource>
+            <FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v3">
+              <Parts>
+                <Access Scope="LiteralConstant" UId="21">
+                  <Constant>
+                    <ConstantType>String</ConstantType>
+                    <ConstantValue>'ES1YD01_S14_act-ES1YD01 Access Request'</ConstantValue>
+                  </Constant>
+                </Access>
+                <Access Scope="GlobalVariable" UId="22">
+                  <Symbol>
+                    <Component Name="ES1YD01_S14_act" />
+                  </Symbol>
+                </Access>
+                <Access Scope="LiteralConstant" UId="23">
+                  <Constant>
+                    <ConstantType>Bool</ConstantType>
+                    <ConstantValue>true</ConstantValue>
+                  </Constant>
+                </Access>
+                <Access Scope="LiteralConstant" UId="24">
+                  <Constant>
+                    <ConstantType>Bool</ConstantType>
+                    <ConstantValue>true</ConstantValue>
+                  </Constant>
+                </Access>
+                <Access Scope="GlobalVariable" UId="25">
+                  <Symbol>
+                    <Component Name="PLC_PrevCycle" />
+                  </Symbol>
+                </Access>
+                <Access Scope="GlobalVariable" UId="26">
+                  <Symbol>
+                    <Component Name="TimeSrvc" />
+                    <Component Name="TimePLC" />
+                  </Symbol>
+                </Access>
+                <Access Scope="GlobalVariable" UId="27">
+                  <Symbol>
+                    <Component Name="AlmReq" />
+                  </Symbol>
+                </Access>
+                <Access Scope="GlobalVariable" UId="28">
+                  <Symbol>
+                    <Component Name="HornReq" />
+                  </Symbol>
+                </Access>
+                <Call UId="29">
+                  <CallInfo Name="DigMon" BlockType="FB">
+                    <Instance Scope="GlobalVariable" UId="30">
+                      <Component Name="ES1YD01_S14_act_DI" />
+                    </Instance>
+                    <Parameter Name="pTagComment" Section="Input" Type="String[80]" />
+                    <Parameter Name="iINP" Section="Input" Type="Bool" />
+                    <Parameter Name="iINP_MSG_NEG" Section="Input" Type="Bool" />
+                    <Parameter Name="iINP_MSG_LOCK" Section="Input" Type="Bool" />
+                    <Parameter Name="iINP_MSG_TYPE" Section="Input" Type="Bool" />
+                    <Parameter Name="iLIOP_SEL" Section="Input" Type="Bool" />
+                    <Parameter Name="iL_SIM" Section="Input" Type="Bool" />
+                    <Parameter Name="iINP_SIM" Section="Input" Type="Bool" />
+                    <Parameter Name="iFLUT_TIME" Section="Input" Type="Int" />
+                    <Parameter Name="iPrevCycle" Section="Input" Type="Int" />
+                    <Parameter Name="iTimestamp" Section="Input" Type="Date_And_Time" />
+                    <Parameter Name="qOUT" Section="Output" Type="Bool" />
+                    <Parameter Name="qERR" Section="Output" Type="Bool" />
+                    <Parameter Name="qSIM" Section="Output" Type="Bool" />
+                    <Parameter Name="qHmiAlmAckn" Section="Output" Type="Bool" />
+                    <Parameter Name="ioAlarm" Section="InOut" Type="Bool" />
+                    <Parameter Name="ioHornReq" Section="InOut" Type="Bool" />
+                  </CallInfo>
+                </Call>
+              </Parts>
+              <Wires>
+                <Wire UId="41">
+                  <OpenCon UId="31" />
+                  <NameCon UId="29" Name="en" />
+                </Wire>
+                <Wire UId="42">
+                  <IdentCon UId="21" />
+                  <NameCon UId="29" Name="pTagComment" />
+                </Wire>
+                <Wire UId="43">
+                  <IdentCon UId="22" />
+                  <NameCon UId="29" Name="iINP" />
+                </Wire>
+                <Wire UId="44">
+                  <IdentCon UId="23" />
+                  <NameCon UId="29" Name="iINP_MSG_NEG" />
+                </Wire>
+                <Wire UId="45">
+                  <OpenCon UId="32" />
+                  <NameCon UId="29" Name="iINP_MSG_LOCK" />
+                </Wire>
+                <Wire UId="46">
+                  <IdentCon UId="24" />
+                  <NameCon UId="29" Name="iINP_MSG_TYPE" />
+                </Wire>
+                <Wire UId="47">
+                  <OpenCon UId="33" />
+                  <NameCon UId="29" Name="iLIOP_SEL" />
+                </Wire>
+                <Wire UId="48">
+                  <OpenCon UId="34" />
+                  <NameCon UId="29" Name="iL_SIM" />
+                </Wire>
+                <Wire UId="49">
+                  <OpenCon UId="35" />
+                  <NameCon UId="29" Name="iINP_SIM" />
+                </Wire>
+                <Wire UId="50">
+                  <OpenCon UId="36" />
+                  <NameCon UId="29" Name="iFLUT_TIME" />
+                </Wire>
+                <Wire UId="51">
+                  <IdentCon UId="25" />
+                  <NameCon UId="29" Name="iPrevCycle" />
+                </Wire>
+                <Wire UId="52">
+                  <IdentCon UId="26" />
+                  <NameCon UId="29" Name="iTimestamp" />
+                </Wire>
+                <Wire UId="53">
+                  <IdentCon UId="27" />
+                  <NameCon UId="29" Name="ioAlarm" />
+                </Wire>
+                <Wire UId="54">
+                  <IdentCon UId="28" />
+                  <NameCon UId="29" Name="ioHornReq" />
+                </Wire>
+                <Wire UId="55">
+                  <NameCon UId="29" Name="qSIM" />
+                  <OpenCon UId="37" />
+                </Wire>
+                <Wire UId="56">
+                  <NameCon UId="29" Name="qOUT" />
+                  <OpenCon UId="38" />
+                </Wire>
+                <Wire UId="57">
+                  <NameCon UId="29" Name="qHmiAlmAckn" />
+                  <OpenCon UId="39" />
+                </Wire>
+                <Wire UId="58">
+                  <NameCon UId="29" Name="qERR" />
+                  <OpenCon UId="40" />
+                </Wire>
+              </Wires>
+            </FlgNet>
+          </NetworkSource>
+          <ProgrammingLanguage>FBD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="1A" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="1B" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="1C" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="1D" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="1E" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>ES1YD01_S14_act - ES1YD01 Access Request</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="1F" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <MultilingualText ID="20" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="21" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="22" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.FC>
+</Document>
