@@ -42,7 +42,7 @@ Task: select all title for the books in a category 'classic' from all bookstores
 XPath: `/document/bookstore/child::book[@category='classic']/child::title`
 
 Document:
-``
+
 	<?xml version="1.0" encoding="UTF-8"?>
 	<document>
 	<bookstore name="Springler">
@@ -97,13 +97,12 @@ Document:
 	</bookstore>
 	 
 	</document>
-``
 
 Result:
-``
+
 	<title lang="ru">&#x412;&#x43E;&#x439;&#x43D;&#x430; &#x438; &#x41C;&#x438;&#x440;</title>
 	<title lang="ru">&#x422;&#x438;&#x445;&#x439; &#x434;&#x43E;&#x43D;</title>
-``
+
 
 # Xpath example 3
 
@@ -112,7 +111,7 @@ Task: select nodes all 'bookstore' elements from a namespace `http://pum.donetsk
 XPath: `/document/*[local-name()='bookstore' and namespace-uri()='http://pum.donetsk.com/bookstore']`
 
 Document:
-``
+
 	<?xml version="1.0" encoding="UTF-8"?>
 	<document>
 	  <bookstore name="Springler">
@@ -178,10 +177,10 @@ Document:
 	    <name>XYZ</name>
 	  </producer>
 	</document>
-``
+
 
 Result:
-``
+
 	  <bookstore xmlns="http://pum.donetsk.com/bookstore">
 	    <name>Springler</name>
 	    <address lang="en">
@@ -195,7 +194,7 @@ Result:
 	      <location state="Москва" city="Москва" street="Рижский 1-й пер., дом 2"/>
 	    </address>
 	  </bookstore>
-``
+
 
 # XPath example 3A
 
@@ -203,7 +202,6 @@ Task : same as in example 3
 
 Document:
 
-``
 	<?xml version="1.0" encoding="UTF-8"?>
 	<document xmlns:bsref="http://pum.donetsk.com/bookstore">
 	  <bookstore name="Springler">
@@ -269,7 +267,7 @@ Document:
 	    <bsref:name>XYZ</bsref:name>
 	  </bsref:producer>
 	</document>
-``
+
 
 XPath 1 : `/document/*[local-name()='bookstore' and namespace-uri()='http://pum.donetsk.com/bookstore']`
 
@@ -278,4 +276,3 @@ Result : same(!)
 XPath 2 : `/document/bsref:bookstore`
 
 Result : mostly the same
-
