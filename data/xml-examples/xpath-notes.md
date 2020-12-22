@@ -2,7 +2,6 @@
 
 The Xpath `/document/bookstore/child::*/child::title` which applyed to the document
 
-``
 	<?xml version="1.0" encoding="UTF-8"?>
 	<document>
 	  <bookstore name="Springler">
@@ -26,15 +25,15 @@ The Xpath `/document/bookstore/child::*/child::title` which applyed to the docum
 	    </book>
 	  </bookstore>
 	</document>
-``
+
 
 gets the result:
-``
+
 	<title lang="en">Harry Potter</title>
 	<title lang="en">Learning XML</title>
 	<title lang="ru">&#x412;&#x43E;&#x439;&#x43D;&#x430; &#x438; &#x41C;&#x438;&#x440;</title>
 	<title lang="ru">&#x422;&#x438;&#x445;&#x439; &#x434;&#x43E;&#x43D;</title>
-``
+
 
 # XPath example 2
 
