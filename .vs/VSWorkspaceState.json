@@ -1,12 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\data",
-    "\\data\\export-blocks",
-    "\\data\\xml-examples",
-    "\\test-ps",
-    "\\test-ps\\tia-xml"
+    "\\CmdLet",
+    "\\data\\xml-examples"
   ],
-  "SelectedNode": "\\test-ps\\tia-xml\\extract-intf-2.ps1",
+  "SelectedNode": "\\CmdLet",
   "PreviewInSolutionExplorer": false
 }
