@@ -1,2 +1,4 @@
 .fossil-settings
-
+obj/
+bin/
+.vs
