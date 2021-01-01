@@ -1,0 +1,21 @@
+* TIA Portal Powershell extention 
+
+** Targets [0/13]
+
+*** TODO Find a device by name
+*** TODO Get PLC program blocks from the devices
+*** TODO Export the code (in XML) for any function (block) 
+*** TODO Import the code (in XML) into PLC
+*** TODO Generate a data block with defined structure
+*** TODO Create/modify the global tag
+*** TODO Find the code by 'template'
+*** TODO Make a function replica (for "big" FC/FB with global access)
+*** TODO Find and replace the variable instance/access
+*** TODO Find and replace a function call by another function (block) with matching of the IN/OUT
+*** TODO Generate simple expression (in XML) and inject into existing code 
+*** TODO Set-up the network device address
+*** TODO Set-up channel address of the device module
+
+** Notes about API
+
+
