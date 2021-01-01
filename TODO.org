@@ -18,4 +18,25 @@
 
 ** Notes about API
 
++ Get-TiaInstance
++ New-TiaInstance [-Path <string>] -WithGui
+
++ Get-TiaProject [-Path <string>] | [-Name <string>]
++ Open-TiaProject -Path <string>
++ Close-Project [-Path <string>] | [-Object <TiaProject>]
+
++ Get-TiaDevice -Project <TiaProject> -Name <string>
++ Get-TiaModule -Device <TiaDeviceItem> -Name <string>
+
++ Get-TiaProgram [-Device <TiaDeviceItem> -Name <string>] | [-Module <TiaDeviceItem>]
+
++ Get-TiaProgramGroup -Program <Object> [-Name <string>]
+
++ Get-TiaSoftwareUnit -Program <Object> [-Name <string>] [-Group <string|Object>]
+
++ Export-TiaSoftwareUnit -Unit <object> -Path <string>
++ Import-TiaSoftwareUnit (-Program <Object> [-Group <string>] | -Group <Object>) -Path <string>
+
+
+
 
