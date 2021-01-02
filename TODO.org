@@ -21,9 +21,9 @@
 + Get-TiaInstance
 + New-TiaInstance [-Path <string>] -WithGui
 
-+ Get-TiaProject [-Path <string>] | [-Name <string>]
-+ Open-TiaProject -Path <string>
-+ Close-Project [-Path <string>] | [-Object <TiaProject>]
++ ? Get-TiaProject -Portal <object> [-Path <string>] | [-Name <string>]
++ Open-TiaProject -Portal <object> -Path <string>
++ Close-Project  (-Portal <object> -Path <string>) | -Project <TiaProject>
 
 + Get-TiaDevice -Project <TiaProject> -Name <string>
 + Get-TiaModule -Device <TiaDeviceItem> -Name <string>

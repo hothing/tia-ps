@@ -11,26 +11,14 @@ using Siemens.Engineering;
 namespace TiaCmdlet
 {
     [Cmdlet(VerbsCommon.New, "TiaInstance")]
-    [OutputType(typeof(Object))]
+    [OutputType(typeof(TiaPortal))]
     class NewTiaInstance : Cmdlet
     {
-        private string projectPath;
-        [Parameter(Mandatory = true,
-            ValueFromPipeline = true,
-            ValueFromPipelineByPropertyName = true,
-            Position = 0,
-            HelpMessage = "TIA project path")]
-        public string Path
-        {
-            get { return projectPath; }
-            set { projectPath = value; }
-        }
-
         private bool mode = false;
         [Parameter(Mandatory = false,
             Position = 1,
             HelpMessage = "TIA Portal mode: start with or without GUI")]
-        public bool WithGui
+        public SwitchParameter WithGui
         {
             get { return mode; }
             set { mode = value; }
