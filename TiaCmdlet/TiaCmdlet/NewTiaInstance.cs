@@ -1,8 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using System.IO;
+using System.Reflection;
 
 using System.Management.Automation;
 using Siemens.Engineering;
@@ -12,7 +11,7 @@ namespace TiaCmdlet
 {
     [Cmdlet(VerbsCommon.New, "TiaInstance")]
     [OutputType(typeof(TiaPortal))]
-    class NewTiaInstance : Cmdlet
+    public class NewTiaInstance : Cmdlet
     {
         private bool mode = false;
         [Parameter(Mandatory = false,

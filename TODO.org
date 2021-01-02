@@ -23,7 +23,7 @@
 
 + ? Get-TiaProject -Portal <object> [-Path <string>] | [-Name <string>]
 + Open-TiaProject -Portal <object> -Path <string>
-+ Close-Project  (-Portal <object> -Path <string>) | -Project <TiaProject>
++ Close-TiaProject  (-Portal <object> -Name <string>) | -Project <TiaProject>
 
 + Get-TiaDevice -Project <TiaProject> -Name <string>
 + Get-TiaModule -Device <TiaDeviceItem> -Name <string>
