@@ -8,31 +8,37 @@ using Siemens.Engineering;
 
 namespace TiaCmdlet
 {
-    [Cmdlet(VerbsCommon.Get, "TiaInstances")]
+    [Cmdlet(VerbsCommon.Get, "TiaProcess")]
     [OutputType(typeof(TiaPortalProcess[]))]
-    public class GetTiaInstances : Cmdlet
+    public class GetTiaProcess : Cmdlet
     {
-        private bool getOnlyFirst = false;
+        private int index = 0;
         [Parameter(Mandatory = false,
-            Position = 1,
-            HelpMessage = "TIA Portal mode: start with or without GUI")]
-        public SwitchParameter First
+            Position = 0,
+            HelpMessage = "TIA Portal instance id: 0 .. n")]
+        public int Id
         {
-            get { return getOnlyFirst; }
-            set { getOnlyFirst = value; }
+            get { return index; }
+            set { index = value; }
         }
         protected override void ProcessRecord()
         {
             base.ProcessRecord();
-
-            if (getOnlyFirst) { WriteObject(TiaPortal.GetProcesses()[0]); }            
+            if (index >= 0)
+            {
+                var tpl = TiaPortal.GetProcesses();
+                if (index < tpl.Count)
+                {
+                    WriteObject(TiaPortal.GetProcesses()[index]);
+                }
+            }
             else
             {
                 foreach (TiaPortalProcess tpx in TiaPortal.GetProcesses())
                 {
                     WriteObject(tpx);
                 }
-            }  
+            }
         }
     }
 }

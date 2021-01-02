@@ -6,7 +6,6 @@ using System.Reflection;
 using System.Management.Automation;
 using Siemens.Engineering;
 
-
 namespace TiaCmdlet
 {
     [Cmdlet(VerbsCommon.New, "TiaInstance")]
