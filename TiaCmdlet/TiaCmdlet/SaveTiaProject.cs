@@ -8,18 +8,32 @@ using Siemens.Engineering;
 
 namespace TiaCmdlet
 {
-    [Cmdlet(VerbsCommon.Open, "TiaProject")]
-    [OutputType(typeof(Project))]
-    public class OpenTiaProject : PSCmdlet
+    [Cmdlet(VerbsData.Save, "TiaProject")]
+    public class SaveTiaProject : PSCmdlet
     {
         private TiaPortal tp = null;
 
         private string projectPath = null;
 
+        private Project project = null;
+
         [Parameter(Mandatory = true,
             ValueFromPipeline = true,
             ValueFromPipelineByPropertyName = true,
             Position = 0,
+            ParameterSetName = "RefDirect",
+            HelpMessage = "TIA Project")]
+        public Project Project
+        {
+            get { return project; }
+            set { project = value; }
+        }
+
+        [Parameter(Mandatory = true,
+            ValueFromPipeline = true,
+            ValueFromPipelineByPropertyName = true,
+            Position = 0,
+            ParameterSetName = "RefByName",
             HelpMessage = "TIA Portal  object")]
         public TiaPortal Portal
         {
@@ -27,9 +41,9 @@ namespace TiaCmdlet
             set { tp = value; }
         }
 
-        [Parameter(Mandatory = false,
+        [Parameter(Mandatory = true,
             Position = 1,
-            ParameterSetName = "GivenProject",
+            ParameterSetName = "RefByName",
             HelpMessage = "TIA project path")]
         public string Path
         {
@@ -39,18 +53,14 @@ namespace TiaCmdlet
         protected override void ProcessRecord()
         {
             base.ProcessRecord();
-            if (projectPath != null) 
+            if (ParameterSetName == "RefByName")
             {
-                Project prj = tp.Projects.Open(new System.IO.FileInfo(projectPath));
-                WriteObject(prj);
-            } 
-            else
-            {
-                foreach (Project prj in tp.Projects) 
+                foreach (Project p in tp.Projects)
                 {
-                    WriteObject(prj);
-                }
+                    if (String.Compare( p.Path.Name , projectPath) == 0) { project = p; }
+                }                
             }
+            if (project != null) { project.Save();  }
         }
     }
 }

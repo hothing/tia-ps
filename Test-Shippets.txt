@@ -1,0 +1,2 @@
+Import-Module C:\Users\Administrator\Documents\tia-ps\TiaCmdlet\TiaCmdlet\bin\Debug\net462\TiaCmdlet.dll
+C:\Users\Administrator\Documents\Automation\Projects\Test1\Test1.ap16

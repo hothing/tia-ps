@@ -2,3 +2,11 @@ New-Object : Exception calling ".ctor" with "1" argument(s): "Security error.
 Can't access this process to acquire needed information.
 Security error.
 Owner 'tiaws2\master' of this process is not member of the windows group 'Siemens TIA Openness'. Please contact your administrator."
+
+----
+
+Issue with parallell working on the project via GUI and Openness: 
+* Creat the group of device via Openness
+* Try to drag'n'drop some devices into new group
+* TIA Portal GUI will freeze(hang on)
+* To enumerate the groups via Openess does GUI unfreeze

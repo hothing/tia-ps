@@ -10,7 +10,7 @@ namespace TiaCmdlet
 {
     [Cmdlet(VerbsCommon.Get, "TiaProcess")]
     [OutputType(typeof(TiaPortalProcess[]))]
-    public class GetTiaProcess : Cmdlet
+    public class GetTiaProcess : PSCmdlet
     {
         private int index = 0;
         [Parameter(Mandatory = false,

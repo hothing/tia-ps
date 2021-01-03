@@ -10,7 +10,7 @@ namespace TiaCmdlet
 {
     [Cmdlet(VerbsCommon.New, "TiaInstance")]
     [OutputType(typeof(TiaPortal))]
-    public class NewTiaInstance : Cmdlet
+    public class NewTiaInstance : PSCmdlet
     {
         private bool mode = false;
         [Parameter(Mandatory = false,

@@ -13,14 +13,18 @@
 *** TODO Find and replace the variable instance/access
 *** TODO Find and replace a function call by another function (block) with matching of the IN/OUT
 *** TODO Generate simple expression (in XML) and inject into existing code 
-*** TODO Set-up the network device address
-*** TODO Set-up channel address of the device module
+*** REJECT Set-up the network device address
+	It is not possible with OPenness
+*** REJECT Set-up channel address of the device module
+	It is not possible with OPenness
+*** TODO User-defined reaction on the TIA Portal notofications
 
 ** Notes about API
 
 + Get-TiaInstance
 + New-TiaInstance [-Path <string>] -WithGui
 
++ New-TiaProject -Portal <object> -Path <string> [-Name <string>]
 + ? Get-TiaProject -Portal <object> [-Path <string>] | [-Name <string>]
 + Open-TiaProject -Portal <object> -Path <string>
 + Close-TiaProject  (-Portal <object> -Name <string>) | -Project <TiaProject>
