@@ -13,10 +13,12 @@ namespace TiaCmdlet
     {
         private TiaPortal tp = null;
 
-        private string projectPath = null;
-
         private Project project = null;
 
+        private string projectName = null;
+                
+        private string projectNewPath = null;
+                
         [Parameter(Mandatory = true,
             ValueFromPipeline = true,
             ValueFromPipelineByPropertyName = true,
@@ -41,26 +43,81 @@ namespace TiaCmdlet
             set { tp = value; }
         }
 
-        [Parameter(Mandatory = true,
+        [Parameter(Mandatory = false,
             Position = 1,
             ParameterSetName = "RefByName",
-            HelpMessage = "TIA project path")]
-        public string Path
+            HelpMessage = "TIA project name")]
+        public string Name
         {
-            get { return projectPath; }
-            set { projectPath = value; }
+            get { return projectName; }
+            set { projectName = value; }
         }
+                
+        [Parameter(Mandatory = false,
+           Position = 1,
+           HelpMessage = "TIA project new path")]
+        public string NewPath
+        {
+            get { return projectNewPath; }
+            set { projectNewPath = value; }
+        }
+
+        private void SelectDefaultProject()
+        {
+            if (project == null) {
+                var tpe = tp.Projects.GetEnumerator();
+                if (tpe.MoveNext()) { project = tpe.Current; }                
+            }
+        }
+
+        private void SelectProject()
+        {
+            foreach (Project p in tp.Projects)
+            {
+                if (String.Compare(p.Name, projectName) == 0) { project = p; }
+            }
+        }
+        private void Save()        
+        {
+            if (project != null) { project.Save(); }
+        }
+                
+        private void SaveAs()
+        {           
+            if (project != null) {
+                if (projectNewPath != null)
+                {
+                    project.SaveAs(new System.IO.DirectoryInfo(projectNewPath));
+                } else
+                {
+                    // TODO: raise Exception
+                }
+                 
+            }
+        }
+
         protected override void ProcessRecord()
         {
             base.ProcessRecord();
             if (ParameterSetName == "RefByName")
             {
-                foreach (Project p in tp.Projects)
+                if (projectName == null)
                 {
-                    if (String.Compare( p.Path.Name , projectPath) == 0) { project = p; }
+                    SelectDefaultProject();
+                } else
+                {
+                    SelectProject();
                 }                
             }
-            if (project != null) { project.Save();  }
+
+            if (projectNewPath == null)
+            {
+                Save();
+            }
+            else
+            {
+                SaveAs();
+            }
         }
     }
 }

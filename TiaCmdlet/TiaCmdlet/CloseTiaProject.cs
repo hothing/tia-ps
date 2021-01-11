@@ -13,7 +13,7 @@ namespace TiaCmdlet
     {
         private TiaPortal tp = null;
 
-        private string projectPath = null;
+        private string projectName = null;
 
         private Project project = null;
 
@@ -41,24 +41,45 @@ namespace TiaCmdlet
             set { tp = value; }
         }
 
-        [Parameter(Mandatory = true,
+        [Parameter(Mandatory = false,
             Position = 1,
             ParameterSetName = "CloseByName",
             HelpMessage = "TIA project path")]
-        public string Path
+        public string Name
         {
-            get { return projectPath; }
-            set { projectPath = value; }
+            get { return projectName; }
+            set { projectName = value; }
+        }
+
+        private void SelectDefaultProject()
+        {
+            if (project == null)
+            {
+                var tpe = tp.Projects.GetEnumerator();
+                if (tpe.MoveNext()) { project = tpe.Current; }
+            }
+        }
+
+        private void SelectProject()
+        {
+            foreach (Project p in tp.Projects)
+            {
+                if (String.Compare(p.Name, projectName) == 0) { project = p; }
+            }
         }
         protected override void ProcessRecord()
         {
             base.ProcessRecord();
             if (ParameterSetName == "CloseByName")
             {
-                foreach (Project p in tp.Projects)
-                {
-                    if (String.Compare( p.Path.Name , projectPath) == 0) { project = p; }
-                }                
+               if (projectName != null)
+               {
+                    SelectProject();
+               } 
+               else
+               {
+                    SelectDefaultProject();
+               }               
             }
             if (project != null) { project.Close();  }
         }
