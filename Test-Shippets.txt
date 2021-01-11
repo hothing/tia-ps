@@ -3,7 +3,11 @@ Get-Command -Module TiaCmdlet
 $tproject = "C:\Users\Administrator\Documents\Automation\Projects\Test1\Test1.ap16"
 $tp = New-TiaInstance -withGui
 $tp | Open-TiaProject -Path $tproject
+
 $tp | Close-TiaProject
 $tp | Close-TiaProject -Name XXX
 $tp | Close-TiaProject -Name Test1
 
+$tp | Get-TiaProject
+$tp | Get-TiaProject -Name XXX
+$tp | Get-TiaProject -Name Test1
