@@ -1,7 +1,7 @@
 * TIA Portal Powershell extention 
 
-** Targets [0/13]
-
+** Targets [1/13]
+*** DONE Operation with project(s): open, close, get/select
 *** TODO Find a device by name
 *** TODO Get PLC program blocks from the devices
 *** TODO Export the code (in XML) for any function (block) 
@@ -17,7 +17,7 @@
 	It is not possible with OPenness
 *** REJECT Set-up channel address of the device module
 	It is not possible with OPenness
-*** TODO User-defined reaction on the TIA Portal notofications
+*** TODO User-defined reaction on the TIA Portal notifications
 
 ** Notes about API
 
@@ -25,21 +25,21 @@
 + New-TiaInstance [-Path <string>] -WithGui
 
 + New-TiaProject -Portal <object> -Path <string> [-Name <string>]
-+ ? Get-TiaProject -Portal <object> [-Path <string>] | [-Name <string>]
 + Open-TiaProject -Portal <object> -Path <string>
-+ Close-TiaProject  (-Portal <object> -Name <string>) | -Project <TiaProject>
++ Close-TiaProject  (-Portal <object> [-Name <string>]) | -Project <TiaProject>
++ Get-TiaProject -Portal <object> [-Name <string>]
 
-+ Get-TiaDevice -Project <TiaProject> -Name <string>
-+ Get-TiaModule -Device <TiaDeviceItem> -Name <string>
+- Get-TiaDevice -Project <TiaProject> -Name <string>
+- Get-TiaModule -Device <TiaDeviceItem> -Name <string>
 
-+ Get-TiaProgram [-Device <TiaDeviceItem> -Name <string>] | [-Module <TiaDeviceItem>]
+- Get-TiaProgram [-Device <TiaDeviceItem> -Name <string>] | [-Module <TiaDeviceItem>]
 
-+ Get-TiaProgramGroup -Program <Object> [-Name <string>]
+- Get-TiaProgramGroup -Program <Object> [-Name <string>]
 
-+ Get-TiaSoftwareUnit -Program <Object> [-Name <string>] [-Group <string|Object>]
+- Get-TiaSoftwareUnit -Program <Object> [-Name <string>] [-Group <string|Object>]
 
-+ Export-TiaSoftwareUnit -Unit <object> -Path <string>
-+ Import-TiaSoftwareUnit (-Program <Object> [-Group <string>] | -Group <Object>) -Path <string>
+- Export-TiaSoftwareUnit -Unit <object> -Path <string>
+- Import-TiaSoftwareUnit (-Program <Object> [-Group <string>] | -Group <Object>) -Path <string>
 
 
 
