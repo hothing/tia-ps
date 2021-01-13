@@ -7,20 +7,21 @@ namespace TiaCmdlet
     [Cmdlet(VerbsCommon.Get, "TiaItem")]
     public class GetTiaItem : PSCmdlet
     {
-        private Project project = null;
+        private Project _project = null;
 
-        private string itemName = null;
+        private string _itemName = null;
 
-        private bool _recurse = false;
+        private WildcardPattern _nameMatch = null;
+        
+        private String[] _path;
 
-        private WildcardPattern nameMatch = null;
-
-        private readonly char[] itemsSeparator = {'/'};
-
-        private String[] pathComponents;
+        private readonly char[] _itemsSeparator = { '/' };
 
         #region Command parameters
 
+        /// <summary>
+        /// Gets or sets the TIA project object.
+        /// </summary>
         [Parameter(Mandatory = true,
             ValueFromPipeline = true,
             ValueFromPipelineByPropertyName = true,
@@ -28,35 +29,20 @@ namespace TiaCmdlet
             HelpMessage = "TIA Project")]
         public Project Project
         {
-            get { return project; }
-            set { project = value; }
+            get { return _project; }
+            set { _project = value; }
         }
 
+        /// <summary>
+        /// Gets or sets the device group name.
+        /// </summary>
         [Parameter(Mandatory = false,
             Position = 1,
             HelpMessage = "TIA project name")]
         public string Name
         {
-            get { return itemName; }
-            set { itemName = value; }
-        }
-
-        /// <summary>
-        /// Gets or sets the recurse switch.
-        /// </summary>
-        [Parameter]
-        [Alias("s")]
-        public SwitchParameter Recurse
-        {
-            get
-            {
-                return _recurse;
-            }
-
-            set
-            {
-                _recurse = value;
-            }
+            get { return _itemName; }
+            set { _itemName = value; }
         }
         #endregion Command parameters
 
@@ -73,11 +59,11 @@ namespace TiaCmdlet
 
         private void WriteMatchedDevice()
         {
-            if (nameMatch != null)
+            if (_nameMatch != null)
             {
-                foreach (Siemens.Engineering.HW.Device dev in project.Devices)
+                foreach (Siemens.Engineering.HW.Device dev in _project.Devices)
                 {
-                    if (nameMatch.IsMatch(dev.Name))
+                    if (_nameMatch.IsMatch(dev.Name))
                     {
                         WriteObject(dev);
                     }
@@ -87,13 +73,13 @@ namespace TiaCmdlet
 
         private void WriteDeviceGroup()
         {
-            if ((itemName == null) || (String.Compare(itemName, ".") == 0))
+            if ((_itemName == null) || (String.Compare(_itemName, ".") == 0))
             {
-                WriteObject(project.Devices);                
+                WriteObject(_project.Devices);                
             }
             else
             {
-                var dg = project.DeviceGroups.Find(itemName);
+                var dg = _project.DeviceGroups.Find(_itemName);
                 WriteObject(dg);
             }
         }
@@ -102,22 +88,22 @@ namespace TiaCmdlet
         protected override void BeginProcessing()
         {
             base.BeginProcessing();
-            if (WildcardPattern.ContainsWildcardCharacters(itemName))
+            if (WildcardPattern.ContainsWildcardCharacters(_itemName))
             {
-                nameMatch = new WildcardPattern(itemName);
+                _nameMatch = new WildcardPattern(_itemName);
             }
             //pathComponents = itemName.Split(itemsSeparator, -1,  StringSplitOptions.RemoveEmptyEntries);            
         }
         protected override void ProcessRecord()
         {
             base.ProcessRecord();
-            if (nameMatch != null)
+            if (_nameMatch != null)
             {
                 WriteMatchedDevice();
             }
             else
             {
-                if ((pathComponents != null) && (pathComponents.Length > 1))
+                if ((_path != null) && (_path.Length > 1))
                 {
                     // TODO: Recursively go down throw 'DeviceUserGroupComposition'
                 } 
@@ -131,8 +117,8 @@ namespace TiaCmdlet
         protected override void EndProcessing()
         {
             base.EndProcessing();
-            nameMatch = null;
-            pathComponents = null;
+            _nameMatch = null;
+            _path = null;
         }
         #endregion command code
     }
