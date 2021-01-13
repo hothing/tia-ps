@@ -29,8 +29,11 @@
 + Close-TiaProject  (-Portal <object> [-Name <string>]) | -Project <TiaProject>
 + Get-TiaProject -Portal <object> [-Name <string>]
 
-- Get-TiaDevice -Project <TiaProject> -Name <string>
-- Get-TiaModule -Device <TiaDeviceItem> -Name <string>
++- Get-TiaItem -Project <TiaProject> -Name <string> 
+NB Get-Item behaviour is basis for this command
+
+- Get-TiaChildItem -Project <TiaProject> -Name <string> <???>
+NB Get-ChildItem behaviour is basis for this command
 
 - Get-TiaProgram [-Device <TiaDeviceItem> -Name <string>] | [-Module <TiaDeviceItem>]
 
