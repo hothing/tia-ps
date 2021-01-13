@@ -1,7 +1,10 @@
 Import-Module C:\Users\Administrator\Documents\tia-ps\TiaCmdlet\TiaCmdlet\bin\Debug\net462\TiaCmdlet.dll
 Get-Command -Module TiaCmdlet
 $tproject = "C:\Users\Administrator\Documents\Automation\Projects\Test1\Test1.ap16"
+
 $tp = New-TiaInstance -withGui
+$tp = Get-TiaInstance
+
 $tp | Open-TiaProject -Path $tproject
 
 $tp | Close-TiaProject
@@ -11,3 +14,5 @@ $tp | Close-TiaProject -Name Test1
 $tp | Get-TiaProject
 $tp | Get-TiaProject -Name XXX
 $tp | Get-TiaProject -Name Test1
+
+$prj = Get-TiaProject -Portal $tp
