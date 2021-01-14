@@ -1,2 +1,2 @@
-# TIA-PS - use TIA Portal with TIA Openess via Powershell
+# TIA-PS - use TIA Portal with Powershell
 
