@@ -11,7 +11,11 @@ Issue with parallell working on the project via GUI and Openness:
 + To enumerate the groups via Openess does GUI unfreeze
 
 ---
-Issue with parallell working on the project via GUI and Openness: 
+Issue with parallel working on the project via GUI and Openness: 
 
 * Attached session (as Powershell) can prevent to close the project (and may be another actions)
 ? Should TiaCmdlet monitor the events and dispose resources? 
+
+----
+Device name can be same as Group name on the same hierarhy level.
+But! All devices (in project) must have unique names.

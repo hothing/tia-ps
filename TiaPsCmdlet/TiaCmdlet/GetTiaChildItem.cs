@@ -4,8 +4,8 @@ using Siemens.Engineering;
 
 namespace TiaCmdlet
 {
-    [Cmdlet(VerbsCommon.Get, "TiaItem")]
-    public class GetTiaItem : PSCmdlet
+    [Cmdlet(VerbsCommon.Get, "TiaChildItem")]
+    public class GetTiaChildItem : PSCmdlet
     {
         private Project _project = null;
 
@@ -51,7 +51,7 @@ namespace TiaCmdlet
         #region internal commands
         private void WriteEachDevice()
         {
-            foreach (Siemens.Engineering.HW.Device dev in project.Devices)
+            foreach (Siemens.Engineering.HW.Device dev in _project.Devices)
             {
                 WriteObject(dev);
             }

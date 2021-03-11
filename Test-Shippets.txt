@@ -1,6 +1,9 @@
-Import-Module C:\Users\Administrator\Documents\tia-ps\TiaCmdlet\TiaCmdlet\bin\Debug\net462\TiaCmdlet.dll
+$modPath = "C:\Users\Administrator\Documents\tia-ps\TiaCmdlet\TiaCmdlet\bin\Debug\net462\TiaCmdlet.dll"
+$modPath = "C:\Users\simatic\source\repos\tia-ps\TiaCmdlet\TiaCmdlet\bin\Debug\net462\TiaCmdlet.dll" 
+Import-Module $modPath
+
 Get-Command -Module TiaCmdlet
-$tproject = "C:\Users\Administrator\Documents\Automation\Projects\Test1\Test1.ap16"
+$tproject = "C:\Users\simatic\Documents\Automation\Projects\Test1\Test1.ap16"
 
 $tp = New-TiaInstance -withGui
 $tp = Get-TiaInstance
@@ -16,3 +19,6 @@ $tp | Get-TiaProject -Name XXX
 $tp | Get-TiaProject -Name Test1
 
 $prj = Get-TiaProject -Portal $tp
+
+
+$prj.Devices.Create("System:Device.S7300", "G1")
