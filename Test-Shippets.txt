@@ -1,5 +1,4 @@
-$modPath = "C:\Users\Administrator\Documents\tia-ps\TiaCmdlet\TiaCmdlet\bin\Debug\net462\TiaCmdlet.dll"
-$modPath = "C:\Users\simatic\source\repos\tia-ps\TiaCmdlet\TiaCmdlet\bin\Debug\net462\TiaCmdlet.dll" 
+$modPath = "C:\Users\simatic\source\repos\tia-ps\TiaPsCmdlet\TiaCmdlet\bin\Debug\net462\TiaCmdlet.dll" 
 Import-Module $modPath
 
 Get-Command -Module TiaCmdlet

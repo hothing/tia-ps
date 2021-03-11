@@ -189,14 +189,17 @@ namespace TiaCmdlet
                 string[] ugnames = path.Split(pathDelimeter, 0, StringSplitOptions.RemoveEmptyEntries);
                 Siemens.Engineering.HW.DeviceUserGroupComposition ugc = project.DeviceGroups;
                 Siemens.Engineering.HW.DeviceUserGroup ug = null;
+
                 foreach (String gn in ugnames)
                 {
                     if (ugc != null)
                     {
+                        WriteDebug($"the group {gn} is finding");
                         ug = ugc.Find(gn);
                         if (ug != null)
                         {
                             ugc = ug.Groups;
+                            WriteDebug("the group {0} is found");
                         }
                         else
                         {
@@ -210,7 +213,8 @@ namespace TiaCmdlet
                         break;
                     }
                 }
-                if (ug != null) { WriteDeviceList(ug.Devices); }                
+                if (ug != null) { WriteDeviceList(ug.Devices); }       
+                else { WriteWarning("The user group is empty. Internal error."); }
             }
         }
 
