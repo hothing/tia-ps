@@ -31,6 +31,5 @@ $prj | Get-TiaDevices -Recursive | where-object TypeIdentifier -match "System:De
 
 $devs = ($prj | Get-TiaDevices -Path "G1")
 
-$devs[0] | Set-TiaDevice -Name "PLC1"
-$devs[0] | Set-TiaDevice -Author "PuM"
-$devs[0] | Set-TiaDevice -Comment "an old PLC"
+$prj | Get-TiaDevices -Path "G1/RIO" | Set-TiaAttribute -Attribute Author -Value "PuM"
+$prj | Get-TiaDevices -Path "G1/RIO" | Get-TiaAttribute -Attribute Author
