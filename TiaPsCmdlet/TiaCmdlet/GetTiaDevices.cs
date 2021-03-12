@@ -186,35 +186,42 @@ namespace TiaCmdlet
             }
             else
             {
-                string[] ugnames = path.Split(pathDelimeter, 0, StringSplitOptions.RemoveEmptyEntries);
+                string[] ugnames = path.Split(pathDelimeter, StringSplitOptions.RemoveEmptyEntries);
+                WriteDebug($"path is {path}");
                 Siemens.Engineering.HW.DeviceUserGroupComposition ugc = project.DeviceGroups;
                 Siemens.Engineering.HW.DeviceUserGroup ug = null;
-
-                foreach (String gn in ugnames)
-                {
-                    if (ugc != null)
+                if (ugnames.Length > 0) { 
+                    WriteDebug($"the root group is {ugnames[0]}");
+                    foreach (String gn in ugnames)
                     {
-                        WriteDebug($"the group {gn} is finding");
-                        ug = ugc.Find(gn);
-                        if (ug != null)
+                        if (ugc != null)
                         {
-                            ugc = ug.Groups;
-                            WriteDebug("the group {0} is found");
+                            WriteDebug($"the group {gn} is finding");
+                            ug = ugc.Find(gn);
+                            if (ug != null)
+                            {
+                                ugc = ug.Groups;
+                                WriteDebug("the group {gn} is found");
+                            }
+                            else
+                            {
+                                ThrowTerminatingError(new ErrorRecord(new ItemNotFoundException(), $"the specified group '{gn}' does not exist", ErrorCategory.InvalidArgument, path));
+                                break;
+                            }
                         }
                         else
                         {
-                            ThrowTerminatingError(new ErrorRecord(new ItemNotFoundException(), "the specified group does not exist", ErrorCategory.InvalidArgument, gn));
-                            break;                            
+                            ThrowTerminatingError(new ErrorRecord(new ItemNotFoundException(), $"the specified group does '{gn}' not exist", ErrorCategory.InvalidArgument, path));
+                            break;
                         }
                     }
-                    else
-                    {
-                        ThrowTerminatingError(new ErrorRecord(new ItemNotFoundException(), "the specified group does not exist", ErrorCategory.InvalidArgument, gn));
-                        break;
-                    }
+                }
+                else {
+                    WriteDebug($"the single group is {path}");
+                    ug = ugc.Find(path);                    
                 }
                 if (ug != null) { WriteDeviceList(ug.Devices); }       
-                else { WriteWarning("The user group is empty. Internal error."); }
+                else { WriteWarning("The user group is empty or doesn't exist."); }
             }
         }
 
