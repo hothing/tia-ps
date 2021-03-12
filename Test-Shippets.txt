@@ -25,3 +25,12 @@ $prj.Devices.Create("System:Device.S7300", "G1")
 $prj | Get-TiaDevices -Path "G1"
 $prj | Get-TiaDevices -Path "G1/RIO"
 $prj | Get-TiaDevices -Path "G2/RII" -Debug
+
+$prj | Get-TiaDevices -Recursive | where-object name -match "D.*"
+$prj | Get-TiaDevices -Recursive | where-object TypeIdentifier -match "System:Device.S7300" # select all S7-300 class devices
+
+$devs = ($prj | Get-TiaDevices -Path "G1")
+
+$devs[0] | Set-TiaDevice -Name "PLC1"
+$devs[0] | Set-TiaDevice -Author "PuM"
+$devs[0] | Set-TiaDevice -Comment "an old PLC"
