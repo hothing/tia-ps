@@ -4,8 +4,8 @@ using Siemens.Engineering;
 
 namespace TiaCmdlet
 {
-    [Cmdlet(VerbsCommon.Get, "TiaDevices")]
-    public class GetTiaDevices : PSCmdlet
+    [Cmdlet(VerbsCommon.Get, "TiaDeviceList")]
+    public class GetTiaDeviceList : PSCmdlet
     {
         private Project project = null;
                
@@ -15,9 +15,7 @@ namespace TiaCmdlet
 
         private string path = null;
 
-        private Boolean enumActive = true;
-
-        private Boolean enumPassive = true;
+        private string filter = null;
 
         private Boolean recursive = false;
 
@@ -29,7 +27,6 @@ namespace TiaCmdlet
         [Parameter(Mandatory = true,
             ValueFromPipeline = true,
             ValueFromPipelineByPropertyName = true,
-            ParameterSetName = "RefRoot",
             Position = 0,
             HelpMessage = "TIA Project")]
         [Alias("i")]
@@ -43,7 +40,7 @@ namespace TiaCmdlet
         /// Gets or sets the path delimeter
         /// </summary>
         [Parameter(Mandatory = false,
-            Position = 2,
+            Position = 1,
             HelpMessage = "Device group path delimeter")]
         [Alias("d")]
         public string Delimeter
@@ -56,9 +53,9 @@ namespace TiaCmdlet
         /// Gets or sets the path
         /// </summary>
         [Parameter(Mandatory = false,
-            Position = 3,
+            Position = 2,
             HelpMessage = "Device group path")]
-        [Alias("f")]
+        [Alias("p")]
         public string Path
         {
             get { return path; }
@@ -66,56 +63,30 @@ namespace TiaCmdlet
         }
 
         /// <summary>
-        /// The enumeration mode: all devices
+        /// Gets or sets the path
         /// </summary>
         [Parameter(Mandatory = false,
-            Position = 4,
-            HelpMessage = "The enumeration mode: all devices")]
-        [Alias("l")]
-        public SwitchParameter All  {
-            get { return enumActive && enumPassive; }
-            set { enumActive = value; enumPassive = enumActive; }
-        }
-
-        /// <summary>
-        /// The enumeration mode: only active devices such as PC, PLC, NetworkHost
-        /// </summary>
-        [Parameter(Mandatory = false,
-            Position = 4,
-            HelpMessage = "The enumeration mode: only active devices such as PC, PLC, NetworkHost")]
-        [Alias("a")]
-        public SwitchParameter Active
+            Position = 2,
+            HelpMessage = "Device filter")]
+        [Alias("f")]
+        public string Filter
         {
-            get { return enumActive && !enumPassive; }
-            set { enumActive = value; enumPassive = false; }
+            get { return filter; }
+            set { filter = value; nameMatch = new WildcardPattern(filter); }
         }
 
         /// <summary>
-        /// The enumeration mode: only passive devices (any what is not active)
+        /// Gets or sets the path
         /// </summary>
         [Parameter(Mandatory = false,
-            Position = 4,
-            HelpMessage = "The enumeration mode: only passive devices (any what is not active)")]
-        [Alias("p")]
-        public SwitchParameter Passive
-        {
-            get { return enumPassive; }
-            set { enumPassive = value; enumActive = false; }
-        }
-
-        /// <summary>
-        /// The enumeration mode: only passive devices (any what is not active)
-        /// </summary>
-        [Parameter(Mandatory = false,
-            Position = 4,
-            HelpMessage = "The enumeration mode: only passive devices (any what is not active)")]
+            Position = 3,
+            HelpMessage = "Traverse all devices recursive thru all groups")]
         [Alias("r")]
         public SwitchParameter Recursive
         {
             get { return recursive; }
             set { recursive = value; }
         }
-
         #endregion Command parameters
 
         #region command code
@@ -125,27 +96,15 @@ namespace TiaCmdlet
         {
             foreach (Siemens.Engineering.HW.Device dev in dc)
             {
-                if (enumActive && enumPassive)
+                if (nameMatch != null)
                 {
-                    WriteObject(dev);
-                } 
+                    if (nameMatch.IsMatch(dev.Name)) { WriteObject(dev); }                    
+                }
                 else
                 {
-                    bool isPassive = dev.IsGsd;
-                    if (!isPassive) {
-                        foreach (Siemens.Engineering.HW.DeviceItem di in dev.Items)
-                        {
-                            var attr = di.GetAttribute("Classification");
-                            //NB: I use a trick: if the attribute Çlassification' is null then a deviceitem is passive
-                            isPassive = isPassive && ( attr == null);
-                        }
-                    }
-                    if (enumActive && !enumPassive && !isPassive) 
-                        { WriteObject(dev); }
-                    else if (!enumActive && enumPassive && isPassive)
-                        { WriteObject(dev); }
+                    WriteObject(dev);
                 }
-            }
+            }            
         }
 
         private void UserGroupsTraverse(Siemens.Engineering.HW.DeviceUserGroupComposition ugc)
@@ -162,24 +121,16 @@ namespace TiaCmdlet
 
         protected override void BeginProcessing()
         {
-            base.BeginProcessing();
-            if (!enumActive && !enumPassive)
-            {
-                enumActive = true;
-                enumPassive = true;
-            }
+            base.BeginProcessing();           
         }
         protected override void ProcessRecord()
         {
             base.ProcessRecord();
             if (path == null)
             {
-                if (!recursive)
-                {
-                    WriteDeviceList(project.Devices);
-                    WriteDeviceList(project.UngroupedDevicesGroup.Devices);
-                }
-                else
+                WriteDeviceList(project.Devices);
+                WriteDeviceList(project.UngroupedDevicesGroup.Devices);
+                if (recursive)
                 {
                     UserGroupsTraverse(project.DeviceGroups);                    
                 }
@@ -201,7 +152,7 @@ namespace TiaCmdlet
                             if (ug != null)
                             {
                                 ugc = ug.Groups;
-                                WriteDebug("the group {gn} is found");
+                                WriteDebug($"the group {gn} is found");
                             }
                             else
                             {
@@ -216,11 +167,18 @@ namespace TiaCmdlet
                         }
                     }
                 }
-                else {
+                else 
+                {
                     WriteDebug($"the single group is {path}");
                     ug = ugc.Find(path);                    
                 }
-                if (ug != null) { WriteDeviceList(ug.Devices); }       
+                if (ug != null) {
+                    WriteDeviceList(ug.Devices);
+                    if (recursive) 
+                    {
+                        UserGroupsTraverse(ug.Groups); 
+                    }                    
+                }       
                 else { WriteWarning("The user group is empty or doesn't exist."); }
             }
         }
@@ -228,7 +186,6 @@ namespace TiaCmdlet
         protected override void EndProcessing()
         {
             base.EndProcessing();
-            nameMatch = null;
         }
         #endregion command code
     }

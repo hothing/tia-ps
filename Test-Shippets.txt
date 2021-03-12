@@ -22,14 +22,14 @@ $prj = Get-TiaProject -Portal $tp
 
 $prj.Devices.Create("System:Device.S7300", "G1")
 
-$prj | Get-TiaDevices -Path "G1"
-$prj | Get-TiaDevices -Path "G1/RIO"
-$prj | Get-TiaDevices -Path "G2/RII" -Debug
+$prj | Get-TiaDeviceList -Path "G1"
+$prj | Get-TiaDeviceList -Path "G1/RIO"
+$prj | Get-TiaDeviceList -Path "G2/RII" -Debug
 
-$prj | Get-TiaDevices -Recursive | where-object name -match "D.*"
-$prj | Get-TiaDevices -Recursive | where-object TypeIdentifier -match "System:Device.S7300" # select all S7-300 class devices
+$prj | Get-TiaDeviceList -Recursive | where-object name -match "D.*"
+$prj | Get-TiaDeviceList -Recursive | where-object TypeIdentifier -match "System:Device.S7300" # select all S7-300 class devices
 
-$devs = ($prj | Get-TiaDevices -Path "G1")
+$devs = ($prj | Get-TiaDeviceList -Path "G1")
 
-$prj | Get-TiaDevices -Path "G1/RIO" | Set-TiaAttribute -Attribute Author -Value "PuM"
-$prj | Get-TiaDevices -Path "G1/RIO" | Get-TiaAttribute -Attribute Author
+$prj | Get-TiaDeviceList -Path "G1/RIO" | Set-TiaAttribute -Attribute Author -Value "PuM"
+$prj | Get-TiaDeviceList -Path "G1/RIO" | Get-TiaAttribute -Attribute Author

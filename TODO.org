@@ -29,13 +29,12 @@
 + Close-TiaProject  (-Portal <object> [-Name <string>]) | -Project <TiaProject>
 + Get-TiaProject -Portal <object> [-Name <string>]
 
-+- Get-TiaItem -Project <TiaProject> -Name <string> 
-NB Get-Item behaviour is basis for this command
++ Get-TiaDeviceList -Project <TiaProject> [-Path <string>] [-Recursive] [-Filter <string>] 
 
-- Get-TiaChildItem -Project <TiaProject> -Name <string> <???>
-NB Get-ChildItem behaviour is basis for this command
++ Get-TiaAttribute -Device <TiaDevice|TiaDeviceItem> -Attribute <string>
++ Set-TiaAttribute -Device <TiaDevice|TiaDeviceItem> -Attribute <string> -Value <Object>
 
-- Get-TiaProgram [-Device <TiaDeviceItem> -Name <string>] | [-Module <TiaDeviceItem>]
+- Get-TiaProgram [-Device <TiaDevice> -Name <string>] | [-Module <TiaDeviceItem>]
 
 - Get-TiaProgramGroup -Program <Object> [-Name <string>]
 
