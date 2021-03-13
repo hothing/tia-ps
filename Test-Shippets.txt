@@ -33,3 +33,6 @@ $devs = ($prj | Get-TiaDeviceList -Path "G1")
 
 $prj | Get-TiaDeviceList -Path "G1/RIO" | Set-TiaAttribute -Attribute Author -Value "PuM"
 $prj | Get-TiaDeviceList -Path "G1/RIO" | Get-TiaAttribute -Attribute Author
+
+$dev = ($prj | Get-TiaDeviceList -Path "G1" | where-object Name -eq -Value "D1_1")
+$prg = Get-TiaProgram -Device $dev -Name "C1_1"

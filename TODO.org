@@ -34,7 +34,7 @@
 + Get-TiaAttribute -Device <TiaDevice|TiaDeviceItem> -Attribute <string>
 + Set-TiaAttribute -Device <TiaDevice|TiaDeviceItem> -Attribute <string> -Value <Object>
 
-- Get-TiaProgram [-Device <TiaDevice> -Name <string>] | [-Module <TiaDeviceItem>]
++ Get-TiaProgram [-Device <TiaDevice> -Name <string>] | [-Module <TiaDeviceItem>]
 
 - Get-TiaProgramGroup -Program <Object> [-Name <string>]
 
