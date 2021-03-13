@@ -36,3 +36,12 @@ $prj | Get-TiaDeviceList -Path "G1/RIO" | Get-TiaAttribute -Attribute Author
 
 $dev = ($prj | Get-TiaDeviceList -Path "G1" | where-object Name -eq -Value "D1_1")
 $prg = Get-TiaProgram -Device $dev -Name "C1_1"
+
+# Set attribute for the block
+$prg.BlockGroup.Blocks.Items(0) | Set-TiaAttribute -Attribute Name -Value "OB1"
+
+# Export all non-grouped blocks
+$prg.BlockGroup.Blocks | foreach { $_.Export(("{0}\{1}.xml" -f (pwd),$_.Name), 1) }
+
+# Import all XML files (as block source) into the program
+Get-ChildItem -Filter "*.xml" | foreach { $fn = ("{0}\{1}" -f (pwd),$_.Name) ; $prg.BlockGroup.Blocks.Import($fn, 1) }

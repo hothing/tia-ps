@@ -93,9 +93,22 @@ namespace TiaCmdlet
             }
             if (device_item != null)
             {
-                WriteObject(((Siemens.Engineering.IEngineeringServiceProvider)device_item).GetService<Siemens.Engineering.HW.Features.SoftwareContainer>());
+                var container = ((Siemens.Engineering.IEngineeringServiceProvider)device_item).GetService<Siemens.Engineering.HW.Features.SoftwareContainer>();
+                if (container != null)
+                {
+                    WriteObject(container.Software);
+                }
+                else
+                {
+                    //WriteWarning("The modules doesn't have a software container");
+                    WriteError(new ErrorRecord(new ItemNotFoundException("container"), "The module doesn't have a software container", ErrorCategory.ObjectNotFound, device_item));
+                }
+                
             }
-            else { WriteWarning("The module not found"); }
+            else {
+                //WriteWarning("The module not found");
+                WriteError(new ErrorRecord(new ItemNotFoundException("module"), $"The module {module_name} is not found", ErrorCategory.ObjectNotFound, device));
+            }
         }
 
         protected override void EndProcessing()
