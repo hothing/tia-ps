@@ -36,6 +36,8 @@
 
 + Get-TiaProgram [-Device <TiaDevice> -Name <string>] | [-Module <TiaDeviceItem>]
 
++ Get-TiaPlcBlock -Program <PlcSoftware> [-Path <string>] [-Recursive] [-Filter <string>] 
+
 - Get-TiaProgramGroup -Program <Object> [-Name <string>]
 
 - Get-TiaSoftwareUnit -Program <Object> [-Name <string>] [-Group <string|Object>]

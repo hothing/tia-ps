@@ -18,6 +18,7 @@ $tp | Get-TiaProject -Name XXX
 $tp | Get-TiaProject -Name Test1
 
 $prj = Get-TiaProject -Portal $tp
+$prj = ($tp | Get-TiaProject)
 
 
 $prj.Devices.Create("System:Device.S7300", "G1")
@@ -35,13 +36,23 @@ $prj | Get-TiaDeviceList -Path "G1/RIO" | Set-TiaAttribute -Attribute Author -Va
 $prj | Get-TiaDeviceList -Path "G1/RIO" | Get-TiaAttribute -Attribute Author
 
 $dev = ($prj | Get-TiaDeviceList -Path "G1" | where-object Name -eq -Value "D1_1")
+$dev = ($prj | Get-TiaDeviceList | where-object Name -eq -Value "S71500")
+
 $prg = Get-TiaProgram -Device $dev -Name "C1_1"
+$prg = Get-TiaProgram -Device $dev -Name "+ES1GC01-K12"
 
 # Set attribute for the block
 $prg.BlockGroup.Blocks.Items(0) | Set-TiaAttribute -Attribute Name -Value "OB1"
 
 # Export all non-grouped blocks
 $prg.BlockGroup.Blocks | foreach { $_.Export(("{0}\{1}.xml" -f (pwd),$_.Name), 1) }
+$prg | Get-TiaPlcBlock -Recursive | foreach { $_.Export(("{0}\{1}.xml" -f (pwd),$_.Name), 1) }
 
 # Import all XML files (as block source) into the program
 Get-ChildItem -Filter "*.xml" | foreach { $fn = ("{0}\{1}" -f (pwd),$_.Name) ; $prg.BlockGroup.Blocks.Import($fn, 1) }
+
+# List all root blocks
+$prg | Get-TiaPlcBlock
+
+# List all blocks
+$prg | Get-TiaPlcBlock -Recursive | select-object name | ft
