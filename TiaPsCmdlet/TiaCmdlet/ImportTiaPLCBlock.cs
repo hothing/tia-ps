@@ -13,8 +13,8 @@ namespace TiaCmdlet
     [Cmdlet(VerbsData.Import, "TiaPlcBlock")]
     public class ImportTiaPlcBlock : PSCmdlet
     {
-        private Siemens.Engineering.SW.Blocks.PlcBlockGroup block_group = null;
-               
+        private Siemens.Engineering.SW.Blocks.PlcBlockComposition block_group = null;
+       
         private string path = null;
 
         private string file_name = null;
@@ -34,9 +34,9 @@ namespace TiaCmdlet
             ValueFromPipeline = true,
             ValueFromPipelineByPropertyName = true,
             Position = 0,
-            HelpMessage = "TIA Project")]
+            HelpMessage = "TIA Plc Block group")]
         [Alias("i")]
-        public Siemens.Engineering.SW.Blocks.PlcBlockGroup InputObject
+        public Siemens.Engineering.SW.Blocks.PlcBlockComposition InputObject
         {
             get { return block_group; }
             set { block_group = value; }
@@ -46,7 +46,6 @@ namespace TiaCmdlet
         /// Gets or sets the path
         /// </summary>
         [Parameter(Mandatory = false,
-            ParameterSetName = "withPath",
             HelpMessage = "XML-file directory path")]
         [Alias("p")]
         public string Path
@@ -137,7 +136,7 @@ namespace TiaCmdlet
                 {
                     try 
                     {
-                        IList<Siemens.Engineering.SW.Blocks.PlcBlock> blocks = block_group.Blocks.Import(new FileInfo(qfn), options);
+                        IList<Siemens.Engineering.SW.Blocks.PlcBlock> blocks = block_group.Import(new FileInfo(qfn), options);
                         if (pass_thru)
                         {
                             foreach (var block in blocks)

@@ -37,7 +37,7 @@ namespace TiaCmdlet
             ValueFromPipeline = true,
             ValueFromPipelineByPropertyName = true,
             Position = 0,
-            HelpMessage = "TIA Project")]
+            HelpMessage = "TIA Plc Program")]
         [Alias("i")]
         public PlcSoftware Program
         {

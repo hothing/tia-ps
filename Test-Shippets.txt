@@ -50,7 +50,8 @@ $prg | Get-TiaPlcBlock -Recursive | foreach { $_.Export(("{0}\{1}.xml" -f (pwd),
 
 # Import all XML files (as block source) into the program
 Get-ChildItem -Filter "*.xml" | foreach { $fn = ("{0}\{1}" -f (pwd),$_.Name) ; $prg.BlockGroup.Blocks.Import($fn, 1) }
- $prg.BlockGroup | Import-TiaPlcBlock -Name "XY_DB.xml"
+$prg.BlockGroup | Import-TiaPlcBlock -Name "XY_DB.xml"
+$prg | Get-TiaPlcGroup -Path . | Import-TiaPlcBlock -Name "XY_DB.xml"
 
 # List all root blocks
 $prg | Get-TiaPlcBlock
