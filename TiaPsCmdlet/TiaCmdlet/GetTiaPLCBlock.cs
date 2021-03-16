@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Management.Automation;
 using Siemens.Engineering;
 using Siemens.Engineering.HW;
@@ -13,6 +14,10 @@ namespace TiaCmdlet
                
         private WildcardPattern nameMatch = null;
 
+        private WildcardPattern includeGroup = null;
+
+        private WildcardPattern excludeGroup = null;
+
         private char[] pathDelimeter = { '/', '.'};
 
         private string path = null;
@@ -20,6 +25,8 @@ namespace TiaCmdlet
         private string filter = null;
 
         private Boolean recursive = false;
+
+        private Boolean includeSystemGroup = false;
 
         #region Command parameters
 
@@ -77,7 +84,7 @@ namespace TiaCmdlet
         }
 
         /// <summary>
-        /// Gets or sets the path
+        /// Gets or sets the 'recursive' enumeration method 
         /// </summary>
         [Parameter(Mandatory = false,
             HelpMessage = "Traverse all blocks recursive thru all groups")]
@@ -87,6 +94,19 @@ namespace TiaCmdlet
             get { return recursive; }
             set { recursive = value; }
         }
+
+        /// <summary>
+        /// Gets or sets the system blocks
+        /// </summary>
+        [Parameter(Mandatory = false,
+            HelpMessage = "Include the system blocks")]
+        [Alias("sg")]
+        public SwitchParameter IncludeSystemGroup
+        {
+            get { return includeSystemGroup; }
+            set { includeSystemGroup = value; }
+        }
+
         #endregion Command parameters
 
         #region command code
@@ -117,6 +137,18 @@ namespace TiaCmdlet
                 }
             }
         }
+
+        private void SysGroupsTraverse(Siemens.Engineering.SW.Blocks.PlcSystemBlockGroupComposition ugc)
+        {
+            foreach (var ug in ugc)
+            {
+                if (ug != null)
+                {
+                    WriteBlockList(ug.Blocks);
+                    SysGroupsTraverse(ug.Groups);
+                }
+            }
+        }
         #endregion internal commands
 
         protected override void BeginProcessing()
@@ -129,10 +161,19 @@ namespace TiaCmdlet
             if (path == null)
             {
                 WriteBlockList(program.BlockGroup.Blocks);
-                //WriteBlockList(program.BlockGroup.SystemBlockGroups);
+                               
                 if (recursive)
                 {
                     UserGroupsTraverse(program.BlockGroup.Groups);                    
+                }
+
+                if (includeSystemGroup)
+                {
+                    if (recursive) { SysGroupsTraverse(program.BlockGroup.SystemBlockGroups); }
+                    else {
+                        var bx = program.BlockGroup.SystemBlockGroups.First();
+                        WriteBlockList(bx.Blocks);  
+                    }
                 }
             }
             else
