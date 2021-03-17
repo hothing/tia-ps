@@ -48,6 +48,12 @@ $prg.BlockGroup.Blocks.Items(0) | Set-TiaAttribute -Attribute Name -Value "OB1"
 $prg.BlockGroup.Blocks | foreach { $_.Export(("{0}\{1}.xml" -f (pwd),$_.Name), 1) }
 $prg | Get-TiaPlcBlock -Recursive | foreach { $_.Export(("{0}\{1}.xml" -f (pwd),$_.Name), 1) }
 
+# Get the group
+$prg | Get-TiaPlcGroup -Path . -SystemGroup
+
+# Filtering blocks by modification datetime
+$prg | Get-TiaPlcGroup -Path "System blocks/Program resources" -SystemGroup | where-object { $_.ModifiedDate -lt (Get-Date "01/03/2017 01:00:00") }
+
 # Import all XML files (as block source) into the program
 Get-ChildItem -Filter "*.xml" | foreach { $fn = ("{0}\{1}" -f (pwd),$_.Name) ; $prg.BlockGroup.Blocks.Import($fn, 1) }
 $prg.BlockGroup | Import-TiaPlcBlock -Name "XY_DB.xml"

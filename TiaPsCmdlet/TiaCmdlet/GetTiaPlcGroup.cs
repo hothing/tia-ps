@@ -36,11 +36,10 @@ namespace TiaCmdlet
         }
 
         /// <summary>
-        /// Gets or sets a device attribute
+        /// Gets or sets a group path in the program folders
         /// </summary>
         [Parameter(Mandatory = true,
-            ParameterSetName = "byPath",
-            HelpMessage = "Device module name")]
+            HelpMessage = "a group path in the program folders")]
         [Alias("n")]
         public string Path
         {
@@ -52,8 +51,7 @@ namespace TiaCmdlet
         /// Gets or sets the path delimeter
         /// </summary>
         [Parameter(Mandatory = false,
-            ParameterSetName = "byPath",
-            HelpMessage = "Device group path delimeter")]
+            HelpMessage = "Path delimeter")]
         [Alias("d")]
         public string Delimeter
         {
@@ -64,8 +62,7 @@ namespace TiaCmdlet
         /// <summary>
         /// Gets or sets the system blocks
         /// </summary>
-        [Parameter(Mandatory = true,
-            ParameterSetName = "bySyGroup",
+        [Parameter(Mandatory = false,
             HelpMessage = "Include the system blocks")]
         [Alias("sg")]
         public SwitchParameter SystemGroup
@@ -88,7 +85,7 @@ namespace TiaCmdlet
         protected override void ProcessRecord()
         {
             base.ProcessRecord();
-            if (ParameterSetName.Equals("byPath"))
+            if (!inSystemGroup)
             {
                 if (
                     (path == null) 
@@ -145,10 +142,62 @@ namespace TiaCmdlet
             } 
             else
             {
-                if (inSystemGroup)
+                if (
+                   (path == null)
+                   || (path.Equals(pathDelimeter[0].ToString()))
+                   || (path.Equals(pathDelimeter[1].ToString()))
+                   )
                 {
-                    WriteObject(software.BlockGroup.SystemBlockGroups.First());
+                    var sbg = software.BlockGroup.SystemBlockGroups.First();
+                    if (sbg != null)
+                    {
+                        WriteObject(sbg.Blocks);
+                    }                    
                 }
+                else
+                {
+                    string[] ugnames = path.Split(pathDelimeter, StringSplitOptions.RemoveEmptyEntries);
+                    WriteDebug($"path is {path}");
+                    Siemens.Engineering.SW.Blocks.PlcSystemBlockGroupComposition ugc = software.BlockGroup.SystemBlockGroups;
+                    Siemens.Engineering.SW.Blocks.PlcSystemBlockGroup ug = null;
+                    if (ugnames.Length > 0)
+                    {
+                        WriteDebug($"the root group is {ugnames[0]}");
+                        foreach (String gn in ugnames)
+                        {
+                            if (ugc != null)
+                            {
+                                WriteDebug($"the group {gn} is finding");
+                                ug = ugc.Find(gn);
+                                if (ug != null)
+                                {
+                                    ugc = ug.Groups;
+                                    WriteDebug($"the group {gn} is found");
+                                }
+                                else
+                                {
+                                    ThrowTerminatingError(new ErrorRecord(new ItemNotFoundException(), $"the specified group '{gn}' does not exist", ErrorCategory.InvalidArgument, path));
+                                    break;
+                                }
+                            }
+                            else
+                            {
+                                ThrowTerminatingError(new ErrorRecord(new ItemNotFoundException(), $"the specified group does '{gn}' not exist", ErrorCategory.InvalidArgument, path));
+                                break;
+                            }
+                        }
+                    }
+                    else
+                    {
+                        WriteDebug($"the single group is {path}");
+                        ug = ugc.Find(path);
+                    }
+                    if (ug != null)
+                    {
+                        WriteObject(ug.Blocks);
+                    }
+                    else { WriteWarning("The user group is empty or doesn't exist."); }
+                }                
             }           
         }
 

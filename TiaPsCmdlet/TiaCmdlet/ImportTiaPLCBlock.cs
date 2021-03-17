@@ -55,7 +55,7 @@ namespace TiaCmdlet
         }
 
         /// <summary>
-        /// Gets or sets the path
+        /// Gets or sets the file name
         /// </summary>
         [Parameter(Mandatory = true,
             HelpMessage = "XML-file name")]
