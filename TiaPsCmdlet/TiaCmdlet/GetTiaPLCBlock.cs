@@ -158,7 +158,11 @@ namespace TiaCmdlet
         protected override void ProcessRecord()
         {
             base.ProcessRecord();
-            if (path == null)
+            if (
+                    (path == null)
+                    || (path.Equals(pathDelimeter[0].ToString()))
+                    || (path.Equals(pathDelimeter[1].ToString()))
+               )
             {
                 WriteBlockList(program.BlockGroup.Blocks);
                                
